@@ -19,3 +19,6 @@ publish/
 
 # Clash Grotesk: licence forbids public redistribution; fetch with tools/get_fonts.sh
 src/FridgeChef/Resources/Fonts/ClashGrotesk-*
+
+# Full feature/code notes stay on this Mac only (docs/HowToRun.txt is the public part)
+docs/Features.txt

@@ -1,0 +1,9 @@
+FRIDGE CHEF - HOW TO RUN (short version; full steps are in README.md)
+----------------------------------------------------------------
+
+Test version on a phone plugged in by USB:
+  dotnet build src/FridgeChef -t:Run -f net11.0-android
+
+Release APK to share:
+  dotnet publish src/FridgeChef -f net11.0-android -c Release -o publish
+  (the file is publish/com.fridgechef.app-Signed.apk)
