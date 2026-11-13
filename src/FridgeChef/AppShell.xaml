@@ -1,0 +1,15 @@
+<!-- Bottom tab bar (icons only, per Figma; titles are still read out by screen readers). ContentTemplate = each tab's page is only built when first opened (lazy loading). -->
+<Shell x:Class="FridgeChef.AppShell"
+       xmlns:views="clr-namespace:FridgeChef.Views"
+       xmlns:res="clr-namespace:FridgeChef.Core.Resources;assembly=FridgeChef.Core"
+       Title="{x:Static res:AppResources.AppName}">
+
+    <TabBar>
+        <ShellContent Title="{x:Static res:AppResources.TabHome}" Route="home" Icon="tab_house.png" ContentTemplate="{DataTemplate views:HomePage}" />
+        <ShellContent Title="{x:Static res:AppResources.TabSaved}" Route="saved" Icon="tab_bookmark.png" ContentTemplate="{DataTemplate views:SavedPage}" />
+        <ShellContent Title="{x:Static res:AppResources.TabRecipe}" Route="recipe" Icon="tab_file_search.png" ContentTemplate="{DataTemplate views:RecipePage}" />
+        <ShellContent Title="{x:Static res:AppResources.TabNews}" Route="news" Icon="tab_globe.png" ContentTemplate="{DataTemplate views:NewsPage}" />
+        <ShellContent Title="{x:Static res:AppResources.TabAccount}" Route="account" Icon="tab_user.png" ContentTemplate="{DataTemplate views:AccountPage}" />
+    </TabBar>
+
+</Shell>

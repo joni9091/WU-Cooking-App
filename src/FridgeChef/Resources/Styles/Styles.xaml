@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- Default looks for controls. Uses only values from Theme.xaml (no raw colours or sizes here).
+     DynamicResource fonts let the font switch at once when the language changes. -->
+<ResourceDictionary>
+
+    <!-- Figma has no title bar: each screen draws its own heading. -->
+    <Style TargetType="Page" ApplyToDerivedTypes="True">
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="Shell.NavBarIsVisible" Value="False" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Background}, Dark={StaticResource BackgroundDark}}" />
+    </Style>
+
+    <!-- Named label styles don't inherit the default one, so they all build on BaseLabel. -->
+    <Style TargetType="Label" x:Key="BaseLabel">
+        <Setter Property="FontFamily" Value="{DynamicResource AppBodyFont}" />
+        <Setter Property="FontSize" Value="{StaticResource FontSizeBody}" />
+        <Setter Property="LineHeight" Value="{DynamicResource AppLineHeight}" />
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Text}, Dark={StaticResource TextDark}}" />
+    </Style>
+
+    <Style TargetType="Label" BasedOn="{StaticResource BaseLabel}" />
+
+    <!-- Big olive serif heading, e.g. "Popular now". -->
+    <Style TargetType="Label" x:Key="Title" BasedOn="{StaticResource BaseLabel}">
+        <Setter Property="FontFamily" Value="{DynamicResource AppHeadingFont}" />
+        <Setter Property="FontSize" Value="{StaticResource FontSizeTitle}" />
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Olive}, Dark={StaticResource PaleYellow}}" />
+    </Style>
+
+    <!-- Recipe names on cards, e.g. "Lok Lak". -->
+    <Style TargetType="Label" x:Key="Heading" BasedOn="{StaticResource Title}">
+        <Setter Property="FontSize" Value="{StaticResource FontSizeHeading}" />
+    </Style>
+
+    <Style TargetType="Label" x:Key="Muted" BasedOn="{StaticResource BaseLabel}">
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Grey}, Dark={StaticResource GreyDark}}" />
+    </Style>
+
+    <Style TargetType="Button">
+        <Setter Property="FontFamily" Value="{DynamicResource AppBodyFont}" />
+        <Setter Property="FontSize" Value="{StaticResource FontSizeBody}" />
+        <Setter Property="BackgroundColor" Value="{StaticResource Olive}" />
+        <Setter Property="TextColor" Value="{StaticResource PaleYellow}" />
+        <Setter Property="MinimumHeightRequest" Value="44" />
+    </Style>
+
+    <Style TargetType="Entry">
+        <Setter Property="FontFamily" Value="{DynamicResource AppBodyFont}" />
+        <Setter Property="FontSize" Value="{StaticResource FontSizeBody}" />
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Text}, Dark={StaticResource TextDark}}" />
+        <Setter Property="PlaceholderColor" Value="{StaticResource Grey}" />
+        <Setter Property="MinimumHeightRequest" Value="44" />
+    </Style>
+
+    <!-- Tab bar colours. Its floating rounded shape is drawn in Platforms/Android/FloatingTabBarHandler.cs. -->
+    <Style TargetType="Shell" ApplyToDerivedTypes="True">
+        <Setter Property="Shell.BackgroundColor" Value="{AppThemeBinding Light={StaticResource Background}, Dark={StaticResource BackgroundDark}}" />
+        <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource PaleYellow}" />
+        <Setter Property="Shell.TabBarTitleColor" Value="{StaticResource Icon}" />
+        <Setter Property="Shell.TabBarUnselectedColor" Value="{StaticResource Icon}" />
+        <Setter Property="Shell.NavBarHasShadow" Value="False" />
+    </Style>
+
+</ResourceDictionary>

@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/FridgeChef/FridgeChef.csproj" />
+    <Project Path="src/FridgeChef.Core/FridgeChef.Core.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/FridgeChef.Tests/FridgeChef.Tests.csproj" />
+  </Folder>
+</Solution>

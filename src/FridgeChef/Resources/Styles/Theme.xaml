@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- THE design file. Every colour, font and spacing value lives here (from the Figma design).
+     To restyle the app, change the values in this file only. -->
+<ResourceDictionary>
+
+    <!-- Colours from Figma (owner-confirmed). -->
+    <Color x:Key="PaleYellow">#FFF7B2</Color>   <!-- tab bar, calorie pills, card borders -->
+    <Color x:Key="Olive">#8C6D00</Color>        <!-- headings -->
+    <Color x:Key="Grey">#757575</Color>         <!-- secondary text -->
+    <Color x:Key="DarkBrown">#433400</Color>    <!-- from the app icon -->
+    <Color x:Key="Background">#FFFFFF</Color>
+    <Color x:Key="Text">#1A1A1A</Color>
+    <Color x:Key="Icon">#000000</Color>
+
+    <!-- shortcut: no dark-mode design yet, so dark mode reuses neutral dark colours; replace when Figma has a dark version. -->
+    <Color x:Key="BackgroundDark">#121212</Color>
+    <Color x:Key="TextDark">#F2F2F2</Color>
+    <Color x:Key="GreyDark">#A0A0A0</Color>
+
+    <!-- Fonts per language. The app copies the right ones into AppHeadingFont / AppBodyFont / AppLineHeight
+         when the language changes. Inter and Instrument Serif have no Khmer letters, so Khmer uses Kantumruy Pro for both. -->
+    <x:String x:Key="HeadingFontEn">InstrumentSerif</x:String>   <!-- Regular + Italic only -->
+    <x:String x:Key="BodyFontEn">Inter</x:String>                <!-- inputs, descriptions, small text -->
+    <x:String x:Key="HeadingFontKm">KantumruyPro</x:String>
+    <x:String x:Key="BodyFontKm">KantumruyPro</x:String>
+    <x:Double x:Key="LineHeightEn">1.0</x:Double>
+    <x:Double x:Key="LineHeightKm">1.5</x:Double>                <!-- stops Khmer letters being clipped -->
+
+    <!-- Defaults until the language is applied at startup. -->
+    <x:String x:Key="AppHeadingFont">InstrumentSerif</x:String>
+    <x:String x:Key="AppBodyFont">Inter</x:String>
+    <x:Double x:Key="AppLineHeight">1.0</x:Double>
+
+    <!-- Text sizes -->
+    <x:Double x:Key="FontSizeSmall">12</x:Double>
+    <x:Double x:Key="FontSizeBody">14</x:Double>
+    <x:Double x:Key="FontSizeHeading">22</x:Double>
+    <x:Double x:Key="FontSizeTitle">30</x:Double>
+
+    <!-- Spacing and shapes (Figma screens are 412 wide with 31 side margins). -->
+    <x:Double x:Key="SpacingS">8</x:Double>
+    <x:Double x:Key="SpacingM">16</x:Double>
+    <Thickness x:Key="PagePadding">31,62,31,0</Thickness>
+    <x:Double x:Key="TabBarHeight">66</x:Double>
+    <x:Double x:Key="TabBarCornerRadius">24</x:Double>
+    <Thickness x:Key="TabBarMargin">21,0,21,24</Thickness>
+
+</ResourceDictionary>

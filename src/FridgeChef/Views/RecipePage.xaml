@@ -1,0 +1,7 @@
+<!-- Recipe tab. Placeholder until its phase; real content follows the Figma design. -->
+<ContentPage x:Class="FridgeChef.Views.RecipePage"
+             xmlns:res="clr-namespace:FridgeChef.Core.Resources;assembly=FridgeChef.Core"
+             Title="{x:Static res:AppResources.TabRecipe}">
+    <Label Text="{x:Static res:AppResources.ComingSoon}" Style="{StaticResource Muted}"
+           HorizontalOptions="Center" VerticalOptions="Center" />
+</ContentPage>

@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- Plain .NET library: view models, validation and all app text live here so unit tests can run on a laptop. -->
+  <PropertyGroup>
+    <TargetFramework>net11.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Generates the AppResources class at build time (works from the terminal, no Visual Studio needed). -->
+    <EmbeddedResource Update="Resources\AppResources.resx"
+                      StronglyTypedLanguage="CSharp"
+                      StronglyTypedClassName="AppResources"
+                      StronglyTypedNamespace="FridgeChef.Core.Resources"
+                      StronglyTypedFileName="$(IntermediateOutputPath)AppResources.Designer.cs"
+                      PublicClass="true" />
+  </ItemGroup>
+
+</Project>
