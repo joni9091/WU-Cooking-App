@@ -1,0 +1,738 @@
+[
+ {
+  "title_en": "Fish Amok",
+  "title_km": "អាម៉ុកត្រី",
+  "cuisine": "KH",
+  "category": "curry",
+  "calories": 420,
+  "prep_minutes": 45,
+  "servings": 4,
+  "difficulty": "medium",
+  "is_trending": true,
+  "popularity": 100,
+  "description_en": "Soft coconut fish curry steamed in banana leaf cups.",
+  "description_km": "ការីត្រីខ្ទិះដូងទន់ៗ ចំហុយក្នុងស្លឹកចេក។",
+  "ingredients_en": [
+   "500 g white fish fillet",
+   "200 ml coconut milk",
+   "2 tbsp kroeung paste",
+   "1 egg",
+   "1 tbsp fish sauce",
+   "Banana leaves"
+  ],
+  "ingredients_km": [
+   "សាច់ត្រីស ៥០០ ក្រាម",
+   "ខ្ទិះដូង ២០០ មីលីលីត្រ",
+   "គ្រឿង ២ ស្លាបព្រាបាយ",
+   "ស៊ុត ១ គ្រាប់",
+   "ទឹកត្រី ១ ស្លាបព្រាបាយ",
+   "ស្លឹកចេក"
+  ],
+  "steps_en": [
+   "Cut the fish into bite-size pieces.",
+   "Mix kroeung paste, coconut milk, egg and fish sauce.",
+   "Fold in the fish and spoon into banana leaf cups.",
+   "Steam for 20 minutes until set."
+  ],
+  "steps_km": [
+   "កាត់ត្រីជាដុំតូចៗ។",
+   "លាយគ្រឿង ខ្ទិះដូង ស៊ុត និងទឹកត្រី។",
+   "ដាក់ត្រីចូល រួចដួសដាក់ក្នុងស្លឹកចេក។",
+   "ចំហុយ ២០ នាទី រហូតដល់ស្អិត។"
+  ],
+  "image_file": "File:Fish Amok with Rice.jpg",
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Fish_Amok_with_Rice.jpg/500px-Fish_Amok_with_Rice.jpg",
+  "image_credit": "Photo: sharonang, CC0, via Wikimedia Commons",
+  "image_page": "https://commons.wikimedia.org/wiki/File:Fish_Amok_with_Rice.jpg"
+ },
+ {
+  "title_en": "Lok Lak",
+  "title_km": "ឡុកឡាក់",
+  "cuisine": "KH",
+  "category": "main",
+  "calories": 510,
+  "prep_minutes": 30,
+  "servings": 2,
+  "difficulty": "easy",
+  "is_trending": false,
+  "popularity": 98,
+  "description_en": "Peppered stir-fried beef with a lime and black pepper dip.",
+  "description_km": "សាច់គោឆាម្រេច ជាមួយទឹកជ្រលក់ក្រូចឆ្មាម្រេច។",
+  "ingredients_en": [
+   "300 g beef sirloin",
+   "2 tbsp soy sauce",
+   "1 tbsp oyster sauce",
+   "3 cloves garlic",
+   "Lettuce, tomato and onion",
+   "1 lime and black pepper"
+  ],
+  "ingredients_km": [
+   "សាច់គោ ៣០០ ក្រាម",
+   "ទឹកស៊ីអ៊ីវ ២ ស្លាបព្រាបាយ",
+   "ប្រេងខ្យង ១ ស្លាបព្រាបាយ",
+   "ខ្ទឹមស ៣ កំពឹស",
+   "សាឡាត់ ប៉េងប៉ោះ និងខ្ទឹមបារាំង",
+   "ក្រូចឆ្មា ១ ផ្លែ និងម្រេចខ្មៅ"
+  ],
+  "steps_en": [
+   "Cube the beef and marinate with soy, oyster sauce and garlic for 15 minutes.",
+   "Sear on very high heat for 2 to 3 minutes.",
+   "Serve on lettuce and tomato with the lime-pepper dip."
+  ],
+  "steps_km": [
+   "កាត់សាច់គោជាដុំ ហើយប្រឡាក់ទឹកស៊ីអ៊ីវ ប្រេងខ្យង និងខ្ទឹមស ១៥ នាទី។",
+   "ឆាលើភ្លើងខ្លាំង ២ ទៅ ៣ នាទី។",
+   "រៀបលើសាឡាត់ និងប៉េងប៉ោះ ជាមួយទឹកជ្រលក់ក្រូចឆ្មាម្រេច។"
+  ],
+  "image_file": "File:Sachko lok lak - beef lok lak thịt bò lúc lắc Khmer food.jpg",
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Sachko_lok_lak_-_beef_lok_lak_th%E1%BB%8Bt_b%C3%B2_l%C3%BAc_l%E1%BA%AFc_Khmer_food.jpg/500px-Sachko_lok_lak_-_beef_lok_lak_th%E1%BB%8Bt_b%C3%B2_l%C3%BAc_l%E1%BA%AFc_Khmer_food.jpg",
+  "image_credit": "Photo: Alexandersingh9, CC0, via Wikimedia Commons",
+  "image_page": "https://commons.wikimedia.org/wiki/File:Sachko_lok_lak_-_beef_lok_lak_th%E1%BB%8Bt_b%C3%B2_l%C3%BAc_l%E1%BA%AFc_Khmer_food.jpg"
+ },
+ {
+  "title_en": "Nom Banh Chok",
+  "title_km": "នំបញ្ចុក",
+  "cuisine": "KH",
+  "category": "noodles",
+  "calories": 380,
+  "prep_minutes": 60,
+  "servings": 4,
+  "difficulty": "hard",
+  "is_trending": false,
+  "popularity": 96,
+  "description_en": "Fresh rice noodles in a green fish gravy with herbs and vegetables.",
+  "description_km": "នំបញ្ចុកស្រស់ ជាមួយសម្លប្រហើរត្រី និងបន្លែស្រស់។",
+  "ingredients_en": [
+   "500 g fresh rice noodles",
+   "300 g fish",
+   "Lemongrass, turmeric and galangal",
+   "200 ml coconut milk",
+   "Banana flower, cucumber and herbs"
+  ],
+  "ingredients_km": [
+   "នំបញ្ចុកស្រស់ ៥០០ ក្រាម",
+   "ត្រី ៣០០ ក្រាម",
+   "ស្លឹកគ្រៃ រមៀត និងរំដេង",
+   "ខ្ទិះដូង ២០០ មីលីលីត្រ",
+   "ត្រយូងចេក ត្រសក់ និងជីរ"
+  ],
+  "steps_en": [
+   "Boil the fish, then flake the meat.",
+   "Pound the herbs into a paste and simmer with the fish and coconut milk.",
+   "Pour the gravy over the noodles and top with fresh vegetables."
+  ],
+  "steps_km": [
+   "ស្ងោរត្រី រួចបកយកសាច់។",
+   "បុកគ្រឿងឱ្យម៉ត់ រួចរំងាស់ជាមួយត្រី និងខ្ទិះដូង។",
+   "ចាក់សម្លលើនំបញ្ចុក ហើយដាក់បន្លែស្រស់ពីលើ។"
+  ],
+  "image_file": "File:Num Banh Chok (cropped).jpg",
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Num_Banh_Chok_%28cropped%29.jpg/500px-Num_Banh_Chok_%28cropped%29.jpg",
+  "image_credit": "Photo: Thomas Wanhoff from Siem Reap, Cambodia, CC BY-SA 2.0, via Wikimedia Commons",
+  "image_page": "https://commons.wikimedia.org/wiki/File:Num_Banh_Chok_(cropped).jpg"
+ },
+ {
+  "title_en": "Kuy Teav",
+  "title_km": "គុយទាវ",
+  "cuisine": "KH",
+  "category": "noodles",
+  "calories": 350,
+  "prep_minutes": 40,
+  "servings": 2,
+  "difficulty": "easy",
+  "is_trending": false,
+  "popularity": 94,
+  "description_en": "Pork noodle soup with a clear, light broth.",
+  "description_km": "គុយទាវសាច់ជ្រូក ជាមួយទឹកស៊ុបថ្លាស្រាល។",
+  "ingredients_en": [
+   "200 g rice noodles",
+   "200 g pork",
+   "500 g pork bones",
+   "1 tbsp garlic oil",
+   "Bean sprouts and spring onion"
+  ],
+  "ingredients_km": [
+   "គុយទាវ ២០០ ក្រាម",
+   "សាច់ជ្រូក ២០០ ក្រាម",
+   "ឆ្អឹងជ្រូក ៥០០ ក្រាម",
+   "ប្រេងខ្ទឹម ១ ស្លាបព្រាបាយ",
+   "សណ្តែកបណ្តុះ និងស្លឹកខ្ទឹម"
+  ],
+  "steps_en": [
+   "Simmer the bones for an hour for a clear broth.",
+   "Blanch the noodles and put them in bowls.",
+   "Top with sliced pork and pour the hot broth over."
+  ],
+  "steps_km": [
+   "រំងាស់ឆ្អឹងមួយម៉ោង ដើម្បីបានទឹកស៊ុបថ្លា។",
+   "ស្រុះគុយទាវ ហើយដាក់ក្នុងចាន។",
+   "ដាក់សាច់ជ្រូកពីលើ រួចចាក់ទឹកស៊ុបក្តៅ។"
+  ],
+  "image_file": "File:Hủ tiếu Nam Vang giò 2.jpg",
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/H%E1%BB%A7_ti%E1%BA%BFu_Nam_Vang_gi%C3%B2_2.jpg/500px-H%E1%BB%A7_ti%E1%BA%BFu_Nam_Vang_gi%C3%B2_2.jpg",
+  "image_credit": "Photo: Phương Huy (thảo luận), Public domain, via Wikimedia Commons",
+  "image_page": "https://commons.wikimedia.org/wiki/File:H%E1%BB%A7_ti%E1%BA%BFu_Nam_Vang_gi%C3%B2_2.jpg"
+ },
+ {
+  "title_en": "Bai Sach Chrouk",
+  "title_km": "បាយសាច់ជ្រូក",
+  "cuisine": "KH",
+  "category": "rice",
+  "calories": 560,
+  "prep_minutes": 30,
+  "servings": 2,
+  "difficulty": "easy",
+  "is_trending": false,
+  "popularity": 92,
+  "description_en": "Grilled coconut-garlic pork over broken rice with pickles.",
+  "description_km": "សាច់ជ្រូកអាំងខ្ទិះដូងខ្ទឹម លើបាយ ជាមួយជ្រក់។",
+  "ingredients_en": [
+   "300 g pork slices",
+   "3 tbsp coconut milk",
+   "3 cloves garlic",
+   "1 tbsp fish sauce",
+   "1 tbsp sugar",
+   "2 cups cooked rice",
+   "Pickled vegetables"
+  ],
+  "ingredients_km": [
+   "សាច់ជ្រូកហាន់ ៣០០ ក្រាម",
+   "ខ្ទិះដូង ៣ ស្លាបព្រាបាយ",
+   "ខ្ទឹមស ៣ កំពឹស",
+   "ទឹកត្រី ១ ស្លាបព្រាបាយ",
+   "ស្ករ ១ ស្លាបព្រាបាយ",
+   "បាយ ២ កែវ",
+   "ជ្រក់បន្លែ"
+  ],
+  "steps_en": [
+   "Marinate the pork with coconut milk, garlic, fish sauce and sugar.",
+   "Grill until charred at the edges.",
+   "Serve over rice with pickles."
+  ],
+  "steps_km": [
+   "ប្រឡាក់សាច់ជ្រូកជាមួយខ្ទិះដូង ខ្ទឹមស ទឹកត្រី និងស្ករ។",
+   "អាំងរហូតដល់ឆេះគែមបន្តិច។",
+   "រៀបលើបាយ ជាមួយជ្រក់។"
+  ],
+  "image_file": "File:Bay sach chrouk.jpg",
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Bay_sach_chrouk.jpg/500px-Bay_sach_chrouk.jpg",
+  "image_credit": "Photo: Mingjang Teang, CC BY-SA 4.0, via Wikimedia Commons",
+  "image_page": "https://commons.wikimedia.org/wiki/File:Bay_sach_chrouk.jpg"
+ },
+ {
+  "title_en": "Samlor Machu Trey",
+  "title_km": "សម្លម្ជូរត្រី",
+  "cuisine": "KH",
+  "category": "soup",
+  "calories": 250,
+  "prep_minutes": 35,
+  "servings": 4,
+  "difficulty": "easy",
+  "is_trending": false,
+  "popularity": 90,
+  "description_en": "Sour fish soup with pineapple and tamarind.",
+  "description_km": "សម្លម្ជូរត្រី ជាមួយម្នាស់ និងអំពិល។",
+  "ingredients_en": [
+   "400 g fish",
+   "2 tbsp tamarind paste",
+   "1 cup pineapple pieces",
+   "2 tomatoes",
+   "Morning glory or herbs",
+   "1 tbsp fish sauce"
+  ],
+  "ingredients_km": [
+   "ត្រី ៤០០ ក្រាម",
+   "ទឹកអំពិល ២ ស្លាបព្រាបាយ",
+   "ម្នាស់ ១ កែវ",
+   "ប៉េងប៉ោះ ២ ផ្លែ",
+   "ត្រកួន ឬជីរ",
+   "ទឹកត្រី ១ ស្លាបព្រាបាយ"
+  ],
+  "steps_en": [
+   "Boil water with the tamarind and pineapple.",
+   "Add the fish and tomatoes and cook for 8 minutes.",
+   "Finish with herbs and fish sauce."
+  ],
+  "steps_km": [
+   "ដាំទឹកជាមួយអំពិល និងម្នាស់។",
+   "ដាក់ត្រី និងប៉េងប៉ោះ ស្ងោរ ៨ នាទី។",
+   "បន្ថែមជីរ និងទឹកត្រី។"
+  ],
+  "image_file": "File:Samlar Machu (7947801760).jpg",
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Samlar_Machu_%287947801760%29.jpg/500px-Samlar_Machu_%287947801760%29.jpg",
+  "image_credit": "Photo: Sodanie Chea from Norwalk, Ca, United States, CC BY 2.0, via Wikimedia Commons",
+  "image_page": "https://commons.wikimedia.org/wiki/File:Samlar_Machu_(7947801760).jpg"
+ },
+ {
+  "title_en": "Khmer Chicken Curry",
+  "title_km": "សម្លការីសាច់មាន់",
+  "cuisine": "KH",
+  "category": "curry",
+  "calories": 480,
+  "prep_minutes": 50,
+  "servings": 4,
+  "difficulty": "medium",
+  "is_trending": false,
+  "popularity": 88,
+  "description_en": "Mild coconut curry with chicken, potato and sweet potato.",
+  "description_km": "ការីសាច់មាន់ខ្ទិះដូងស្រាល ជាមួយដំឡូងបារាំង និងដំឡូងជ្វា។",
+  "ingredients_en": [
+   "500 g chicken",
+   "3 tbsp red curry kroeung",
+   "400 ml coconut milk",
+   "2 potatoes",
+   "1 sweet potato",
+   "1 onion"
+  ],
+  "ingredients_km": [
+   "សាច់មាន់ ៥០០ ក្រាម",
+   "គ្រឿងការីក្រហម ៣ ស្លាបព្រាបាយ",
+   "ខ្ទិះដូង ៤០០ មីលីលីត្រ",
+   "ដំឡូងបារាំង ២ មើម",
+   "ដំឡូងជ្វា ១ មើម",
+   "ខ្ទឹមបារាំង ១ មើម"
+  ],
+  "steps_en": [
+   "Fry the curry paste until fragrant.",
+   "Add the chicken and coconut milk and bring to a simmer.",
+   "Add potato and sweet potato and cook until tender. Serve with bread or rice."
+  ],
+  "steps_km": [
+   "លីងគ្រឿងការីរហូតដល់ក្លិនឈ្ងុយ។",
+   "ដាក់សាច់មាន់ និងខ្ទិះដូង ហើយរំងាស់។",
+   "ដាក់ដំឡូង ស្ងោររហូតដល់ទន់។ ញ៉ាំជាមួយនំបុ័ង ឬបាយ។"
+  ]
+ },
+ {
+  "title_en": "Samlor Korko",
+  "title_km": "សម្លកកូរ",
+  "cuisine": "KH",
+  "category": "soup",
+  "calories": 390,
+  "prep_minutes": 60,
+  "servings": 4,
+  "difficulty": "hard",
+  "is_trending": false,
+  "popularity": 86,
+  "description_en": "Thick Khmer stirred soup with pork, vegetables and toasted rice.",
+  "description_km": "សម្លកកូរខាប់ ជាមួយសាច់ជ្រូក បន្លែ និងអង្ករលីង។",
+  "ingredients_en": [
+   "300 g pork",
+   "2 tbsp toasted rice powder",
+   "Eggplant, pumpkin and green papaya",
+   "3 tbsp kroeung paste",
+   "1 tbsp prahok",
+   "Herbs"
+  ],
+  "ingredients_km": [
+   "សាច់ជ្រូក ៣០០ ក្រាម",
+   "អង្ករលីងបុក ២ ស្លាបព្រាបាយ",
+   "ត្រប់ ល្ពៅ និងល្ហុងខ្ចី",
+   "គ្រឿង ៣ ស្លាបព្រាបាយ",
+   "ប្រហុក ១ ស្លាបព្រាបាយ",
+   "ជីរ"
+  ],
+  "steps_en": [
+   "Fry the kroeung paste and prahok with the pork.",
+   "Add water and the hard vegetables and simmer.",
+   "Stir in the toasted rice powder to thicken, then add the herbs."
+  ],
+  "steps_km": [
+   "លីងគ្រឿង និងប្រហុកជាមួយសាច់ជ្រូក។",
+   "ចាក់ទឹក ដាក់បន្លែរឹងៗ ហើយរំងាស់។",
+   "កូរអង្ករលីងចូលឱ្យខាប់ រួចដាក់ជីរ។"
+  ],
+  "image_file": "File:Samlor Korko Khmer at Peace Cafe.jpg",
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Samlor_Korko_Khmer_at_Peace_Cafe.jpg/500px-Samlor_Korko_Khmer_at_Peace_Cafe.jpg",
+  "image_credit": "Photo: Mx. Granger, CC0, via Wikimedia Commons",
+  "image_page": "https://commons.wikimedia.org/wiki/File:Samlor_Korko_Khmer_at_Peace_Cafe.jpg"
+ },
+ {
+  "title_en": "Num Kachay",
+  "title_km": "នំកាឆាយ",
+  "cuisine": "KH",
+  "category": "snack",
+  "calories": 300,
+  "prep_minutes": 40,
+  "servings": 4,
+  "difficulty": "medium",
+  "is_trending": false,
+  "popularity": 84,
+  "description_en": "Crisp fried chive cakes with a sweet and sour dip.",
+  "description_km": "នំកាឆាយចៀនស្រួយ ជាមួយទឹកជ្រលក់ជូរផ្អែម។",
+  "ingredients_en": [
+   "200 g rice flour",
+   "2 tbsp tapioca starch",
+   "1 bunch Chinese chives",
+   "Oil for frying",
+   "Sweet fish sauce dip"
+  ],
+  "ingredients_km": [
+   "ម្សៅអង្ករ ២០០ ក្រាម",
+   "ម្សៅដំឡូងមី ២ ស្លាបព្រាបាយ",
+   "គូឆាយ ១ ចង្កោម",
+   "ប្រេងសម្រាប់ចៀន",
+   "ទឹកត្រីផ្អែមជ្រលក់"
+  ],
+  "steps_en": [
+   "Mix the flours with warm water into a thick batter.",
+   "Fold in the chopped chives and shape small cakes.",
+   "Pan-fry until golden and crisp. Serve hot with the dip."
+  ],
+  "steps_km": [
+   "លាយម្សៅជាមួយទឹកក្តៅឧណ្ហៗ ឱ្យខាប់។",
+   "ដាក់គូឆាយហាន់ ហើយធ្វើជាដុំតូចៗ។",
+   "ចៀនរហូតលឿងស្រួយ។ ញ៉ាំក្តៅៗជាមួយទឹកជ្រលក់។"
+  ],
+  "image_file": "File:Cambodian deep-fried chive cakes.jpg",
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Cambodian_deep-fried_chive_cakes.jpg/500px-Cambodian_deep-fried_chive_cakes.jpg",
+  "image_credit": "Photo: Jason Eppink from New York City, USA, CC BY 2.0, via Wikimedia Commons",
+  "image_page": "https://commons.wikimedia.org/wiki/File:Cambodian_deep-fried_chive_cakes.jpg"
+ },
+ {
+  "title_en": "Lemongrass Beef Stir-fry",
+  "title_km": "ឆាគ្រឿងសាច់គោ",
+  "cuisine": "KH",
+  "category": "main",
+  "calories": 430,
+  "prep_minutes": 25,
+  "servings": 2,
+  "difficulty": "easy",
+  "is_trending": false,
+  "popularity": 82,
+  "description_en": "Beef stir-fried with lemongrass kroeung, chili and green beans.",
+  "description_km": "សាច់គោឆាគ្រឿងស្លឹកគ្រៃ ជាមួយម្ទេស និងសណ្តែកកួរ។",
+  "ingredients_en": [
+   "250 g beef",
+   "2 tbsp lemongrass kroeung",
+   "1 chili",
+   "100 g green beans",
+   "1 tbsp fish sauce",
+   "1 tbsp oil"
+  ],
+  "ingredients_km": [
+   "សាច់គោ ២៥០ ក្រាម",
+   "គ្រឿងស្លឹកគ្រៃ ២ ស្លាបព្រាបាយ",
+   "ម្ទេស ១ គ្រាប់",
+   "សណ្តែកកួរ ១០០ ក្រាម",
+   "ទឹកត្រី ១ ស្លាបព្រាបាយ",
+   "ប្រេង ១ ស្លាបព្រាបាយ"
+  ],
+  "steps_en": [
+   "Slice the beef thinly.",
+   "Fry the kroeung and chili in oil until fragrant.",
+   "Add beef, beans and fish sauce and stir on high heat for 3 minutes."
+  ],
+  "steps_km": [
+   "ហាន់សាច់គោឱ្យស្តើង។",
+   "លីងគ្រឿង និងម្ទេសក្នុងប្រេងរហូតឈ្ងុយ។",
+   "ដាក់សាច់គោ សណ្តែកកួរ និងទឹកត្រី ឆាលើភ្លើងខ្លាំង ៣ នាទី។"
+  ],
+  "image_file": "File:Cha kroeung.jpg",
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/Cha_kroeung.jpg/500px-Cha_kroeung.jpg",
+  "image_credit": "Photo: Thomas Wanhoff, CC BY-SA 2.0, via Wikimedia Commons",
+  "image_page": "https://commons.wikimedia.org/wiki/File:Cha_kroeung.jpg"
+ },
+ {
+  "title_en": "Chicken Fried Rice",
+  "title_km": "បាយឆាសាច់មាន់",
+  "cuisine": "KH",
+  "category": "rice",
+  "calories": 520,
+  "prep_minutes": 20,
+  "servings": 2,
+  "difficulty": "easy",
+  "is_trending": false,
+  "popularity": 80,
+  "description_en": "Quick wok-fried rice with chicken, egg and tomato.",
+  "description_km": "បាយឆារហ័ស ជាមួយសាច់មាន់ ស៊ុត និងប៉េងប៉ោះ។",
+  "ingredients_en": [
+   "2 cups cooked rice",
+   "1 chicken breast",
+   "2 eggs",
+   "1 tomato",
+   "1 tbsp fish sauce",
+   "1 tbsp oil"
+  ],
+  "ingredients_km": [
+   "បាយ ២ កែវ",
+   "សាច់ទ្រូងមាន់ ១ ដុំ",
+   "ស៊ុត ២ គ្រាប់",
+   "ប៉េងប៉ោះ ១ ផ្លែ",
+   "ទឹកត្រី ១ ស្លាបព្រាបាយ",
+   "ប្រេង ១ ស្លាបព្រាបាយ"
+  ],
+  "steps_en": [
+   "Fry the diced chicken until cooked.",
+   "Scramble the eggs in the wok.",
+   "Add rice, tomato and fish sauce and stir-fry for 3 minutes."
+  ],
+  "steps_km": [
+   "ឆាសាច់មាន់ហាន់ដុំឱ្យឆ្អិន។",
+   "វាយស៊ុតក្នុងខ្ទះ។",
+   "ដាក់បាយ ប៉េងប៉ោះ និងទឹកត្រី ឆា ៣ នាទី។"
+  ],
+  "image_file": "File:Hongkong Fried Rice 2.jpg",
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Hongkong_Fried_Rice_2.jpg/500px-Hongkong_Fried_Rice_2.jpg",
+  "image_credit": "Photo: Bajinra, CC0, via Wikimedia Commons",
+  "image_page": "https://commons.wikimedia.org/wiki/File:Hongkong_Fried_Rice_2.jpg"
+ },
+ {
+  "title_en": "Prahok Ktis",
+  "title_km": "ប្រហុកខ្ទិះ",
+  "cuisine": "KH",
+  "category": "main",
+  "calories": 450,
+  "prep_minutes": 30,
+  "servings": 4,
+  "difficulty": "medium",
+  "is_trending": false,
+  "popularity": 79,
+  "description_en": "Creamy pork and prahok dip in coconut milk, eaten with fresh vegetables.",
+  "description_km": "ប្រហុកខ្ទិះសាច់ជ្រូក ខ្ទិះដូង ញ៉ាំជាមួយបន្លែស្រស់។",
+  "ingredients_en": [
+   "200 g minced pork",
+   "2 tbsp prahok",
+   "300 ml coconut milk",
+   "2 tbsp kroeung paste",
+   "3 pea eggplants",
+   "Fresh vegetables to dip"
+  ],
+  "ingredients_km": [
+   "សាច់ជ្រូកចិញ្ច្រាំ ២០០ ក្រាម",
+   "ប្រហុក ២ ស្លាបព្រាបាយ",
+   "ខ្ទិះដូង ៣០០ មីលីលីត្រ",
+   "គ្រឿង ២ ស្លាបព្រាបាយ",
+   "ត្រប់ពុត ៣ គ្រាប់",
+   "បន្លែស្រស់សម្រាប់ជ្រលក់"
+  ],
+  "steps_en": [
+   "Simmer the coconut milk with the kroeung paste.",
+   "Add the pork and prahok and cook, stirring, for 10 minutes.",
+   "Add the pea eggplants and serve with fresh vegetables."
+  ],
+  "steps_km": [
+   "រំងាស់ខ្ទិះដូងជាមួយគ្រឿង។",
+   "ដាក់សាច់ជ្រូក និងប្រហុក កូរ ១០ នាទី។",
+   "ដាក់ត្រប់ពុត ហើយញ៉ាំជាមួយបន្លែស្រស់។"
+  ],
+  "image_file": "File:Prahok ktiss.jpg",
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Prahok_ktiss.jpg/500px-Prahok_ktiss.jpg",
+  "image_credit": "Photo: Timothy Vollmer, CC BY 2.0, via Wikimedia Commons",
+  "image_page": "https://commons.wikimedia.org/wiki/File:Prahok_ktiss.jpg"
+ },
+ {
+  "title_en": "Kdam Chhar",
+  "title_km": "ក្តាមឆាម្រេចខ្ចី",
+  "cuisine": "KH",
+  "category": "main",
+  "calories": 330,
+  "prep_minutes": 30,
+  "servings": 2,
+  "difficulty": "medium",
+  "is_trending": true,
+  "popularity": 78,
+  "description_en": "Crab stir-fried with fresh Kampot green peppercorns.",
+  "description_km": "ក្តាមឆាជាមួយម្រេចខ្ចីកំពត។",
+  "ingredients_en": [
+   "2 blue crabs",
+   "3 stems fresh green peppercorns",
+   "3 cloves garlic",
+   "1 tbsp oyster sauce",
+   "1 tbsp fish sauce",
+   "1 tbsp oil"
+  ],
+  "ingredients_km": [
+   "ក្តាមសេះ ២ ក្បាល",
+   "ម្រេចខ្ចី ៣ ចង្កោម",
+   "ខ្ទឹមស ៣ កំពឹស",
+   "ប្រេងខ្យង ១ ស្លាបព្រាបាយ",
+   "ទឹកត្រី ១ ស្លាបព្រាបាយ",
+   "ប្រេង ១ ស្លាបព្រាបាយ"
+  ],
+  "steps_en": [
+   "Clean the crabs and cut them in half.",
+   "Fry the garlic, then add the crab and stir for 5 minutes.",
+   "Add the peppercorns and sauces and cook for 3 more minutes."
+  ],
+  "steps_km": [
+   "លាងក្តាមឱ្យស្អាត ហើយកាត់ពាក់កណ្តាល។",
+   "លីងខ្ទឹមស រួចដាក់ក្តាម ឆា ៥ នាទី។",
+   "ដាក់ម្រេចខ្ចី និងទឹកជ្រលក់ ឆា ៣ នាទីទៀត។"
+  ],
+  "image_file": "File:Fried crab with green pepper.jpg",
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Fried_crab_with_green_pepper.jpg/500px-Fried_crab_with_green_pepper.jpg",
+  "image_credit": "Photo: eric yeargan, CC BY 2.0, via Wikimedia Commons",
+  "image_page": "https://commons.wikimedia.org/wiki/File:Fried_crab_with_green_pepper.jpg"
+ },
+ {
+  "title_en": "Num Pang",
+  "title_km": "នំបុ័ងសាច់",
+  "cuisine": "KH",
+  "category": "snack",
+  "calories": 480,
+  "prep_minutes": 15,
+  "servings": 1,
+  "difficulty": "easy",
+  "is_trending": true,
+  "popularity": 77,
+  "description_en": "Khmer baguette sandwich with pâté, meat, pickles and herbs.",
+  "description_km": "នំបុ័ងខ្មែរ ជាមួយប៉ាតេ សាច់ ជ្រក់ និងជីរ។",
+  "ingredients_en": [
+   "1 baguette",
+   "2 tbsp pâté",
+   "80 g grilled pork or cold cuts",
+   "Pickled carrot and papaya",
+   "Cucumber and cilantro",
+   "Chili sauce"
+  ],
+  "ingredients_km": [
+   "នំបុ័ង ១ ដើម",
+   "ប៉ាតេ ២ ស្លាបព្រាបាយ",
+   "សាច់ជ្រូកអាំង ឬសាច់ក្រក ៨០ ក្រាម",
+   "ជ្រក់ការ៉ុត និងល្ហុង",
+   "ត្រសក់ និងជីវ៉ាន់ស៊ុយ",
+   "ទឹកម្ទេស"
+  ],
+  "steps_en": [
+   "Warm the baguette and slice it open.",
+   "Spread with pâté and add the meat.",
+   "Fill with pickles, cucumber and herbs, and add chili sauce."
+  ],
+  "steps_km": [
+   "កម្តៅនំបុ័ង ហើយវះចំហ។",
+   "លាបប៉ាតេ ហើយដាក់សាច់។",
+   "ដាក់ជ្រក់ ត្រសក់ ជីរ និងទឹកម្ទេស។"
+  ],
+  "image_file": "File:Catfish peppercorn num pang.jpg",
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Catfish_peppercorn_num_pang.jpg/500px-Catfish_peppercorn_num_pang.jpg",
+  "image_credit": "Photo: Krista, CC BY 2.0, via Wikimedia Commons",
+  "image_page": "https://commons.wikimedia.org/wiki/File:Catfish_peppercorn_num_pang.jpg"
+ },
+ {
+  "title_en": "Samlor Machu Youn",
+  "title_km": "សម្លម្ជូរយួន",
+  "cuisine": "KH",
+  "category": "soup",
+  "calories": 220,
+  "prep_minutes": 35,
+  "servings": 4,
+  "difficulty": "easy",
+  "is_trending": false,
+  "popularity": 76,
+  "description_en": "Sweet and sour fish soup with pineapple, tomato and herbs.",
+  "description_km": "សម្លម្ជូរយួនជូរផ្អែម ជាមួយម្នាស់ ប៉េងប៉ោះ និងជីរ។",
+  "ingredients_en": [
+   "400 g catfish",
+   "2 tbsp tamarind paste",
+   "1 cup pineapple",
+   "2 tomatoes",
+   "Bean sprouts and lotus stems",
+   "Rice paddy herb and fried garlic"
+  ],
+  "ingredients_km": [
+   "ត្រីអណ្តែង ៤០០ ក្រាម",
+   "ទឹកអំពិល ២ ស្លាបព្រាបាយ",
+   "ម្នាស់ ១ កែវ",
+   "ប៉េងប៉ោះ ២ ផ្លែ",
+   "សណ្តែកបណ្តុះ និងក្រអៅឈូក",
+   "ម្អម និងខ្ទឹមចៀន"
+  ],
+  "steps_en": [
+   "Boil water with tamarind, pineapple and a little sugar.",
+   "Add the fish and tomatoes and cook for 8 minutes.",
+   "Add the vegetables, then top with herbs and fried garlic."
+  ],
+  "steps_km": [
+   "ដាំទឹកជាមួយអំពិល ម្នាស់ និងស្ករបន្តិច។",
+   "ដាក់ត្រី និងប៉េងប៉ោះ ស្ងោរ ៨ នាទី។",
+   "ដាក់បន្លែ រួចរោយម្អម និងខ្ទឹមចៀន។"
+  ],
+  "image_file": "File:Canh chua cá lóc ở Thủy Trúc Quán, đường Nguyễn Nhữ Lãm (1).jpg",
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Canh_chua_c%C3%A1_l%C3%B3c_%E1%BB%9F_Th%E1%BB%A7y_Tr%C3%BAc_Qu%C3%A1n%2C_%C4%91%C6%B0%E1%BB%9Dng_Nguy%E1%BB%85n_Nh%E1%BB%AF_L%C3%A3m_%281%29.jpg/500px-Canh_chua_c%C3%A1_l%C3%B3c_%E1%BB%9F_Th%E1%BB%A7y_Tr%C3%BAc_Qu%C3%A1n%2C_%C4%91%C6%B0%E1%BB%9Dng_Nguy%E1%BB%85n_Nh%E1%BB%AF_L%C3%A3m_%281%29.jpg",
+  "image_credit": "Photo: Phương Huy (thảo luận), Public domain, via Wikimedia Commons",
+  "image_page": "https://commons.wikimedia.org/wiki/File:Canh_chua_c%C3%A1_l%C3%B3c_%E1%BB%9F_Th%E1%BB%A7y_Tr%C3%BAc_Qu%C3%A1n,_%C4%91%C6%B0%E1%BB%9Dng_Nguy%E1%BB%85n_Nh%E1%BB%AF_L%C3%A3m_(1).jpg"
+ },
+ {
+  "title_en": "Num Ansom",
+  "title_km": "នំអន្សម",
+  "cuisine": "KH",
+  "category": "sweet",
+  "calories": 320,
+  "prep_minutes": 120,
+  "servings": 6,
+  "difficulty": "hard",
+  "is_trending": false,
+  "popularity": 75,
+  "description_en": "Sticky rice cake with banana, wrapped in banana leaf and boiled.",
+  "description_km": "នំអន្សមចេក ធ្វើពីបាយដំណើប ខ្ចប់ស្លឹកចេក ហើយស្ងោរ។",
+  "ingredients_en": [
+   "500 g sticky rice",
+   "200 ml coconut milk",
+   "3 ripe bananas",
+   "1 tsp salt",
+   "2 tbsp sugar",
+   "Banana leaves and string"
+  ],
+  "ingredients_km": [
+   "អង្ករដំណើប ៥០០ ក្រាម",
+   "ខ្ទិះដូង ២០០ មីលីលីត្រ",
+   "ចេកទុំ ៣ ផ្លែ",
+   "អំបិល ១ ស្លាបព្រាកាហ្វេ",
+   "ស្ករ ២ ស្លាបព្រាបាយ",
+   "ស្លឹកចេក និងខ្សែ"
+  ],
+  "steps_en": [
+   "Soak the sticky rice for 4 hours, then mix with coconut milk, salt and sugar.",
+   "Wrap the rice around a banana in banana leaves and tie tightly.",
+   "Boil for 90 minutes and cool before slicing."
+  ],
+  "steps_km": [
+   "ត្រាំអង្ករដំណើប ៤ ម៉ោង រួចលាយខ្ទិះដូង អំបិល និងស្ករ។",
+   "ខ្ចប់អង្ករព័ទ្ធជុំវិញចេក ក្នុងស្លឹកចេក ហើយចងឱ្យណែន។",
+   "ស្ងោរ ៩០ នាទី ទុកឱ្យត្រជាក់ ទើបកាត់។"
+  ],
+  "image_file": "File:Num ansom chek Khmer Cambodian dessert rice cake.jpg",
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Num_ansom_chek_Khmer_Cambodian_dessert_rice_cake.jpg/500px-Num_ansom_chek_Khmer_Cambodian_dessert_rice_cake.jpg",
+  "image_credit": "Photo: MoonsMoon, CC BY 4.0, via Wikimedia Commons",
+  "image_page": "https://commons.wikimedia.org/wiki/File:Num_ansom_chek_Khmer_Cambodian_dessert_rice_cake.jpg"
+ },
+ {
+  "title_en": "Tuk Ampov",
+  "title_km": "ទឹកអំពៅ",
+  "cuisine": "KH",
+  "category": "drinks",
+  "calories": 180,
+  "prep_minutes": 10,
+  "servings": 2,
+  "difficulty": "easy",
+  "is_trending": false,
+  "popularity": 74,
+  "description_en": "Fresh-pressed sugarcane juice with a squeeze of lime over ice.",
+  "description_km": "ទឹកអំពៅកិនស្រស់ ជាមួយក្រូចឆ្មាបន្តិច និងទឹកកក។",
+  "ingredients_en": [
+   "4 sticks peeled sugarcane",
+   "1 calamansi or lime",
+   "Ice"
+  ],
+  "ingredients_km": [
+   "អំពៅចិតសំបក ៤ ដើម",
+   "ក្រូចឆ្មា ១ ផ្លែ",
+   "ទឹកកក"
+  ],
+  "steps_en": [
+   "Press the sugarcane through a juicer.",
+   "Add a squeeze of lime.",
+   "Pour over ice and drink fresh."
+  ],
+  "steps_km": [
+   "កិនអំពៅយកទឹក។",
+   "ច្របាច់ក្រូចឆ្មាបន្តិច។",
+   "ចាក់លើទឹកកក ហើយផឹកភ្លាមៗ។"
+  ],
+  "image_file": "File:Sugar cane juice in Phnom Penh 4.jpg",
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Sugar_cane_juice_in_Phnom_Penh_4.jpg/500px-Sugar_cane_juice_in_Phnom_Penh_4.jpg",
+  "image_credit": "Photo: Mx. Granger, CC0, via Wikimedia Commons",
+  "image_page": "https://commons.wikimedia.org/wiki/File:Sugar_cane_juice_in_Phnom_Penh_4.jpg"
+ }
+]

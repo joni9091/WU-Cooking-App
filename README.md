@@ -69,6 +69,17 @@ The tab icons in `Resources/Images/tab_*.svg` are temporary stand-ins from Lucid
 
 Apply a new migration file by pasting it into Supabase dashboard → SQL Editor → Run, then note in the file that it is applied.
 
+## Recipes and countries (seed data)
+
+Recipes live in `supabase/seed/recipes_*.json` and countries in `supabase/seed/cuisines.json`. To add or change a recipe:
+
+1. Edit the JSON file. Every recipe needs English **and** Khmer text, with the same number of ingredients and steps in both.
+2. For a new photo, set `image_file` to a Wikimedia Commons file name (for example `File:Fish Amok with Rice.jpg`), then run `python3 -I tools/fetch_image_credits.py` to fill in the photo link and credit.
+3. Run `python3 -I tools/build_seed.py`. It checks every rule (calories 50–1500, 1–2 sentence descriptions, at least 10 Cambodian and 2 per country…) and writes `supabase/seed.sql`.
+4. Copy it with `pbcopy < supabase/seed.sql`, paste it into Supabase → SQL Editor and click Run. It is safe to run again: existing recipes are updated, not duplicated.
+
+Photos come from Wikimedia Commons. Many licences require credit, so `image_credit` must be shown on the recipe detail page.
+
 ## Secrets
 
 - Never commit real keys. `.env` is ignored by git; copy `.env.example` to `.env` for local use.

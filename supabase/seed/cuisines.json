@@ -1,0 +1,22 @@
+[
+{"code":"KH","name_en":"Cambodia","name_km":"កម្ពុជា","adjective_en":"Cambodian","adjective_km":"ខ្មែរ","flag_emoji":"🇰🇭","sort_order":1},
+{"code":"VN","name_en":"Vietnam","name_km":"វៀតណាម","adjective_en":"Vietnamese","adjective_km":null,"flag_emoji":"🇻🇳","sort_order":3},
+{"code":"LA","name_en":"Laos","name_km":"ឡាវ","adjective_en":"Lao","adjective_km":null,"flag_emoji":"🇱🇦","sort_order":4},
+{"code":"MM","name_en":"Myanmar","name_km":"មីយ៉ាន់ម៉ា","adjective_en":"Burmese","adjective_km":null,"flag_emoji":"🇲🇲","sort_order":5},
+{"code":"CN","name_en":"China","name_km":"ចិន","adjective_en":"Chinese","adjective_km":null,"flag_emoji":"🇨🇳","sort_order":6},
+{"code":"JP","name_en":"Japan","name_km":"ជប៉ុន","adjective_en":"Japanese","adjective_km":null,"flag_emoji":"🇯🇵","sort_order":7},
+{"code":"KR","name_en":"South Korea","name_km":"កូរ៉េខាងត្បូង","adjective_en":"Korean","adjective_km":null,"flag_emoji":"🇰🇷","sort_order":8},
+{"code":"IN","name_en":"India","name_km":"ឥណ្ឌា","adjective_en":"Indian","adjective_km":null,"flag_emoji":"🇮🇳","sort_order":9},
+{"code":"PH","name_en":"Philippines","name_km":"ហ្វីលីពីន","adjective_en":"Filipino","adjective_km":null,"flag_emoji":"🇵🇭","sort_order":10},
+{"code":"ID","name_en":"Indonesia","name_km":"ឥណ្ឌូនេស៊ី","adjective_en":"Indonesian","adjective_km":null,"flag_emoji":"🇮🇩","sort_order":11},
+{"code":"MY","name_en":"Malaysia","name_km":"ម៉ាឡេស៊ី","adjective_en":"Malaysian","adjective_km":null,"flag_emoji":"🇲🇾","sort_order":12},
+{"code":"SG","name_en":"Singapore","name_km":"សិង្ហបុរី","adjective_en":"Singaporean","adjective_km":null,"flag_emoji":"🇸🇬","sort_order":13},
+{"code":"IT","name_en":"Italy","name_km":"អ៊ីតាលី","adjective_en":"Italian","adjective_km":null,"flag_emoji":"🇮🇹","sort_order":14},
+{"code":"FR","name_en":"France","name_km":"បារាំង","adjective_en":"French","adjective_km":null,"flag_emoji":"🇫🇷","sort_order":15},
+{"code":"ES","name_en":"Spain","name_km":"អេស្ប៉ាញ","adjective_en":"Spanish","adjective_km":null,"flag_emoji":"🇪🇸","sort_order":16},
+{"code":"US","name_en":"United States","name_km":"សហរដ្ឋអាមេរិក","adjective_en":"American","adjective_km":null,"flag_emoji":"🇺🇸","sort_order":17},
+{"code":"MX","name_en":"Mexico","name_km":"ម៉ិកស៊ិក","adjective_en":"Mexican","adjective_km":null,"flag_emoji":"🇲🇽","sort_order":18},
+{"code":"TR","name_en":"Turkey","name_km":"តួកគី","adjective_en":"Turkish","adjective_km":null,"flag_emoji":"🇹🇷","sort_order":19},
+{"code":"GR","name_en":"Greece","name_km":"ក្រិក","adjective_en":"Greek","adjective_km":null,"flag_emoji":"🇬🇷","sort_order":20},
+{"code":"GB","name_en":"United Kingdom","name_km":"ចក្រភពអង់គ្លេស","adjective_en":"British","adjective_km":null,"flag_emoji":"🇬🇧","sort_order":99}
+]

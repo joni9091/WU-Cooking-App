@@ -1,0 +1,998 @@
+[
+ {
+  "title_en": "Pho Bo",
+  "title_km": "ផើសាច់គោ",
+  "cuisine": "VN",
+  "category": "noodles",
+  "calories": 420,
+  "prep_minutes": 90,
+  "servings": 4,
+  "difficulty": "hard",
+  "is_trending": false,
+  "popularity": 70,
+  "description_en": "Vietnamese beef noodle soup with a star anise and ginger broth.",
+  "description_km": "គុយទាវសាច់គោវៀតណាម ជាមួយទឹកស៊ុបផ្កាចន្ទ និងខ្ញី។",
+  "ingredients_en": [
+   "1 kg beef bones",
+   "400 g rice noodles",
+   "2 star anise and 1 cinnamon stick",
+   "1 piece ginger",
+   "200 g thin beef slices",
+   "Herbs, bean sprouts and lime"
+  ],
+  "ingredients_km": [
+   "ឆ្អឹងគោ ១ គីឡូក្រាម",
+   "គុយទាវ ៤០០ ក្រាម",
+   "ផ្កាចន្ទ ២ និងសំបកឈើក្រអូប ១",
+   "ខ្ញី ១ ដុំ",
+   "សាច់គោហាន់ស្តើង ២០០ ក្រាម",
+   "ជីរ សណ្តែកបណ្តុះ និងក្រូចឆ្មា"
+  ],
+  "steps_en": [
+   "Simmer the bones with toasted spices and ginger for 2 hours.",
+   "Cook the noodles and put them in bowls with raw beef.",
+   "Pour the boiling broth over and add herbs and lime."
+  ],
+  "steps_km": [
+   "រំងាស់ឆ្អឹងជាមួយគ្រឿងទេសលីង និងខ្ញី ២ ម៉ោង។",
+   "ស្ងោរគុយទាវ ដាក់ក្នុងចានជាមួយសាច់គោឆៅ។",
+   "ចាក់ទឹកស៊ុបពុះពីលើ ហើយដាក់ជីរ និងក្រូចឆ្មា។"
+  ],
+  "image_file": "File:Beef noodle soup (Phở bò) - Pho Hanoi Authentic 2024-12-01.jpg",
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Beef_noodle_soup_%28Ph%E1%BB%9F_b%C3%B2%29_-_Pho_Hanoi_Authentic_2024-12-01.jpg/500px-Beef_noodle_soup_%28Ph%E1%BB%9F_b%C3%B2%29_-_Pho_Hanoi_Authentic_2024-12-01.jpg",
+  "image_credit": "Photo: Andy Li, CC0, via Wikimedia Commons",
+  "image_page": "https://commons.wikimedia.org/wiki/File:Beef_noodle_soup_(Ph%E1%BB%9F_b%C3%B2)_-_Pho_Hanoi_Authentic_2024-12-01.jpg"
+ },
+ {
+  "title_en": "Banh Xeo",
+  "title_km": "នំបាញ់ឆែវ",
+  "cuisine": "VN",
+  "category": "snack",
+  "calories": 410,
+  "prep_minutes": 40,
+  "servings": 4,
+  "difficulty": "medium",
+  "is_trending": true,
+  "popularity": 69,
+  "description_en": "Crispy turmeric rice pancake filled with shrimp, pork and bean sprouts.",
+  "description_km": "នំបាញ់ឆែវម្សៅអង្ករលាយរមៀតស្រួយ ញាត់បង្គា សាច់ជ្រូក និងសណ្តែកបណ្តុះ។",
+  "ingredients_en": [
+   "200 g rice flour",
+   "200 ml coconut milk",
+   "1 tsp turmeric",
+   "150 g shrimp",
+   "100 g pork belly",
+   "Bean sprouts and lettuce"
+  ],
+  "ingredients_km": [
+   "ម្សៅអង្ករ ២០០ ក្រាម",
+   "ខ្ទិះដូង ២០០ មីលីលីត្រ",
+   "ម្សៅរមៀត ១ ស្លាបព្រាកាហ្វេ",
+   "បង្គា ១៥០ ក្រាម",
+   "សាច់ជ្រូកបីជាន់ ១០០ ក្រាម",
+   "សណ្តែកបណ្តុះ និងសាឡាត់"
+  ],
+  "steps_en": [
+   "Whisk the flour, coconut milk, turmeric and water into a thin batter.",
+   "Fry the pork and shrimp, pour in batter and swirl.",
+   "Add bean sprouts, cover, then fold when crisp. Wrap in lettuce to eat."
+  ],
+  "steps_km": [
+   "លាយម្សៅ ខ្ទិះដូង រមៀត និងទឹកឱ្យរាវ។",
+   "ឆាសាច់ជ្រូក និងបង្គា រួចចាក់ម្សៅ ហើយគ្រវីឱ្យរាល។",
+   "ដាក់សណ្តែកបណ្តុះ គ្រប ហើយបត់ពេលស្រួយ។ ខ្ចប់សាឡាត់ញ៉ាំ។"
+  ],
+  "image_file": "File:Crispy Vietnamese Pancake (Banh Xeo) - Xin Chao, Eastbourne 2026-08-14 (1).jpg",
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Crispy_Vietnamese_Pancake_%28Banh_Xeo%29_-_Xin_Chao%2C_Eastbourne_2026-08-14_%281%29.jpg/500px-Crispy_Vietnamese_Pancake_%28Banh_Xeo%29_-_Xin_Chao%2C_Eastbourne_2026-08-14_%281%29.jpg",
+  "image_credit": "Photo: Andy Li, CC0, via Wikimedia Commons",
+  "image_page": "https://commons.wikimedia.org/wiki/File:Crispy_Vietnamese_Pancake_(Banh_Xeo)_-_Xin_Chao,_Eastbourne_2026-08-14_(1).jpg"
+ },
+ {
+  "title_en": "Ca Phe Sua Da",
+  "title_km": "កាហ្វេទឹកដោះគោទឹកកក",
+  "cuisine": "VN",
+  "category": "drinks",
+  "calories": 190,
+  "prep_minutes": 10,
+  "servings": 1,
+  "difficulty": "easy",
+  "is_trending": false,
+  "popularity": 68,
+  "description_en": "Strong drip coffee with sweet condensed milk over ice.",
+  "description_km": "កាហ្វេដាំខ្លាំង ជាមួយទឹកដោះគោខាប់ និងទឹកកក។",
+  "ingredients_en": [
+   "2 tbsp dark ground coffee",
+   "2 tbsp condensed milk",
+   "100 ml hot water",
+   "Ice"
+  ],
+  "ingredients_km": [
+   "ម្សៅកាហ្វេខ្មៅ ២ ស្លាបព្រាបាយ",
+   "ទឹកដោះគោខាប់ ២ ស្លាបព្រាបាយ",
+   "ទឹកក្តៅ ១០០ មីលីលីត្រ",
+   "ទឹកកក"
+  ],
+  "steps_en": [
+   "Put condensed milk in a glass.",
+   "Drip the coffee through a phin filter over it.",
+   "Stir and pour over ice."
+  ],
+  "steps_km": [
+   "ដាក់ទឹកដោះគោខាប់ក្នុងកែវ។",
+   "ចម្រោះកាហ្វេតាមតម្រងភីនពីលើ។",
+   "កូរ ហើយចាក់លើទឹកកក។"
+  ],
+  "image_file": "File:Ca Phe Sua Da.jpg",
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Ca_Phe_Sua_Da.jpg/500px-Ca_Phe_Sua_Da.jpg",
+  "image_credit": "Photo: Clarin, CC BY 2.5, via Wikimedia Commons",
+  "image_page": "https://commons.wikimedia.org/wiki/File:Ca_Phe_Sua_Da.jpg"
+ },
+ {
+  "title_en": "Larb",
+  "title_km": "ឡាប",
+  "cuisine": "LA",
+  "category": "salad",
+  "calories": 310,
+  "prep_minutes": 25,
+  "servings": 2,
+  "difficulty": "easy",
+  "is_trending": false,
+  "popularity": 66,
+  "description_en": "Lao minced chicken salad with lime, toasted rice and mint.",
+  "description_km": "ញាំសាច់មាន់ចិញ្ច្រាំឡាវ ជាមួយក្រូចឆ្មា អង្ករលីង និងជីរអង្កាម។",
+  "ingredients_en": [
+   "300 g minced chicken",
+   "2 tbsp lime juice",
+   "1 tbsp fish sauce",
+   "1 tbsp toasted rice powder",
+   "2 shallots",
+   "Mint and cilantro"
+  ],
+  "ingredients_km": [
+   "សាច់មាន់ចិញ្ច្រាំ ៣០០ ក្រាម",
+   "ទឹកក្រូចឆ្មា ២ ស្លាបព្រាបាយ",
+   "ទឹកត្រី ១ ស្លាបព្រាបាយ",
+   "អង្ករលីងបុក ១ ស្លាបព្រាបាយ",
+   "ខ្ទឹមក្រហម ២ មើម",
+   "ជីរអង្កាម និងជីវ៉ាន់ស៊ុយ"
+  ],
+  "steps_en": [
+   "Cook the chicken in a dry pan with a splash of water.",
+   "Mix with lime, fish sauce, shallots and rice powder.",
+   "Toss with fresh herbs and serve with sticky rice."
+  ],
+  "steps_km": [
+   "ឆាសាច់មាន់ក្នុងខ្ទះ ជាមួយទឹកបន្តិច។",
+   "លាយទឹកក្រូចឆ្មា ទឹកត្រី ខ្ទឹមក្រហម និងអង្ករលីង។",
+   "ច្របល់ជីរស្រស់ ហើយញ៉ាំជាមួយបាយដំណើប។"
+  ],
+  "image_file": "File:Day 224- Chicken Larb (7947748382).jpg",
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Day_224-_Chicken_Larb_%287947748382%29.jpg/500px-Day_224-_Chicken_Larb_%287947748382%29.jpg",
+  "image_credit": "Photo: Sodanie Chea from Norwalk, Ca, United States, CC BY 2.0, via Wikimedia Commons",
+  "image_page": "https://commons.wikimedia.org/wiki/File:Day_224-_Chicken_Larb_(7947748382).jpg"
+ },
+ {
+  "title_en": "Tam Mak Hoong",
+  "title_km": "បុកល្ហុងឡាវ",
+  "cuisine": "LA",
+  "category": "salad",
+  "calories": 150,
+  "prep_minutes": 15,
+  "servings": 2,
+  "difficulty": "easy",
+  "is_trending": false,
+  "popularity": 65,
+  "description_en": "Spicy pounded green papaya salad, Lao style.",
+  "description_km": "បុកល្ហុងហឹរ តាមរបៀបឡាវ។",
+  "ingredients_en": [
+   "2 cups shredded green papaya",
+   "2 chilies",
+   "2 cloves garlic",
+   "1 tomato",
+   "1 tbsp fish sauce",
+   "1 lime"
+  ],
+  "ingredients_km": [
+   "ល្ហុងខ្ចីចិត ២ កែវ",
+   "ម្ទេស ២ គ្រាប់",
+   "ខ្ទឹមស ២ កំពឹស",
+   "ប៉េងប៉ោះ ១ ផ្លែ",
+   "ទឹកត្រី ១ ស្លាបព្រាបាយ",
+   "ក្រូចឆ្មា ១ ផ្លែ"
+  ],
+  "steps_en": [
+   "Pound the chilies and garlic in a mortar.",
+   "Add tomato, fish sauce and lime and bruise lightly.",
+   "Add the papaya and pound gently until mixed."
+  ],
+  "steps_km": [
+   "បុកម្ទេស និងខ្ទឹមសក្នុងត្បាល់។",
+   "ដាក់ប៉េងប៉ោះ ទឹកត្រី និងក្រូចឆ្មា បុកស្រាលៗ។",
+   "ដាក់ល្ហុង ហើយបុកថ្នមៗឱ្យសព្វ។"
+  ],
+  "image_file": "File:Lao green papaya salad.jpg",
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Lao_green_papaya_salad.jpg/500px-Lao_green_papaya_salad.jpg",
+  "image_credit": "Photo: Jpatokal, CC BY-SA 4.0, via Wikimedia Commons",
+  "image_page": "https://commons.wikimedia.org/wiki/File:Lao_green_papaya_salad.jpg"
+ },
+ {
+  "title_en": "Mohinga",
+  "title_km": "មហ៊ីងហ្គា",
+  "cuisine": "MM",
+  "category": "noodles",
+  "calories": 400,
+  "prep_minutes": 60,
+  "servings": 4,
+  "difficulty": "medium",
+  "is_trending": false,
+  "popularity": 64,
+  "description_en": "Burmese fish and lemongrass noodle soup, eaten for breakfast.",
+  "description_km": "គុយទាវទឹកត្រីស្លឹកគ្រៃភូមា សម្រាប់អាហារពេលព្រឹក។",
+  "ingredients_en": [
+   "300 g catfish",
+   "300 g thin rice noodles",
+   "2 stalks lemongrass",
+   "2 tbsp chickpea flour",
+   "1 onion",
+   "Boiled eggs and lime"
+  ],
+  "ingredients_km": [
+   "ត្រីអណ្តែង ៣០០ ក្រាម",
+   "មីអង្ករស្តើង ៣០០ ក្រាម",
+   "ស្លឹកគ្រៃ ២ ដើម",
+   "ម្សៅសណ្តែកងួរ ២ ស្លាបព្រាបាយ",
+   "ខ្ទឹមបារាំង ១ មើម",
+   "ស៊ុតស្ងោរ និងក្រូចឆ្មា"
+  ],
+  "steps_en": [
+   "Poach the fish with lemongrass and flake it.",
+   "Fry onion, add the fish and broth, and thicken with chickpea flour.",
+   "Serve over noodles with egg and lime."
+  ],
+  "steps_km": [
+   "ស្ងោរត្រីជាមួយស្លឹកគ្រៃ ហើយបកយកសាច់។",
+   "លីងខ្ទឹមបារាំង ដាក់ត្រី និងទឹកស៊ុប រួចធ្វើឱ្យខាប់ដោយម្សៅសណ្តែក។",
+   "ចាក់លើមី ជាមួយស៊ុត និងក្រូចឆ្មា។"
+  ],
+  "image_file": "File:Mohinga bowl.jpg",
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Mohinga_bowl.jpg/500px-Mohinga_bowl.jpg",
+  "image_credit": "Photo: Junosang, CC0, via Wikimedia Commons",
+  "image_page": "https://commons.wikimedia.org/wiki/File:Mohinga_bowl.jpg"
+ },
+ {
+  "title_en": "Lahpet Thoke",
+  "title_km": "ញាំស្លឹកតែភូមា",
+  "cuisine": "MM",
+  "category": "salad",
+  "calories": 280,
+  "prep_minutes": 15,
+  "servings": 2,
+  "difficulty": "easy",
+  "is_trending": false,
+  "popularity": 63,
+  "description_en": "Burmese fermented tea leaf salad with crunchy beans and nuts.",
+  "description_km": "ញាំស្លឹកតែជ្រលក់ភូមា ជាមួយសណ្តែក និងគ្រាប់ស្រួយ។",
+  "ingredients_en": [
+   "3 tbsp fermented tea leaves",
+   "2 cups shredded cabbage",
+   "1 tomato",
+   "3 tbsp fried beans and peanuts",
+   "1 tbsp sesame seeds",
+   "1 lime"
+  ],
+  "ingredients_km": [
+   "ស្លឹកតែជ្រលក់ ៣ ស្លាបព្រាបាយ",
+   "ស្ពៃក្តោបចិត ២ កែវ",
+   "ប៉េងប៉ោះ ១ ផ្លែ",
+   "សណ្តែកចៀន និងសណ្តែកដី ៣ ស្លាបព្រាបាយ",
+   "ល្ង ១ ស្លាបព្រាបាយ",
+   "ក្រូចឆ្មា ១ ផ្លែ"
+  ],
+  "steps_en": [
+   "Put the cabbage and tomato in a bowl.",
+   "Add the tea leaves, beans, peanuts and sesame.",
+   "Squeeze over lime and toss just before eating."
+  ],
+  "steps_km": [
+   "ដាក់ស្ពៃក្តោប និងប៉េងប៉ោះក្នុងចាន។",
+   "ដាក់ស្លឹកតែ សណ្តែក សណ្តែកដី និងល្ង។",
+   "ច្របាច់ក្រូចឆ្មា ហើយច្របល់មុនញ៉ាំ។"
+  ],
+  "image_file": "File:Fermented Tea Leaf Salad.jpg",
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Fermented_Tea_Leaf_Salad.jpg/500px-Fermented_Tea_Leaf_Salad.jpg",
+  "image_credit": "Photo: Saosukham, CC0, via Wikimedia Commons",
+  "image_page": "https://commons.wikimedia.org/wiki/File:Fermented_Tea_Leaf_Salad.jpg"
+ },
+ {
+  "title_en": "Mapo Tofu",
+  "title_km": "តៅហ៊ូម៉ាប៉ូ",
+  "cuisine": "CN",
+  "category": "main",
+  "calories": 380,
+  "prep_minutes": 25,
+  "servings": 3,
+  "difficulty": "medium",
+  "is_trending": false,
+  "popularity": 62,
+  "description_en": "Sichuan tofu in a spicy, numbing chili and bean sauce with minced pork.",
+  "description_km": "តៅហ៊ូស៊ីឈួន ក្នុងទឹកម្ទេសសណ្តែកហឹរ ជាមួយសាច់ជ្រូកចិញ្ច្រាំ។",
+  "ingredients_en": [
+   "400 g soft tofu",
+   "100 g minced pork",
+   "2 tbsp chili bean paste",
+   "1 tsp Sichuan pepper",
+   "2 cloves garlic",
+   "1 tsp cornstarch"
+  ],
+  "ingredients_km": [
+   "តៅហ៊ូទន់ ៤០០ ក្រាម",
+   "សាច់ជ្រូកចិញ្ច្រាំ ១០០ ក្រាម",
+   "ទឹកម្ទេសសណ្តែក ២ ស្លាបព្រាបាយ",
+   "ម្រេចស៊ីឈួន ១ ស្លាបព្រាកាហ្វេ",
+   "ខ្ទឹមស ២ កំពឹស",
+   "ម្សៅពោត ១ ស្លាបព្រាកាហ្វេ"
+  ],
+  "steps_en": [
+   "Fry the pork until crisp, then add the bean paste and garlic.",
+   "Add water and the cubed tofu and simmer for 5 minutes.",
+   "Thicken with cornstarch and sprinkle with Sichuan pepper."
+  ],
+  "steps_km": [
+   "ឆាសាច់ជ្រូកឱ្យស្រួយ រួចដាក់ទឹកម្ទេសសណ្តែក និងខ្ទឹមស។",
+   "ចាក់ទឹក ដាក់តៅហ៊ូកាត់ដុំ ហើយរំងាស់ ៥ នាទី។",
+   "ធ្វើឱ្យខាប់ដោយម្សៅពោត ហើយរោយម្រេចស៊ីឈួន។"
+  ],
+  "image_file": "File:Authentic Mapo Tofu.jpg",
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Authentic_Mapo_Tofu.jpg/500px-Authentic_Mapo_Tofu.jpg",
+  "image_credit": "Photo: Sichuanfoodlover, CC BY-SA 4.0, via Wikimedia Commons",
+  "image_page": "https://commons.wikimedia.org/wiki/File:Authentic_Mapo_Tofu.jpg"
+ },
+ {
+  "title_en": "Kung Pao Chicken",
+  "title_km": "សាច់មាន់គុងប៉ាវ",
+  "cuisine": "CN",
+  "category": "main",
+  "calories": 450,
+  "prep_minutes": 25,
+  "servings": 2,
+  "difficulty": "easy",
+  "is_trending": false,
+  "popularity": 61,
+  "description_en": "Stir-fried chicken with peanuts, dried chilies and a sweet-sour sauce.",
+  "description_km": "សាច់មាន់ឆាជាមួយសណ្តែកដី ម្ទេសក្រៀម និងទឹកជូរផ្អែម។",
+  "ingredients_en": [
+   "300 g chicken thigh",
+   "50 g roasted peanuts",
+   "6 dried chilies",
+   "2 tbsp soy sauce",
+   "1 tbsp black vinegar",
+   "1 tbsp sugar"
+  ],
+  "ingredients_km": [
+   "សាច់ភ្លៅមាន់ ៣០០ ក្រាម",
+   "សណ្តែកដីលីង ៥០ ក្រាម",
+   "ម្ទេសក្រៀម ៦ គ្រាប់",
+   "ទឹកស៊ីអ៊ីវ ២ ស្លាបព្រាបាយ",
+   "ទឹកខ្មេះខ្មៅ ១ ស្លាបព្រាបាយ",
+   "ស្ករ ១ ស្លាបព្រាបាយ"
+  ],
+  "steps_en": [
+   "Cube the chicken and coat with a little soy sauce.",
+   "Fry the chilies briefly, then stir-fry the chicken until cooked.",
+   "Add the sauce and peanuts and toss for 1 minute."
+  ],
+  "steps_km": [
+   "កាត់សាច់មាន់ជាដុំ ហើយប្រឡាក់ទឹកស៊ីអ៊ីវបន្តិច។",
+   "លីងម្ទេសក្រៀមបន្តិច រួចឆាសាច់មាន់ឱ្យឆ្អិន។",
+   "ដាក់ទឹកជ្រលក់ និងសណ្តែកដី ឆា ១ នាទី។"
+  ],
+  "image_file": "File:Kung Pao chicken (western version) -1.jpg",
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Kung_Pao_chicken_%28western_version%29_-1.jpg/500px-Kung_Pao_chicken_%28western_version%29_-1.jpg",
+  "image_credit": "Photo: Alexander Marks (aomarks), Public domain, via Wikimedia Commons",
+  "image_page": "https://commons.wikimedia.org/wiki/File:Kung_Pao_chicken_(western_version)_-1.jpg"
+ },
+ {
+  "title_en": "Oyakodon",
+  "title_km": "បាយមាន់ស៊ុតជប៉ុន",
+  "cuisine": "JP",
+  "category": "rice",
+  "calories": 620,
+  "prep_minutes": 20,
+  "servings": 2,
+  "difficulty": "easy",
+  "is_trending": false,
+  "popularity": 60,
+  "description_en": "Japanese rice bowl topped with chicken and soft egg simmered in sweet soy broth.",
+  "description_km": "បាយជប៉ុន ដាក់សាច់មាន់ និងស៊ុតទន់ រំងាស់ក្នុងទឹកស៊ីអ៊ីវផ្អែម។",
+  "ingredients_en": [
+   "2 bowls cooked rice",
+   "200 g chicken thigh",
+   "3 eggs",
+   "1 onion",
+   "3 tbsp soy sauce",
+   "1 tbsp sugar"
+  ],
+  "ingredients_km": [
+   "បាយ ២ ចាន",
+   "សាច់ភ្លៅមាន់ ២០០ ក្រាម",
+   "ស៊ុត ៣ គ្រាប់",
+   "ខ្ទឹមបារាំង ១ មើម",
+   "ទឹកស៊ីអ៊ីវ ៣ ស្លាបព្រាបាយ",
+   "ស្ករ ១ ស្លាបព្រាបាយ"
+  ],
+  "steps_en": [
+   "Simmer the onion in soy sauce, sugar and water.",
+   "Add the chicken and cook for 5 minutes.",
+   "Pour in beaten eggs, cover for 1 minute and slide onto rice."
+  ],
+  "steps_km": [
+   "រំងាស់ខ្ទឹមបារាំងក្នុងទឹកស៊ីអ៊ីវ ស្ករ និងទឹក។",
+   "ដាក់សាច់មាន់ ស្ងោរ ៥ នាទី។",
+   "ចាក់ស៊ុតវាយ គរ ១ នាទី ហើយដាក់លើបាយ។"
+  ],
+  "image_file": "File:Oyakodon 003.jpg",
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/Oyakodon_003.jpg/500px-Oyakodon_003.jpg",
+  "image_credit": "Photo: Ocdp, CC0, via Wikimedia Commons",
+  "image_page": "https://commons.wikimedia.org/wiki/File:Oyakodon_003.jpg"
+ },
+ {
+  "title_en": "Miso Soup",
+  "title_km": "ស៊ុបមីសូ",
+  "cuisine": "JP",
+  "category": "soup",
+  "calories": 90,
+  "prep_minutes": 10,
+  "servings": 2,
+  "difficulty": "easy",
+  "is_trending": false,
+  "popularity": 59,
+  "description_en": "Light Japanese soup of miso, tofu and seaweed.",
+  "description_km": "ស៊ុបជប៉ុនស្រាល ជាមួយមីសូ តៅហ៊ូ និងសារាយសមុទ្រ។",
+  "ingredients_en": [
+   "500 ml dashi stock",
+   "2 tbsp miso paste",
+   "100 g soft tofu",
+   "1 tbsp dried wakame",
+   "1 spring onion"
+  ],
+  "ingredients_km": [
+   "ទឹកស៊ុបដាស៊ី ៥០០ មីលីលីត្រ",
+   "មីសូ ២ ស្លាបព្រាបាយ",
+   "តៅហ៊ូទន់ ១០០ ក្រាម",
+   "សារាយវ៉ាកាមេ ១ ស្លាបព្រាបាយ",
+   "ស្លឹកខ្ទឹម ១ ដើម"
+  ],
+  "steps_en": [
+   "Heat the dashi without boiling.",
+   "Add the tofu cubes and wakame for 2 minutes.",
+   "Turn off the heat, stir in the miso and top with spring onion."
+  ],
+  "steps_km": [
+   "កម្តៅទឹកដាស៊ី កុំឱ្យពុះ។",
+   "ដាក់តៅហ៊ូ និងវ៉ាកាមេ ២ នាទី។",
+   "បិទភ្លើង កូរមីសូ ហើយរោយស្លឹកខ្ទឹម។"
+  ],
+  "image_file": "File:Miso Soup 001.jpg",
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Miso_Soup_001.jpg/500px-Miso_Soup_001.jpg",
+  "image_credit": "Photo: Ocdp, CC0, via Wikimedia Commons",
+  "image_page": "https://commons.wikimedia.org/wiki/File:Miso_Soup_001.jpg"
+ },
+ {
+  "title_en": "Bibimbap",
+  "title_km": "ប៊ីប៊ីមបាប",
+  "cuisine": "KR",
+  "category": "rice",
+  "calories": 590,
+  "prep_minutes": 40,
+  "servings": 2,
+  "difficulty": "medium",
+  "is_trending": true,
+  "popularity": 58,
+  "description_en": "Korean rice bowl with seasoned vegetables, beef, egg and chili paste.",
+  "description_km": "បាយកូរ៉េ ជាមួយបន្លែប្រឡាក់ សាច់គោ ស៊ុត និងទឹកម្ទេសកូរ៉េ។",
+  "ingredients_en": [
+   "2 bowls cooked rice",
+   "150 g beef",
+   "1 carrot and 1 zucchini",
+   "100 g spinach",
+   "2 eggs",
+   "2 tbsp gochujang"
+  ],
+  "ingredients_km": [
+   "បាយ ២ ចាន",
+   "សាច់គោ ១៥០ ក្រាម",
+   "ការ៉ុត ១ និងត្រសក់បារាំង ១",
+   "ស្ពៃខៀវ ១០០ ក្រាម",
+   "ស៊ុត ២ គ្រាប់",
+   "ទឹកម្ទេសកូរ៉េ ២ ស្លាបព្រាបាយ"
+  ],
+  "steps_en": [
+   "Stir-fry the beef and each vegetable separately with a little sesame oil.",
+   "Fry the eggs sunny side up.",
+   "Arrange everything on the rice and mix in gochujang to eat."
+  ],
+  "steps_km": [
+   "ឆាសាច់គោ និងបន្លែម្តងមួយមុខ ជាមួយប្រេងល្ងបន្តិច។",
+   "ចៀនស៊ុតពងទា។",
+   "រៀបទាំងអស់លើបាយ ហើយច្របល់ទឹកម្ទេសកូរ៉េពេលញ៉ាំ។"
+  ],
+  "image_file": "File:Seoul Bibimbap (beef) - Time For Kimchi.jpg",
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Seoul_Bibimbap_%28beef%29_-_Time_For_Kimchi.jpg/500px-Seoul_Bibimbap_%28beef%29_-_Time_For_Kimchi.jpg",
+  "image_credit": "Photo: Andy Li, CC0, via Wikimedia Commons",
+  "image_page": "https://commons.wikimedia.org/wiki/File:Seoul_Bibimbap_(beef)_-_Time_For_Kimchi.jpg"
+ },
+ {
+  "title_en": "Kimchi Jjigae",
+  "title_km": "ស៊ុបគីមឈី",
+  "cuisine": "KR",
+  "category": "soup",
+  "calories": 330,
+  "prep_minutes": 30,
+  "servings": 2,
+  "difficulty": "easy",
+  "is_trending": false,
+  "popularity": 57,
+  "description_en": "Spicy Korean kimchi stew with pork and tofu.",
+  "description_km": "ស៊ុបគីមឈីកូរ៉េហឹរ ជាមួយសាច់ជ្រូក និងតៅហ៊ូ។",
+  "ingredients_en": [
+   "200 g aged kimchi",
+   "150 g pork belly",
+   "150 g tofu",
+   "1 tbsp gochugaru",
+   "1 spring onion",
+   "500 ml water"
+  ],
+  "ingredients_km": [
+   "គីមឈីចាស់ ២០០ ក្រាម",
+   "សាច់ជ្រូកបីជាន់ ១៥០ ក្រាម",
+   "តៅហ៊ូ ១៥០ ក្រាម",
+   "ម្សៅម្ទេសកូរ៉េ ១ ស្លាបព្រាបាយ",
+   "ស្លឹកខ្ទឹម ១ ដើម",
+   "ទឹក ៥០០ មីលីលីត្រ"
+  ],
+  "steps_en": [
+   "Fry the pork, then add the kimchi and chili flakes.",
+   "Add water and simmer for 15 minutes.",
+   "Add the tofu and spring onion and cook for 5 more minutes."
+  ],
+  "steps_km": [
+   "ឆាសាច់ជ្រូក រួចដាក់គីមឈី និងម្សៅម្ទេស។",
+   "ចាក់ទឹក ហើយរំងាស់ ១៥ នាទី។",
+   "ដាក់តៅហ៊ូ និងស្លឹកខ្ទឹម ស្ងោរ ៥ នាទីទៀត។"
+  ],
+  "image_file": "File:Kimchi jjigae - Kogi, Brighton 2023-11-15.jpg",
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Kimchi_jjigae_-_Kogi%2C_Brighton_2023-11-15.jpg/500px-Kimchi_jjigae_-_Kogi%2C_Brighton_2023-11-15.jpg",
+  "image_credit": "Photo: Andy Li, CC0, via Wikimedia Commons",
+  "image_page": "https://commons.wikimedia.org/wiki/File:Kimchi_jjigae_-_Kogi,_Brighton_2023-11-15.jpg"
+ },
+ {
+  "title_en": "Chana Masala",
+  "title_km": "ការីសណ្តែកងួរ",
+  "cuisine": "IN",
+  "category": "curry",
+  "calories": 360,
+  "prep_minutes": 35,
+  "servings": 4,
+  "difficulty": "easy",
+  "is_trending": false,
+  "popularity": 56,
+  "description_en": "North Indian chickpea curry with tomato, onion and warm spices.",
+  "description_km": "ការីសណ្តែកងួរឥណ្ឌាខាងជើង ជាមួយប៉េងប៉ោះ ខ្ទឹមបារាំង និងគ្រឿងទេស។",
+  "ingredients_en": [
+   "2 cans chickpeas",
+   "2 onions",
+   "3 tomatoes",
+   "1 piece ginger and 3 cloves garlic",
+   "2 tsp garam masala",
+   "Cilantro"
+  ],
+  "ingredients_km": [
+   "សណ្តែកងួរ ២ កំប៉ុង",
+   "ខ្ទឹមបារាំង ២ មើម",
+   "ប៉េងប៉ោះ ៣ ផ្លែ",
+   "ខ្ញី ១ ដុំ និងខ្ទឹមស ៣ កំពឹស",
+   "ម្សៅហ្គារ៉ាម ម៉ាសាឡា ២ ស្លាបព្រាកាហ្វេ",
+   "ជីវ៉ាន់ស៊ុយ"
+  ],
+  "steps_en": [
+   "Fry the onions until golden, then add ginger and garlic.",
+   "Add tomatoes and spices and cook into a thick sauce.",
+   "Add the chickpeas, simmer for 15 minutes and top with cilantro."
+  ],
+  "steps_km": [
+   "លីងខ្ទឹមបារាំងឱ្យលឿង រួចដាក់ខ្ញី និងខ្ទឹមស។",
+   "ដាក់ប៉េងប៉ោះ និងគ្រឿងទេស ឆាឱ្យខាប់។",
+   "ដាក់សណ្តែកងួរ រំងាស់ ១៥ នាទី ហើយរោយជីវ៉ាន់ស៊ុយ។"
+  ],
+  "image_file": "File:Chana Masala - Mohammed - Spice Of Life 2024-05-27.jpg",
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Chana_Masala_-_Mohammed_-_Spice_Of_Life_2024-05-27.jpg/500px-Chana_Masala_-_Mohammed_-_Spice_Of_Life_2024-05-27.jpg",
+  "image_credit": "Photo: Andy Li, CC0, via Wikimedia Commons",
+  "image_page": "https://commons.wikimedia.org/wiki/File:Chana_Masala_-_Mohammed_-_Spice_Of_Life_2024-05-27.jpg"
+ },
+ {
+  "title_en": "Mango Lassi",
+  "title_km": "ឡាស៊ីស្វាយ",
+  "cuisine": "IN",
+  "category": "drinks",
+  "calories": 220,
+  "prep_minutes": 5,
+  "servings": 2,
+  "difficulty": "easy",
+  "is_trending": false,
+  "popularity": 55,
+  "description_en": "Creamy Indian yogurt drink blended with ripe mango.",
+  "description_km": "ភេសជ្ជៈយ៉ាអួឥណ្ឌា ក្រឡុកជាមួយស្វាយទុំ។",
+  "ingredients_en": [
+   "1 ripe mango",
+   "250 g plain yogurt",
+   "100 ml milk",
+   "1 tbsp sugar",
+   "Ice"
+  ],
+  "ingredients_km": [
+   "ស្វាយទុំ ១ ផ្លែ",
+   "យ៉ាអួ ២៥០ ក្រាម",
+   "ទឹកដោះគោ ១០០ មីលីលីត្រ",
+   "ស្ករ ១ ស្លាបព្រាបាយ",
+   "ទឹកកក"
+  ],
+  "steps_en": [
+   "Peel and chop the mango.",
+   "Blend with yogurt, milk and sugar until smooth.",
+   "Serve cold over ice."
+  ],
+  "steps_km": [
+   "ចិតស្វាយ ហើយកាត់ជាដុំ។",
+   "ក្រឡុកជាមួយយ៉ាអួ ទឹកដោះគោ និងស្ករឱ្យម៉ត់។",
+   "ចាក់លើទឹកកក ហើយផឹកត្រជាក់ៗ។"
+  ],
+  "image_file": "File:Mango Lassi and Butter Milk - Vel South Indian Kitchen + Bar.jpg",
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Mango_Lassi_and_Butter_Milk_-_Vel_South_Indian_Kitchen_%2B_Bar.jpg/500px-Mango_Lassi_and_Butter_Milk_-_Vel_South_Indian_Kitchen_%2B_Bar.jpg",
+  "image_credit": "Photo: Andy Li, CC0, via Wikimedia Commons",
+  "image_page": "https://commons.wikimedia.org/wiki/File:Mango_Lassi_and_Butter_Milk_-_Vel_South_Indian_Kitchen_%2B_Bar.jpg"
+ },
+ {
+  "title_en": "Chicken Adobo",
+  "title_km": "សាច់មាន់អាដូបូ",
+  "cuisine": "PH",
+  "category": "main",
+  "calories": 470,
+  "prep_minutes": 45,
+  "servings": 4,
+  "difficulty": "easy",
+  "is_trending": false,
+  "popularity": 54,
+  "description_en": "Filipino chicken braised in vinegar, soy sauce, garlic and bay leaves.",
+  "description_km": "សាច់មាន់ហ្វីលីពីន ខដោយទឹកខ្មេះ ទឹកស៊ីអ៊ីវ ខ្ទឹមស និងស្លឹកបេ។",
+  "ingredients_en": [
+   "800 g chicken pieces",
+   "120 ml soy sauce",
+   "80 ml vinegar",
+   "1 head garlic",
+   "3 bay leaves",
+   "1 tsp black peppercorns"
+  ],
+  "ingredients_km": [
+   "សាច់មាន់ ៨០០ ក្រាម",
+   "ទឹកស៊ីអ៊ីវ ១២០ មីលីលីត្រ",
+   "ទឹកខ្មេះ ៨០ មីលីលីត្រ",
+   "ខ្ទឹមស ១ មើម",
+   "ស្លឹកបេ ៣ សន្លឹក",
+   "គ្រាប់ម្រេច ១ ស្លាបព្រាកាហ្វេ"
+  ],
+  "steps_en": [
+   "Put everything in a pot and marinate for 30 minutes.",
+   "Simmer covered for 30 minutes.",
+   "Uncover and reduce the sauce until glossy. Serve with rice."
+  ],
+  "steps_km": [
+   "ដាក់គ្រប់មុខក្នុងឆ្នាំង ហើយប្រឡាក់ ៣០ នាទី។",
+   "គ្របហើយរំងាស់ ៣០ នាទី។",
+   "បើកគម្រប ខឱ្យទឹករីងភ្លឺ។ ញ៉ាំជាមួយបាយ។"
+  ],
+  "image_file": "File:Chicken adobo.jpg",
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Chicken_adobo.jpg/500px-Chicken_adobo.jpg",
+  "image_credit": "Photo: dbgg1979 on flickr, CC BY 2.0, via Wikimedia Commons",
+  "image_page": "https://commons.wikimedia.org/wiki/File:Chicken_adobo.jpg"
+ },
+ {
+  "title_en": "Halo-Halo",
+  "title_km": "ហាឡូហាឡូ",
+  "cuisine": "PH",
+  "category": "sweet",
+  "calories": 350,
+  "prep_minutes": 15,
+  "servings": 2,
+  "difficulty": "easy",
+  "is_trending": false,
+  "popularity": 53,
+  "description_en": "Filipino shaved ice dessert with sweet beans, fruit, milk and ube ice cream.",
+  "description_km": "បង្អែមទឹកកកឈូសហ្វីលីពីន ជាមួយសណ្តែកផ្អែម ផ្លែឈើ ទឹកដោះគោ និងការ៉េមដំឡូងស្វាយ។",
+  "ingredients_en": [
+   "2 cups shaved ice",
+   "4 tbsp sweet beans and jellies",
+   "Ripe jackfruit or banana",
+   "120 ml evaporated milk",
+   "2 scoops ube ice cream"
+  ],
+  "ingredients_km": [
+   "ទឹកកកឈូស ២ កែវ",
+   "សណ្តែកផ្អែម និងចាហួយ ៤ ស្លាបព្រាបាយ",
+   "ខ្នុរទុំ ឬចេក",
+   "ទឹកដោះគោខាប់រាវ ១២០ មីលីលីត្រ",
+   "ការ៉េមដំឡូងស្វាយ ២ ដុំ"
+  ],
+  "steps_en": [
+   "Put the beans, jellies and fruit in tall glasses.",
+   "Pack shaved ice on top and pour over the milk.",
+   "Top with ube ice cream and mix before eating."
+  ],
+  "steps_km": [
+   "ដាក់សណ្តែក ចាហួយ និងផ្លែឈើក្នុងកែវខ្ពស់។",
+   "ដាក់ទឹកកកឈូសពីលើ ហើយចាក់ទឹកដោះគោ។",
+   "ដាក់ការ៉េមពីលើ ហើយកូរមុនញ៉ាំ។"
+  ],
+  "image_file": "File:Halo halo (28049395903).jpg",
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Halo_halo_%2828049395903%29.jpg/500px-Halo_halo_%2828049395903%29.jpg",
+  "image_credit": "Photo: T.Tseng, CC BY 2.0, via Wikimedia Commons",
+  "image_page": "https://commons.wikimedia.org/wiki/File:Halo_halo_(28049395903).jpg"
+ },
+ {
+  "title_en": "Nasi Goreng",
+  "title_km": "បាយឆាឥណ្ឌូនេស៊ី",
+  "cuisine": "ID",
+  "category": "rice",
+  "calories": 560,
+  "prep_minutes": 20,
+  "servings": 2,
+  "difficulty": "easy",
+  "is_trending": false,
+  "popularity": 52,
+  "description_en": "Indonesian sweet soy fried rice served with a fried egg.",
+  "description_km": "បាយឆាឥណ្ឌូនេស៊ី ជាមួយទឹកស៊ីអ៊ីវផ្អែម និងស៊ុតចៀន។",
+  "ingredients_en": [
+   "2 cups day-old rice",
+   "2 shallots and 2 cloves garlic",
+   "1 chili",
+   "2 tbsp kecap manis (sweet soy)",
+   "2 eggs",
+   "Cucumber and crackers"
+  ],
+  "ingredients_km": [
+   "បាយសល់ពីម្សិលមិញ ២ កែវ",
+   "ខ្ទឹមក្រហម ២ និងខ្ទឹមស ២ កំពឹស",
+   "ម្ទេស ១ គ្រាប់",
+   "ទឹកស៊ីអ៊ីវផ្អែម ២ ស្លាបព្រាបាយ",
+   "ស៊ុត ២ គ្រាប់",
+   "ត្រសក់ និងនំក្រៀប"
+  ],
+  "steps_en": [
+   "Pound the shallots, garlic and chili and fry until fragrant.",
+   "Add the rice and sweet soy and stir-fry until hot.",
+   "Serve with a fried egg, cucumber and crackers."
+  ],
+  "steps_km": [
+   "បុកខ្ទឹមក្រហម ខ្ទឹមស និងម្ទេស លីងរហូតឈ្ងុយ។",
+   "ដាក់បាយ និងទឹកស៊ីអ៊ីវផ្អែម ឆាឱ្យក្តៅសព្វ។",
+   "ញ៉ាំជាមួយស៊ុតចៀន ត្រសក់ និងនំក្រៀប។"
+  ],
+  "image_file": "File:Gili Meno Island, Nasi goreng, Fried rice with juice, Indonesia.jpg",
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Gili_Meno_Island%2C_Nasi_goreng%2C_Fried_rice_with_juice%2C_Indonesia.jpg/500px-Gili_Meno_Island%2C_Nasi_goreng%2C_Fried_rice_with_juice%2C_Indonesia.jpg",
+  "image_credit": "Photo: Vyacheslav Argenberg, CC BY 4.0, via Wikimedia Commons",
+  "image_page": "https://commons.wikimedia.org/wiki/File:Gili_Meno_Island,_Nasi_goreng,_Fried_rice_with_juice,_Indonesia.jpg"
+ },
+ {
+  "title_en": "Gado-Gado",
+  "title_km": "ហ្គាដូហ្គាដូ",
+  "cuisine": "ID",
+  "category": "salad",
+  "calories": 420,
+  "prep_minutes": 30,
+  "servings": 2,
+  "difficulty": "easy",
+  "is_trending": false,
+  "popularity": 51,
+  "description_en": "Indonesian vegetable salad with egg, tofu and a peanut sauce.",
+  "description_km": "ញាំបន្លែឥណ្ឌូនេស៊ី ជាមួយស៊ុត តៅហ៊ូ និងទឹកជ្រលក់សណ្តែកដី។",
+  "ingredients_en": [
+   "Cabbage, green beans and bean sprouts",
+   "1 potato",
+   "2 boiled eggs",
+   "100 g fried tofu",
+   "4 tbsp peanut sauce",
+   "Prawn crackers"
+  ],
+  "ingredients_km": [
+   "ស្ពៃក្តោប សណ្តែកកួរ និងសណ្តែកបណ្តុះ",
+   "ដំឡូងបារាំង ១ មើម",
+   "ស៊ុតស្ងោរ ២ គ្រាប់",
+   "តៅហ៊ូចៀន ១០០ ក្រាម",
+   "ទឹកជ្រលក់សណ្តែកដី ៤ ស្លាបព្រាបាយ",
+   "នំក្រៀបបង្គា"
+  ],
+  "steps_en": [
+   "Blanch the vegetables and boil the potato.",
+   "Arrange with sliced egg and tofu on a plate.",
+   "Pour the peanut sauce over and add crackers."
+  ],
+  "steps_km": [
+   "ស្រុះបន្លែ ហើយស្ងោរដំឡូង។",
+   "រៀបជាមួយស៊ុត និងតៅហ៊ូលើចាន។",
+   "ចាក់ទឹកជ្រលក់សណ្តែកដីពីលើ ហើយដាក់នំក្រៀប។"
+  ],
+  "image_file": "File:Gado-gado - Bali 2025-09-25.jpg",
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Gado-gado_-_Bali_2025-09-25.jpg/500px-Gado-gado_-_Bali_2025-09-25.jpg",
+  "image_credit": "Photo: Andy Li, CC0, via Wikimedia Commons",
+  "image_page": "https://commons.wikimedia.org/wiki/File:Gado-gado_-_Bali_2025-09-25.jpg"
+ },
+ {
+  "title_en": "Nasi Lemak",
+  "title_km": "បាយខ្ទិះដូងម៉ាឡេ",
+  "cuisine": "MY",
+  "category": "rice",
+  "calories": 640,
+  "prep_minutes": 45,
+  "servings": 2,
+  "difficulty": "medium",
+  "is_trending": false,
+  "popularity": 50,
+  "description_en": "Malaysian coconut rice with sambal, egg, peanuts and crispy anchovies.",
+  "description_km": "បាយខ្ទិះដូងម៉ាឡេស៊ី ជាមួយសាំបាល់ ស៊ុត សណ្តែកដី និងត្រីឆ្អើរស្រួយ។",
+  "ingredients_en": [
+   "1 cup rice",
+   "200 ml coconut milk",
+   "1 pandan leaf",
+   "3 tbsp sambal",
+   "2 boiled eggs",
+   "Fried anchovies, peanuts and cucumber"
+  ],
+  "ingredients_km": [
+   "អង្ករ ១ កែវ",
+   "ខ្ទិះដូង ២០០ មីលីលីត្រ",
+   "ស្លឹកតើយ ១ សន្លឹក",
+   "សាំបាល់ ៣ ស្លាបព្រាបាយ",
+   "ស៊ុតស្ងោរ ២ គ្រាប់",
+   "ត្រីឆ្អើរចៀន សណ្តែកដី និងត្រសក់"
+  ],
+  "steps_en": [
+   "Cook the rice with coconut milk and pandan.",
+   "Fry the anchovies and peanuts until crisp.",
+   "Serve the rice with sambal, egg, anchovies, peanuts and cucumber."
+  ],
+  "steps_km": [
+   "ដាំបាយជាមួយខ្ទិះដូង និងស្លឹកតើយ។",
+   "ចៀនត្រីឆ្អើរ និងសណ្តែកដីឱ្យស្រួយ។",
+   "ញ៉ាំបាយជាមួយសាំបាល់ ស៊ុត ត្រីឆ្អើរ សណ្តែកដី និងត្រសក់។"
+  ],
+  "image_file": "File:Nasi Lemak - Roti King 2025-09-19.jpg",
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Nasi_Lemak_-_Roti_King_2025-09-19.jpg/500px-Nasi_Lemak_-_Roti_King_2025-09-19.jpg",
+  "image_credit": "Photo: Andy Li, CC0, via Wikimedia Commons",
+  "image_page": "https://commons.wikimedia.org/wiki/File:Nasi_Lemak_-_Roti_King_2025-09-19.jpg"
+ },
+ {
+  "title_en": "Teh Tarik",
+  "title_km": "តែទាញ",
+  "cuisine": "MY",
+  "category": "drinks",
+  "calories": 160,
+  "prep_minutes": 10,
+  "servings": 2,
+  "difficulty": "easy",
+  "is_trending": false,
+  "popularity": 49,
+  "description_en": "Frothy Malaysian milk tea, poured back and forth to cool and foam.",
+  "description_km": "តែទឹកដោះគោម៉ាឡេស៊ីមានពពុះ ចាក់ទាញទៅមកឱ្យពពុះ។",
+  "ingredients_en": [
+   "2 tbsp black tea leaves",
+   "400 ml boiling water",
+   "3 tbsp condensed milk",
+   "2 tbsp evaporated milk"
+  ],
+  "ingredients_km": [
+   "ស្លឹកតែខ្មៅ ២ ស្លាបព្រាបាយ",
+   "ទឹកពុះ ៤០០ មីលីលីត្រ",
+   "ទឹកដោះគោខាប់ ៣ ស្លាបព្រាបាយ",
+   "ទឹកដោះគោខាប់រាវ ២ ស្លាបព្រាបាយ"
+  ],
+  "steps_en": [
+   "Brew the tea strongly for 5 minutes and strain.",
+   "Stir in both milks.",
+   "Pour from one jug to another from a height until foamy."
+  ],
+  "steps_km": [
+   "ឆុងតែឱ្យខ្លាំង ៥ នាទី ហើយចម្រោះ។",
+   "លាយទឹកដោះគោទាំងពីរ។",
+   "ចាក់ពីកែវមួយទៅកែវមួយពីខ្ពស់ រហូតមានពពុះ។"
+  ],
+  "image_file": "File:Roti Telur and Teh Tarik.jpg",
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Roti_Telur_and_Teh_Tarik.jpg/500px-Roti_Telur_and_Teh_Tarik.jpg",
+  "image_credit": "Photo: Azreey, CC BY-SA 4.0, via Wikimedia Commons",
+  "image_page": "https://commons.wikimedia.org/wiki/File:Roti_Telur_and_Teh_Tarik.jpg"
+ },
+ {
+  "title_en": "Hainanese Chicken Rice",
+  "title_km": "បាយមាន់ហៃណាន",
+  "cuisine": "SG",
+  "category": "rice",
+  "calories": 600,
+  "prep_minutes": 60,
+  "servings": 4,
+  "difficulty": "medium",
+  "is_trending": false,
+  "popularity": 48,
+  "description_en": "Poached chicken with fragrant ginger rice and chili sauce.",
+  "description_km": "សាច់មាន់ស្ងោរ ជាមួយបាយខ្ញីក្រអូប និងទឹកម្ទេស។",
+  "ingredients_en": [
+   "1 whole chicken",
+   "2 cups rice",
+   "1 large piece ginger",
+   "4 cloves garlic",
+   "Chili sauce",
+   "Cucumber"
+  ],
+  "ingredients_km": [
+   "មាន់ ១ ក្បាល",
+   "អង្ករ ២ កែវ",
+   "ខ្ញី ១ ដុំធំ",
+   "ខ្ទឹមស ៤ កំពឹស",
+   "ទឹកម្ទេស",
+   "ត្រសក់"
+  ],
+  "steps_en": [
+   "Poach the chicken gently with ginger for 40 minutes, then chill in ice water.",
+   "Fry the rice with garlic and ginger, then cook it in the chicken broth.",
+   "Slice the chicken and serve with the rice, cucumber and chili sauce."
+  ],
+  "steps_km": [
+   "ស្ងោរមាន់ជាមួយខ្ញីដោយភ្លើងតិច ៤០ នាទី រួចត្រាំទឹកកក។",
+   "លីងអង្ករជាមួយខ្ទឹមស និងខ្ញី រួចដាំក្នុងទឹកស៊ុបមាន់។",
+   "កាត់សាច់មាន់ ញ៉ាំជាមួយបាយ ត្រសក់ និងទឹកម្ទេស។"
+  ],
+  "image_file": "File:Hainanese Chicken Rice.jpg",
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Hainanese_Chicken_Rice.jpg/500px-Hainanese_Chicken_Rice.jpg",
+  "image_credit": "Photo: No machine-readable author provided. Terence assumed (based on copyright claims), CC BY 2.5, via Wikimedia Commons",
+  "image_page": "https://commons.wikimedia.org/wiki/File:Hainanese_Chicken_Rice.jpg"
+ },
+ {
+  "title_en": "Kaya Toast",
+  "title_km": "នំបុ័ងអាំងកាយ៉ា",
+  "cuisine": "SG",
+  "category": "snack",
+  "calories": 340,
+  "prep_minutes": 10,
+  "servings": 1,
+  "difficulty": "easy",
+  "is_trending": false,
+  "popularity": 47,
+  "description_en": "Crisp toast with coconut-egg jam and butter, a Singapore breakfast.",
+  "description_km": "នំបុ័ងអាំងស្រួយ ជាមួយយៈសាពូងស៊ុតដូង និងប៊ឺ ជាអាហារពេលព្រឹកសិង្ហបុរី។",
+  "ingredients_en": [
+   "2 slices white bread",
+   "2 tbsp kaya jam",
+   "1 tbsp cold butter",
+   "2 soft-boiled eggs",
+   "Soy sauce and pepper"
+  ],
+  "ingredients_km": [
+   "នំបុ័ងស ២ ចំណិត",
+   "យៈសាពូកាយ៉ា ២ ស្លាបព្រាបាយ",
+   "ប៊ឺត្រជាក់ ១ ស្លាបព្រាបាយ",
+   "ស៊ុតស្ងោរទន់ ២ គ្រាប់",
+   "ទឹកស៊ីអ៊ីវ និងម្រេច"
+  ],
+  "steps_en": [
+   "Toast the bread until crisp.",
+   "Spread with kaya and add thin slices of cold butter.",
+   "Serve with soft eggs seasoned with soy sauce and pepper."
+  ],
+  "steps_km": [
+   "អាំងនំបុ័ងឱ្យស្រួយ។",
+   "លាបកាយ៉ា ហើយដាក់ប៊ឺត្រជាក់ចំណិតស្តើង។",
+   "ញ៉ាំជាមួយស៊ុតទន់ ដាក់ទឹកស៊ីអ៊ីវ និងម្រេច។"
+  ],
+  "image_file": "File:Kaya Toast with Coffee (cropped).jpg",
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Kaya_Toast_with_Coffee_%28cropped%29.jpg/500px-Kaya_Toast_with_Coffee_%28cropped%29.jpg",
+  "image_credit": "Photo: Daniel., CC BY 2.0, via Wikimedia Commons",
+  "image_page": "https://commons.wikimedia.org/wiki/File:Kaya_Toast_with_Coffee_(cropped).jpg"
+ }
+]

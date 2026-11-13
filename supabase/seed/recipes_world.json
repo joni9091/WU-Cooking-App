@@ -1,0 +1,614 @@
+[
+ {
+  "title_en": "Pizza Margherita",
+  "title_km": "ភីហ្សាម៉ាហ្គារីតា",
+  "cuisine": "IT",
+  "category": "main",
+  "calories": 700,
+  "prep_minutes": 90,
+  "servings": 2,
+  "difficulty": "medium",
+  "is_trending": false,
+  "popularity": 46,
+  "description_en": "Neapolitan pizza with tomato, mozzarella and fresh basil.",
+  "description_km": "ភីហ្សាណាប៉ូលី ជាមួយប៉េងប៉ោះ ឈីសម៉ូហ្សារ៉ែឡា និងជីរនាងវង។",
+  "ingredients_en": [
+   "250 g pizza dough",
+   "100 g crushed tomatoes",
+   "125 g mozzarella",
+   "Fresh basil",
+   "1 tbsp olive oil"
+  ],
+  "ingredients_km": [
+   "ម្សៅភីហ្សា ២៥០ ក្រាម",
+   "ប៉េងប៉ោះកិន ១០០ ក្រាម",
+   "ឈីសម៉ូហ្សារ៉ែឡា ១២៥ ក្រាម",
+   "ជីរនាងវងស្រស់",
+   "ប្រេងអូលីវ ១ ស្លាបព្រាបាយ"
+  ],
+  "steps_en": [
+   "Stretch the dough into a thin round.",
+   "Spread with tomato and add torn mozzarella.",
+   "Bake at the highest oven heat for 8 to 10 minutes, then add basil and oil."
+  ],
+  "steps_km": [
+   "ពន្លាតម្សៅជារង្វង់ស្តើង។",
+   "លាបប៉េងប៉ោះ ហើយដាក់ឈីសហែក។",
+   "ដុតក្នុងឡកម្តៅខ្ពស់បំផុត ៨ ទៅ ១០ នាទី រួចដាក់ជីរនាងវង និងប្រេង។"
+  ],
+  "image_file": "File:Margherita pizza on plate 2.jpg",
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Margherita_pizza_on_plate_2.jpg/500px-Margherita_pizza_on_plate_2.jpg",
+  "image_credit": "Photo: Shisma, CC BY 4.0, via Wikimedia Commons",
+  "image_page": "https://commons.wikimedia.org/wiki/File:Margherita_pizza_on_plate_2.jpg"
+ },
+ {
+  "title_en": "Tiramisu",
+  "title_km": "ធីរ៉ាមីស៊ូ",
+  "cuisine": "IT",
+  "category": "sweet",
+  "calories": 450,
+  "prep_minutes": 30,
+  "servings": 6,
+  "difficulty": "medium",
+  "is_trending": false,
+  "popularity": 45,
+  "description_en": "Italian layered dessert of coffee-soaked biscuits and mascarpone cream.",
+  "description_km": "បង្អែមអ៊ីតាលីជាន់ៗ នំត្រាំកាហ្វេ និងក្រែមម៉ាស្ការផូន។",
+  "ingredients_en": [
+   "250 g mascarpone",
+   "3 eggs",
+   "80 g sugar",
+   "200 g ladyfinger biscuits",
+   "250 ml strong coffee",
+   "Cocoa powder"
+  ],
+  "ingredients_km": [
+   "ឈីសម៉ាស្ការផូន ២៥០ ក្រាម",
+   "ស៊ុត ៣ គ្រាប់",
+   "ស្ករ ៨០ ក្រាម",
+   "នំស្ពុងស្រួយ ២០០ ក្រាម",
+   "កាហ្វេខ្លាំង ២៥០ មីលីលីត្រ",
+   "ម្សៅកាកាវ"
+  ],
+  "steps_en": [
+   "Beat the yolks with sugar, then fold in mascarpone and whipped whites.",
+   "Dip the biscuits in coffee and layer with the cream.",
+   "Chill for at least 4 hours and dust with cocoa."
+  ],
+  "steps_km": [
+   "វាយស្នូលស៊ុតជាមួយស្ករ រួចលាយម៉ាស្ការផូន និងសស៊ុតវាយ។",
+   "ជ្រលក់នំក្នុងកាហ្វេ ហើយរៀបជាជាន់ជាមួយក្រែម។",
+   "ដាក់ទូទឹកកកយ៉ាងតិច ៤ ម៉ោង ហើយរោយម្សៅកាកាវ។"
+  ],
+  "image_file": "File:Tiramisu at Italian restaurant in Japan.jpg",
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Tiramisu_at_Italian_restaurant_in_Japan.jpg/500px-Tiramisu_at_Italian_restaurant_in_Japan.jpg",
+  "image_credit": "Photo: Syced, CC0, via Wikimedia Commons",
+  "image_page": "https://commons.wikimedia.org/wiki/File:Tiramisu_at_Italian_restaurant_in_Japan.jpg"
+ },
+ {
+  "title_en": "Ratatouille",
+  "title_km": "រ៉ាតាទូយ",
+  "cuisine": "FR",
+  "category": "main",
+  "calories": 220,
+  "prep_minutes": 60,
+  "servings": 4,
+  "difficulty": "easy",
+  "is_trending": false,
+  "popularity": 44,
+  "description_en": "Provençal stew of eggplant, zucchini, peppers and tomato in olive oil.",
+  "description_km": "បន្លែខបែបប្រូវ៉ង់ស ជាមួយត្រប់ ត្រសក់បារាំង ម្ទេសប្លោក និងប៉េងប៉ោះ។",
+  "ingredients_en": [
+   "1 eggplant",
+   "2 zucchini",
+   "2 bell peppers",
+   "4 tomatoes",
+   "1 onion and 3 cloves garlic",
+   "3 tbsp olive oil"
+  ],
+  "ingredients_km": [
+   "ត្រប់ ១ ផ្លែ",
+   "ត្រសក់បារាំង ២ ផ្លែ",
+   "ម្ទេសប្លោក ២ ផ្លែ",
+   "ប៉េងប៉ោះ ៤ ផ្លែ",
+   "ខ្ទឹមបារាំង ១ និងខ្ទឹមស ៣ កំពឹស",
+   "ប្រេងអូលីវ ៣ ស្លាបព្រាបាយ"
+  ],
+  "steps_en": [
+   "Cut all the vegetables into chunks.",
+   "Fry the onion and garlic, then add peppers, eggplant and zucchini.",
+   "Add tomatoes and simmer gently for 40 minutes."
+  ],
+  "steps_km": [
+   "កាត់បន្លែទាំងអស់ជាដុំ។",
+   "លីងខ្ទឹមបារាំង និងខ្ទឹមស រួចដាក់ម្ទេសប្លោក ត្រប់ និងត្រសក់។",
+   "ដាក់ប៉េងប៉ោះ ហើយខដោយភ្លើងតិច ៤០ នាទី។"
+  ],
+  "image_file": "File:Ratatouille.jpg",
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/Ratatouille.jpg/500px-Ratatouille.jpg",
+  "image_credit": "Photo: Marcus Guimarães, CC BY 2.0, via Wikimedia Commons",
+  "image_page": "https://commons.wikimedia.org/wiki/File:Ratatouille.jpg"
+ },
+ {
+  "title_en": "Crème Brûlée",
+  "title_km": "ក្រែមប្រ៊ុយឡេ",
+  "cuisine": "FR",
+  "category": "sweet",
+  "calories": 400,
+  "prep_minutes": 60,
+  "servings": 4,
+  "difficulty": "medium",
+  "is_trending": false,
+  "popularity": 43,
+  "description_en": "Vanilla custard with a crackly caramelised sugar top.",
+  "description_km": "ក្រែមស៊ុតវ៉ានីឡា មានស្ករដុតស្រួយពីលើ។",
+  "ingredients_en": [
+   "500 ml cream",
+   "5 egg yolks",
+   "80 g sugar",
+   "1 vanilla pod",
+   "4 tbsp sugar for the top"
+  ],
+  "ingredients_km": [
+   "ក្រែម ៥០០ មីលីលីត្រ",
+   "ស្នូលស៊ុត ៥ គ្រាប់",
+   "ស្ករ ៨០ ក្រាម",
+   "វ៉ានីឡា ១ ដើម",
+   "ស្ករ ៤ ស្លាបព្រាបាយសម្រាប់ដុតពីលើ"
+  ],
+  "steps_en": [
+   "Warm the cream with vanilla, then whisk into the yolks and sugar.",
+   "Bake in small dishes in a water bath at 150 °C for 35 minutes.",
+   "Chill, sprinkle with sugar and caramelise with a torch."
+  ],
+  "steps_km": [
+   "កម្តៅក្រែមជាមួយវ៉ានីឡា រួចវាយលាយស្នូលស៊ុត និងស្ករ។",
+   "ដុតក្នុងចានតូចៗ ដាក់ក្នុងថាសទឹក ១៥០ អង្សា ៣៥ នាទី។",
+   "ទុកឱ្យត្រជាក់ រោយស្ករ ហើយដុតឱ្យស្ករឡើងពណ៌។"
+  ],
+  "image_file": "File:Crème brûlée at restaurant in Zushi.jpg",
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Cr%C3%A8me_br%C3%BBl%C3%A9e_at_restaurant_in_Zushi.jpg/500px-Cr%C3%A8me_br%C3%BBl%C3%A9e_at_restaurant_in_Zushi.jpg",
+  "image_credit": "Photo: Syced, CC0, via Wikimedia Commons",
+  "image_page": "https://commons.wikimedia.org/wiki/File:Cr%C3%A8me_br%C3%BBl%C3%A9e_at_restaurant_in_Zushi.jpg"
+ },
+ {
+  "title_en": "Paella",
+  "title_km": "ប៉ាអេយ៉ា",
+  "cuisine": "ES",
+  "category": "rice",
+  "calories": 580,
+  "prep_minutes": 60,
+  "servings": 4,
+  "difficulty": "hard",
+  "is_trending": false,
+  "popularity": 42,
+  "description_en": "Spanish saffron rice cooked in a wide pan with seafood.",
+  "description_km": "បាយអេស្ប៉ាញដាក់សាហ្វ្រង់ ដាំក្នុងខ្ទះធំ ជាមួយគ្រឿងសមុទ្រ។",
+  "ingredients_en": [
+   "300 g paella rice",
+   "1 litre fish stock",
+   "300 g mixed seafood",
+   "1 pinch saffron",
+   "1 tomato and 1 bell pepper",
+   "3 tbsp olive oil"
+  ],
+  "ingredients_km": [
+   "អង្ករប៉ាអេយ៉ា ៣០០ ក្រាម",
+   "ទឹកស៊ុបត្រី ១ លីត្រ",
+   "គ្រឿងសមុទ្រចម្រុះ ៣០០ ក្រាម",
+   "សាហ្វ្រង់ បន្តិច",
+   "ប៉េងប៉ោះ ១ និងម្ទេសប្លោក ១",
+   "ប្រេងអូលីវ ៣ ស្លាបព្រាបាយ"
+  ],
+  "steps_en": [
+   "Fry the pepper and grated tomato in olive oil.",
+   "Add the rice, stock and saffron and spread evenly. Do not stir.",
+   "Add the seafood on top and cook until the rice is tender and crisp at the bottom."
+  ],
+  "steps_km": [
+   "ឆាម្ទេសប្លោក និងប៉េងប៉ោះកោស ក្នុងប្រេងអូលីវ។",
+   "ដាក់អង្ករ ទឹកស៊ុប និងសាហ្វ្រង់ ពង្រាយឱ្យស្មើ។ កុំកូរ។",
+   "ដាក់គ្រឿងសមុទ្រពីលើ ដាំរហូតបាយទន់ និងក្រៀមបាត។"
+  ],
+  "image_file": "File:Paella valenciana, Mazatlán, 25 de abril de 2023.jpg",
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Paella_valenciana%2C_Mazatl%C3%A1n%2C_25_de_abril_de_2023.jpg/500px-Paella_valenciana%2C_Mazatl%C3%A1n%2C_25_de_abril_de_2023.jpg",
+  "image_credit": "Photo: El Nuevo Doge, CC0, via Wikimedia Commons",
+  "image_page": "https://commons.wikimedia.org/wiki/File:Paella_valenciana,_Mazatl%C3%A1n,_25_de_abril_de_2023.jpg"
+ },
+ {
+  "title_en": "Gazpacho",
+  "title_km": "ស៊ុបត្រជាក់ហ្គាសប៉ាឆូ",
+  "cuisine": "ES",
+  "category": "soup",
+  "calories": 150,
+  "prep_minutes": 15,
+  "servings": 4,
+  "difficulty": "easy",
+  "is_trending": false,
+  "popularity": 41,
+  "description_en": "Chilled Andalusian tomato and cucumber soup.",
+  "description_km": "ស៊ុបប៉េងប៉ោះ និងត្រសក់ត្រជាក់ បែបអង់ដាលូស៊ី។",
+  "ingredients_en": [
+   "1 kg ripe tomatoes",
+   "1 cucumber",
+   "1 green pepper",
+   "1 clove garlic",
+   "3 tbsp olive oil",
+   "1 tbsp vinegar"
+  ],
+  "ingredients_km": [
+   "ប៉េងប៉ោះទុំ ១ គីឡូក្រាម",
+   "ត្រសក់ ១ ផ្លែ",
+   "ម្ទេសប្លោកបៃតង ១ ផ្លែ",
+   "ខ្ទឹមស ១ កំពឹស",
+   "ប្រេងអូលីវ ៣ ស្លាបព្រាបាយ",
+   "ទឹកខ្មេះ ១ ស្លាបព្រាបាយ"
+  ],
+  "steps_en": [
+   "Chop the vegetables roughly.",
+   "Blend with olive oil, vinegar and salt until smooth.",
+   "Chill for 2 hours and top with diced cucumber."
+  ],
+  "steps_km": [
+   "កាត់បន្លែជាដុំធំៗ។",
+   "ក្រឡុកជាមួយប្រេងអូលីវ ទឹកខ្មេះ និងអំបិលឱ្យម៉ត់។",
+   "ដាក់ទូទឹកកក ២ ម៉ោង ហើយដាក់ត្រសក់ហាន់ពីលើ។"
+  ],
+  "image_file": "File:Gazpacho con su guarnición - jlastras.jpg",
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Gazpacho_con_su_guarnici%C3%B3n_-_jlastras.jpg/500px-Gazpacho_con_su_guarnici%C3%B3n_-_jlastras.jpg",
+  "image_credit": "Photo: Javier Lastras from España/Spain, CC BY 2.0, via Wikimedia Commons",
+  "image_page": "https://commons.wikimedia.org/wiki/File:Gazpacho_con_su_guarnici%C3%B3n_-_jlastras.jpg"
+ },
+ {
+  "title_en": "Pancakes",
+  "title_km": "នំផេនខេក",
+  "cuisine": "US",
+  "category": "sweet",
+  "calories": 430,
+  "prep_minutes": 20,
+  "servings": 2,
+  "difficulty": "easy",
+  "is_trending": false,
+  "popularity": 40,
+  "description_en": "Fluffy American pancakes served with honey or syrup.",
+  "description_km": "នំផេនខេកអាមេរិកទន់ហើម ញ៉ាំជាមួយទឹកឃ្មុំ ឬទឹកស្ករ។",
+  "ingredients_en": [
+   "150 g flour",
+   "2 tsp baking powder",
+   "1 egg",
+   "200 ml milk",
+   "1 tbsp sugar",
+   "Butter and honey"
+  ],
+  "ingredients_km": [
+   "ម្សៅ ១៥០ ក្រាម",
+   "ម្សៅដំបែ ២ ស្លាបព្រាកាហ្វេ",
+   "ស៊ុត ១ គ្រាប់",
+   "ទឹកដោះគោ ២០០ មីលីលីត្រ",
+   "ស្ករ ១ ស្លាបព្រាបាយ",
+   "ប៊ឺ និងទឹកឃ្មុំ"
+  ],
+  "steps_en": [
+   "Whisk the dry ingredients, then add egg and milk.",
+   "Cook small rounds in a buttered pan until bubbles form, then flip.",
+   "Stack and drizzle with honey."
+  ],
+  "steps_km": [
+   "លាយគ្រឿងស្ងួត រួចដាក់ស៊ុត និងទឹកដោះគោ។",
+   "ចៀនជារង្វង់តូចៗក្នុងខ្ទះលាបប៊ឺ រហូតមានពពុះ ហើយត្រឡប់។",
+   "តម្រៀបជាជង់ ហើយស្រោចទឹកឃ្មុំ។"
+  ],
+  "image_file": "File:Foodiesfeed.com pouring-honey-on-pancakes-with-walnuts.jpg",
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Foodiesfeed.com_pouring-honey-on-pancakes-with-walnuts.jpg/500px-Foodiesfeed.com_pouring-honey-on-pancakes-with-walnuts.jpg",
+  "image_credit": "Photo: Mae Mu, CC0, via Wikimedia Commons",
+  "image_page": "https://commons.wikimedia.org/wiki/File:Foodiesfeed.com_pouring-honey-on-pancakes-with-walnuts.jpg"
+ },
+ {
+  "title_en": "Cheeseburger",
+  "title_km": "ឈីសប៊ឺហ្គឺ",
+  "cuisine": "US",
+  "category": "main",
+  "calories": 750,
+  "prep_minutes": 20,
+  "servings": 2,
+  "difficulty": "easy",
+  "is_trending": false,
+  "popularity": 39,
+  "description_en": "Grilled beef burger with melted cheese, lettuce and tomato.",
+  "description_km": "ប៊ឺហ្គឺសាច់គោអាំង ជាមួយឈីសរលាយ សាឡាត់ និងប៉េងប៉ោះ។",
+  "ingredients_en": [
+   "300 g ground beef",
+   "2 burger buns",
+   "2 slices cheese",
+   "Lettuce and tomato",
+   "Pickles",
+   "Ketchup and mustard"
+  ],
+  "ingredients_km": [
+   "សាច់គោចិញ្ច្រាំ ៣០០ ក្រាម",
+   "នំបុ័ងប៊ឺហ្គឺ ២",
+   "ឈីស ២ សន្លឹក",
+   "សាឡាត់ និងប៉េងប៉ោះ",
+   "ត្រសក់ជ្រក់",
+   "ទឹកប៉េងប៉ោះ និងទឹកមូស្តាត"
+  ],
+  "steps_en": [
+   "Shape the beef into two patties and season with salt and pepper.",
+   "Grill for 3 minutes per side and add cheese to melt.",
+   "Build in toasted buns with lettuce, tomato, pickles and sauces."
+  ],
+  "steps_km": [
+   "ធ្វើសាច់គោជាដុំសំប៉ែតពីរ ប្រឡាក់អំបិល និងម្រេច។",
+   "អាំងម្ខាង ៣ នាទី ហើយដាក់ឈីសឱ្យរលាយ។",
+   "ដាក់ក្នុងនំបុ័ងអាំង ជាមួយសាឡាត់ ប៉េងប៉ោះ ត្រសក់ជ្រក់ និងទឹកជ្រលក់។"
+  ],
+  "image_file": "File:Cheeseburger 2.jpg",
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Cheeseburger_2.jpg/500px-Cheeseburger_2.jpg",
+  "image_credit": "Photo: Kurtkaiser, CC0, via Wikimedia Commons",
+  "image_page": "https://commons.wikimedia.org/wiki/File:Cheeseburger_2.jpg"
+ },
+ {
+  "title_en": "Guacamole",
+  "title_km": "ក្វាកាម៉ូលេ",
+  "cuisine": "MX",
+  "category": "snack",
+  "calories": 230,
+  "prep_minutes": 10,
+  "servings": 4,
+  "difficulty": "easy",
+  "is_trending": false,
+  "popularity": 38,
+  "description_en": "Mexican avocado dip with lime, onion and cilantro, served with chips.",
+  "description_km": "ទឹកជ្រលក់ផ្លែបឺម៉ិកស៊ិក ជាមួយក្រូចឆ្មា ខ្ទឹមបារាំង និងជីវ៉ាន់ស៊ុយ។",
+  "ingredients_en": [
+   "3 ripe avocados",
+   "1 lime",
+   "1 small onion",
+   "1 tomato",
+   "Cilantro",
+   "Tortilla chips"
+  ],
+  "ingredients_km": [
+   "ផ្លែបឺទុំ ៣ ផ្លែ",
+   "ក្រូចឆ្មា ១ ផ្លែ",
+   "ខ្ទឹមបារាំងតូច ១ មើម",
+   "ប៉េងប៉ោះ ១ ផ្លែ",
+   "ជីវ៉ាន់ស៊ុយ",
+   "នំក្រៀបតតុកស៊ី"
+  ],
+  "steps_en": [
+   "Mash the avocados with lime juice and salt.",
+   "Stir in the chopped onion, tomato and cilantro.",
+   "Serve straight away with tortilla chips."
+  ],
+  "steps_km": [
+   "កិនផ្លែបឺជាមួយទឹកក្រូចឆ្មា និងអំបិល។",
+   "លាយខ្ទឹមបារាំង ប៉េងប៉ោះ និងជីវ៉ាន់ស៊ុយហាន់។",
+   "ញ៉ាំភ្លាមជាមួយនំក្រៀប។"
+  ],
+  "image_file": "File:Guacamole and chips - Stierch.jpg",
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Guacamole_and_chips_-_Stierch.jpg/500px-Guacamole_and_chips_-_Stierch.jpg",
+  "image_credit": "Photo: Missvain, CC BY 4.0, via Wikimedia Commons",
+  "image_page": "https://commons.wikimedia.org/wiki/File:Guacamole_and_chips_-_Stierch.jpg"
+ },
+ {
+  "title_en": "Horchata",
+  "title_km": "អរឆាតា",
+  "cuisine": "MX",
+  "category": "drinks",
+  "calories": 200,
+  "prep_minutes": 15,
+  "servings": 4,
+  "difficulty": "easy",
+  "is_trending": false,
+  "popularity": 37,
+  "description_en": "Sweet Mexican rice and cinnamon drink served over ice.",
+  "description_km": "ភេសជ្ជៈអង្ករ និងសំបកឈើក្រអូបម៉ិកស៊ិកផ្អែម ចាក់លើទឹកកក។",
+  "ingredients_en": [
+   "150 g white rice",
+   "1 cinnamon stick",
+   "1 litre water",
+   "100 g sugar",
+   "100 ml milk",
+   "Ice"
+  ],
+  "ingredients_km": [
+   "អង្ករស ១៥០ ក្រាម",
+   "សំបកឈើក្រអូប ១ ដើម",
+   "ទឹក ១ លីត្រ",
+   "ស្ករ ១០០ ក្រាម",
+   "ទឹកដោះគោ ១០០ មីលីលីត្រ",
+   "ទឹកកក"
+  ],
+  "steps_en": [
+   "Soak the rice and cinnamon in water overnight.",
+   "Blend well and strain through a cloth.",
+   "Stir in sugar and milk and serve over ice."
+  ],
+  "steps_km": [
+   "ត្រាំអង្ករ និងសំបកឈើក្រអូបក្នុងទឹកមួយយប់។",
+   "ក្រឡុកឱ្យម៉ត់ ហើយចម្រោះតាមក្រណាត់។",
+   "លាយស្ករ និងទឹកដោះគោ ហើយចាក់លើទឹកកក។"
+  ],
+  "image_file": "File:Horchata, my drink of choice in Mexico - Merida Yucatan 21 March 2021.jpg",
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Horchata%2C_my_drink_of_choice_in_Mexico_-_Merida_Yucatan_21_March_2021.jpg/500px-Horchata%2C_my_drink_of_choice_in_Mexico_-_Merida_Yucatan_21_March_2021.jpg",
+  "image_credit": "Photo: Sharon Hahn Darlin, CC BY 2.0, via Wikimedia Commons",
+  "image_page": "https://commons.wikimedia.org/wiki/File:Horchata,_my_drink_of_choice_in_Mexico_-_Merida_Yucatan_21_March_2021.jpg"
+ },
+ {
+  "title_en": "Lentil Soup",
+  "title_km": "ស៊ុបសណ្តែកលីនទីល",
+  "cuisine": "TR",
+  "category": "soup",
+  "calories": 260,
+  "prep_minutes": 35,
+  "servings": 4,
+  "difficulty": "easy",
+  "is_trending": false,
+  "popularity": 36,
+  "description_en": "Smooth Turkish red lentil soup with a squeeze of lemon.",
+  "description_km": "ស៊ុបសណ្តែកលីនទីលក្រហមតួកគីម៉ត់ ច្របាច់ក្រូចឆ្មាបន្តិច។",
+  "ingredients_en": [
+   "200 g red lentils",
+   "1 onion",
+   "1 carrot",
+   "1 tbsp tomato paste",
+   "1 litre stock",
+   "1 lemon"
+  ],
+  "ingredients_km": [
+   "សណ្តែកលីនទីលក្រហម ២០០ ក្រាម",
+   "ខ្ទឹមបារាំង ១ មើម",
+   "ការ៉ុត ១ មើម",
+   "ប៉េងប៉ោះខាប់ ១ ស្លាបព្រាបាយ",
+   "ទឹកស៊ុប ១ លីត្រ",
+   "ក្រូចឆ្មា ១ ផ្លែ"
+  ],
+  "steps_en": [
+   "Fry the onion, carrot and tomato paste.",
+   "Add the lentils and stock and simmer for 25 minutes.",
+   "Blend until smooth and serve with lemon."
+  ],
+  "steps_km": [
+   "ឆាខ្ទឹមបារាំង ការ៉ុត និងប៉េងប៉ោះខាប់។",
+   "ដាក់សណ្តែក និងទឹកស៊ុប រំងាស់ ២៥ នាទី។",
+   "ក្រឡុកឱ្យម៉ត់ ហើយញ៉ាំជាមួយក្រូចឆ្មា។"
+  ],
+  "image_file": "File:Homemade Lentil Soup - Lavash 2025-02-10.jpg",
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Homemade_Lentil_Soup_-_Lavash_2025-02-10.jpg/500px-Homemade_Lentil_Soup_-_Lavash_2025-02-10.jpg",
+  "image_credit": "Photo: Andy Li, CC0, via Wikimedia Commons",
+  "image_page": "https://commons.wikimedia.org/wiki/File:Homemade_Lentil_Soup_-_Lavash_2025-02-10.jpg"
+ },
+ {
+  "title_en": "Baklava",
+  "title_km": "បាក្លាវ៉ា",
+  "cuisine": "TR",
+  "category": "sweet",
+  "calories": 420,
+  "prep_minutes": 90,
+  "servings": 12,
+  "difficulty": "hard",
+  "is_trending": false,
+  "popularity": 35,
+  "description_en": "Layers of crisp filo pastry with nuts, soaked in sweet syrup.",
+  "description_km": "នំស្រទាប់ស្តើងៗស្រួយ ជាមួយគ្រាប់ធញ្ញជាតិ ត្រាំទឹកស្ករ។",
+  "ingredients_en": [
+   "500 g filo pastry",
+   "250 g butter, melted",
+   "300 g chopped pistachios or walnuts",
+   "300 g sugar",
+   "200 ml water",
+   "1 tbsp lemon juice"
+  ],
+  "ingredients_km": [
+   "ស្លឹកម្សៅហ្វីឡូ ៥០០ ក្រាម",
+   "ប៊ឺរលាយ ២៥០ ក្រាម",
+   "គ្រាប់ពីស្តាស ឬវ៉ាល់ណាត់ហាន់ ៣០០ ក្រាម",
+   "ស្ករ ៣០០ ក្រាម",
+   "ទឹក ២០០ មីលីលីត្រ",
+   "ទឹកក្រូចឆ្មា ១ ស្លាបព្រាបាយ"
+  ],
+  "steps_en": [
+   "Layer buttered filo sheets in a tray, with nuts in the middle.",
+   "Cut into diamonds and bake at 170 °C for 45 minutes.",
+   "Pour cooled syrup over the hot baklava and rest for 4 hours."
+  ],
+  "steps_km": [
+   "រៀបស្លឹកហ្វីឡូលាបប៊ឺក្នុងថាស ដាក់គ្រាប់នៅកណ្តាល។",
+   "កាត់ជារាងពេជ្រ ហើយដុត ១៧០ អង្សា ៤៥ នាទី។",
+   "ចាក់ទឹកស្ករត្រជាក់លើនំក្តៅ ហើយទុក ៤ ម៉ោង។"
+  ],
+  "image_file": "File:Baklava in pan.jpg",
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Baklava_in_pan.jpg/500px-Baklava_in_pan.jpg",
+  "image_credit": "Photo: Punker1999, CC0, via Wikimedia Commons",
+  "image_page": "https://commons.wikimedia.org/wiki/File:Baklava_in_pan.jpg"
+ },
+ {
+  "title_en": "Greek Salad",
+  "title_km": "សាឡាត់ក្រិក",
+  "cuisine": "GR",
+  "category": "salad",
+  "calories": 280,
+  "prep_minutes": 10,
+  "servings": 2,
+  "difficulty": "easy",
+  "is_trending": false,
+  "popularity": 34,
+  "description_en": "Tomato, cucumber, olives and feta with olive oil and oregano.",
+  "description_km": "ប៉េងប៉ោះ ត្រសក់ ផ្លែអូលីវ និងឈីសហ្វេតា ជាមួយប្រេងអូលីវ។",
+  "ingredients_en": [
+   "3 tomatoes",
+   "1 cucumber",
+   "1 red onion",
+   "100 g feta cheese",
+   "10 olives",
+   "2 tbsp olive oil and oregano"
+  ],
+  "ingredients_km": [
+   "ប៉េងប៉ោះ ៣ ផ្លែ",
+   "ត្រសក់ ១ ផ្លែ",
+   "ខ្ទឹមបារាំងក្រហម ១ មើម",
+   "ឈីសហ្វេតា ១០០ ក្រាម",
+   "ផ្លែអូលីវ ១០ គ្រាប់",
+   "ប្រេងអូលីវ ២ ស្លាបព្រាបាយ និងអូរេហ្គាណូ"
+  ],
+  "steps_en": [
+   "Cut the tomatoes and cucumber into chunks and slice the onion.",
+   "Add the olives and a block of feta on top.",
+   "Drizzle with olive oil and sprinkle with oregano."
+  ],
+  "steps_km": [
+   "កាត់ប៉េងប៉ោះ និងត្រសក់ជាដុំ ហើយហាន់ខ្ទឹមបារាំង។",
+   "ដាក់ផ្លែអូលីវ និងឈីសហ្វេតាមួយដុំពីលើ។",
+   "ស្រោចប្រេងអូលីវ ហើយរោយអូរេហ្គាណូ។"
+  ],
+  "image_file": "File:Greek Salad Choriatiki.jpg",
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Greek_Salad_Choriatiki.jpg/500px-Greek_Salad_Choriatiki.jpg",
+  "image_credit": "Photo: https://www.flickr.com/photos/zone41/, CC BY 2.0, via Wikimedia Commons",
+  "image_page": "https://commons.wikimedia.org/wiki/File:Greek_Salad_Choriatiki.jpg"
+ },
+ {
+  "title_en": "Moussaka",
+  "title_km": "មូសាកា",
+  "cuisine": "GR",
+  "category": "main",
+  "calories": 620,
+  "prep_minutes": 90,
+  "servings": 6,
+  "difficulty": "hard",
+  "is_trending": false,
+  "popularity": 33,
+  "description_en": "Baked layers of eggplant, spiced meat sauce and creamy white sauce.",
+  "description_km": "ត្រប់ ទឹកសាច់គ្រឿងទេស និងទឹកក្រែមស ដុតជាស្រទាប់ៗ។",
+  "ingredients_en": [
+   "3 eggplants",
+   "500 g minced lamb or beef",
+   "400 g crushed tomatoes",
+   "1 onion",
+   "1 tsp cinnamon",
+   "500 ml white sauce"
+  ],
+  "ingredients_km": [
+   "ត្រប់ ៣ ផ្លែ",
+   "សាច់ចៀម ឬសាច់គោចិញ្ច្រាំ ៥០០ ក្រាម",
+   "ប៉េងប៉ោះកិន ៤០០ ក្រាម",
+   "ខ្ទឹមបារាំង ១ មើម",
+   "ម្សៅសំបកឈើក្រអូប ១ ស្លាបព្រាកាហ្វេ",
+   "ទឹកក្រែមស ៥០០ មីលីលីត្រ"
+  ],
+  "steps_en": [
+   "Slice and fry or roast the eggplant.",
+   "Cook the meat with onion, tomatoes and cinnamon.",
+   "Layer eggplant and meat, top with white sauce and bake at 180 °C for 45 minutes."
+  ],
+  "steps_km": [
+   "កាត់ត្រប់ ហើយចៀន ឬដុត។",
+   "ឆាសាច់ជាមួយខ្ទឹមបារាំង ប៉េងប៉ោះ និងសំបកឈើក្រអូប។",
+   "រៀបត្រប់ និងសាច់ជាស្រទាប់ ដាក់ទឹកក្រែមសពីលើ ហើយដុត ១៨០ អង្សា ៤៥ នាទី។"
+  ],
+  "image_file": "File:Meat Moussaka - Kouzina, Brighton 2023-11-24.jpg",
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Meat_Moussaka_-_Kouzina%2C_Brighton_2023-11-24.jpg/500px-Meat_Moussaka_-_Kouzina%2C_Brighton_2023-11-24.jpg",
+  "image_credit": "Photo: Andy Li, CC0, via Wikimedia Commons",
+  "image_page": "https://commons.wikimedia.org/wiki/File:Meat_Moussaka_-_Kouzina,_Brighton_2023-11-24.jpg"
+ }
+]
