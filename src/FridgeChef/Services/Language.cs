@@ -35,7 +35,7 @@ public static class Language
         // TryGetValue also searches Theme.xaml (a merged dictionary).
         var r = Application.Current!.Resources;
         var suffix = km ? "Km" : "En";
-        foreach (var key in new[] { "HeadingFont", "BodyFont", "BodyBoldFont", "LineHeight" })
+        foreach (var key in new[] { "HeadingFont", "BodyFont", "BodyBoldFont", "LineHeight", "WelcomeTitleSize", "WelcomeTextSize" })
             if (r.TryGetValue(key + suffix, out var value)) r["App" + key] = value;
     }
 }

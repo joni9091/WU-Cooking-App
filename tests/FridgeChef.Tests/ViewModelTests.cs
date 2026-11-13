@@ -149,6 +149,14 @@ public class ViewModelTests
     }
 
     [Fact]
+    public async Task Characters_not_allowed_in_a_handle_cannot_be_typed()
+    {
+        var (vm, _, _) = await Profile(_ => FakeServer.Json(HttpStatusCode.OK, "true"));
+        vm.Handle = "@Joni-Test x_1";
+        Assert.Equal("jonitestx_1", vm.Handle);
+    }
+
+    [Fact]
     public async Task Taken_handle_is_reported_while_typing()
     {
         var (vm, _, _) = await Profile(_ => FakeServer.Json(HttpStatusCode.OK, "false"));
@@ -175,7 +183,8 @@ public class ViewModelTests
             : FakeServer.Json(HttpStatusCode.OK, "true"));
         vm.Handle = "joni"; vm.DisplayName = "Joni";
         await vm.FinishCommand.ExecuteAsync(null);
-        Assert.Equal(AppResources.HandleTaken, vm.Error);
+        Assert.Equal(AppResources.HandleTaken, vm.HandleStatus); // shown under the handle box
+        Assert.True(vm.HandleIsBad);
         Assert.Equal(0, nav.SignedIn);
     }
 

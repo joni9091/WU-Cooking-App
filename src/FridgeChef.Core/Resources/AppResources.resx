@@ -58,7 +58,7 @@
   <data name="AddPhoto" xml:space="preserve"><value>Add a photo</value></data>
   <data name="ChangePhoto" xml:space="preserve"><value>Change photo</value></data>
   <data name="HandleLabel" xml:space="preserve"><value>@handle</value></data>
-  <data name="HandlePlaceholder" xml:space="preserve"><value>@pick-a-handle</value></data>
+  <data name="HandlePlaceholder" xml:space="preserve"><value>@your.name</value></data>
   <data name="HandleHint" xml:space="preserve"><value>Letters, numbers, dots and _ only. Must be unique.</value></data>
   <data name="HandleChecking" xml:space="preserve"><value>Checking…</value></data>
   <data name="HandleFree" xml:space="preserve"><value>Available</value></data>

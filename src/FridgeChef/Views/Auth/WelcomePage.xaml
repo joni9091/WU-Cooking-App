@@ -14,8 +14,8 @@
                             <Image Source="{Binding Image}" Aspect="AspectFill" />
                         </Border>
                         <Label Text="{Binding Title}" Style="{StaticResource Title}" TextColor="{StaticResource OnOlive}"
-                               FontSize="34" HorizontalTextAlignment="Center" Margin="32,56,32,16" />
-                        <Label Text="{Binding Text}" FontFamily="{DynamicResource AppHeadingFont}" FontSize="17"
+                               FontSize="{DynamicResource AppWelcomeTitleSize}" HorizontalTextAlignment="Center" Margin="32,48,32,12" />
+                        <Label Text="{Binding Text}" FontFamily="{DynamicResource AppHeadingFont}" FontSize="{DynamicResource AppWelcomeTextSize}"
                                TextColor="{StaticResource OnOlive}" HorizontalTextAlignment="Center" Margin="48,0" />
                     </VerticalStackLayout>
                 </DataTemplate>
@@ -29,7 +29,7 @@
         <Border VerticalOptions="Start" HorizontalOptions="End" Margin="0,16,16,0" Padding="12,6"
                 BackgroundColor="#992B240F" StrokeThickness="0" StrokeShape="RoundRectangle 14">
             <Label Text="{x:Static res:AppResources.LanguageLink}" TextColor="{StaticResource PaleYellow}"
-                   FontFamily="{DynamicResource AppBodyBoldFont}" FontSize="13" />
+                   FontFamily="KantumruyProSemiBold" FontSize="13" /><!-- has both Latin and Khmer letters -->
             <Border.GestureRecognizers>
                 <TapGestureRecognizer Tapped="OnLanguageTapped" />
             </Border.GestureRecognizers>

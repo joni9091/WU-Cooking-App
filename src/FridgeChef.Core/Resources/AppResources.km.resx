@@ -58,7 +58,7 @@
   <data name="AddPhoto" xml:space="preserve"><value>បន្ថែមរូបថត</value></data>
   <data name="ChangePhoto" xml:space="preserve"><value>ប្តូររូបថត</value></data>
   <data name="HandleLabel" xml:space="preserve"><value>@handle</value></data>
-  <data name="HandlePlaceholder" xml:space="preserve"><value>@ជ្រើស-handle</value></data>
+  <data name="HandlePlaceholder" xml:space="preserve"><value>@your.name</value></data>
   <data name="HandleHint" xml:space="preserve"><value>អក្សរ លេខ ចំណុច និង _ ប៉ុណ្ណោះ។ ត្រូវតែមិនជាន់គេ។</value></data>
   <data name="HandleChecking" xml:space="preserve"><value>កំពុងពិនិត្យ…</value></data>
   <data name="HandleFree" xml:space="preserve"><value>អាចប្រើបាន</value></data>

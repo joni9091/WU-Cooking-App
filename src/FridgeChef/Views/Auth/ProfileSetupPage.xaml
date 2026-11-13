@@ -36,7 +36,13 @@
                 </Grid>
             </Border>
             <Label Text="{Binding HandleStatus, FallbackValue={x:Static res:AppResources.HandleHint}, TargetNullValue={x:Static res:AppResources.HandleHint}}"
-                   Style="{StaticResource Muted}" FontSize="{StaticResource FontSizeSmall}" />
+                   Style="{StaticResource Muted}" FontSize="{StaticResource FontSizeSmall}">
+                <Label.Triggers>
+                    <DataTrigger TargetType="Label" Binding="{Binding HandleIsBad}" Value="True">
+                        <Setter Property="TextColor" Value="{StaticResource Danger}" />
+                    </DataTrigger>
+                </Label.Triggers>
+            </Label>
 
             <Label Text="{x:Static res:AppResources.AccountNameLabel}" Style="{StaticResource OliveBold}" />
             <Border Style="{StaticResource InputBox}">
