@@ -43,7 +43,7 @@ public static class MauiProgram
 		// One HttpClient for all Supabase calls; the publishable key is sent with every request (RLS protects the data).
 		s.AddSingleton(_ =>
 		{
-			var http = new HttpClient { BaseAddress = new Uri(SupabaseConfig.Url + "/"), Timeout = TimeSpan.FromSeconds(20) };
+			var http = new HttpClient { BaseAddress = new Uri(SupabaseConfig.Url + "/"), Timeout = TimeSpan.FromSeconds(60) }; // recipe ideas can take up to 2 x 15 s on the server
 			http.DefaultRequestHeaders.Add("apikey", SupabaseConfig.PublishableKey);
 			return http;
 		});
@@ -57,6 +57,7 @@ public static class MauiProgram
 		s.AddSingleton(_ => new LocalCache(Path.Combine(FileSystem.AppDataDirectory, "fridgechef.db3")));
 		s.AddSingleton<RecipeClient>();
 		s.AddSingleton<SavedRecipes>();
+		s.AddSingleton<SuggestClient>();
 		s.AddSingleton<IAppNavigator, AppNavigator>();
 		s.AddSingleton<IToast, ToastService>();
 		s.AddSingleton<Router>();
@@ -68,7 +69,13 @@ public static class MauiProgram
 		 .AddTransient<ForgotPasswordPage>().AddTransient<ProfileSetupPage>().AddTransient<AccountPage>();
 		s.AddTransient<HomeViewModel>().AddTransient<RecipesViewModel>().AddTransient<RecipeDetailViewModel>().AddTransient<SavedViewModel>();
 		s.AddTransient<HomePage>().AddTransient<RecipePage>().AddTransient<RecipeDetailPage>().AddTransient<SavedPage>();
-		Routing.RegisterRoute(AppNavigator.DetailRoute, typeof(RecipeDetailPage)); // once per app run (AppShell is rebuilt often)
+		s.AddTransient<FridgeViewModel>().AddTransient<SuggestionsViewModel>().AddTransient<SuggestionDetailViewModel>();
+		s.AddTransient<FridgePage>().AddTransient<SuggestionsPage>().AddTransient<SuggestionDetailPage>();
+		// Routes: registered once per app run (AppShell is rebuilt often).
+		Routing.RegisterRoute(AppNavigator.DetailRoute, typeof(RecipeDetailPage));
+		Routing.RegisterRoute(AppNavigator.FridgeRoute, typeof(FridgePage));
+		Routing.RegisterRoute(AppNavigator.SuggestionsRoute, typeof(SuggestionsPage));
+		Routing.RegisterRoute(AppNavigator.SuggestionRoute, typeof(SuggestionDetailPage));
 
 #if DEBUG
 		builder.Logging.AddDebug();

@@ -21,7 +21,7 @@ sealed class FakeServer(Func<HttpRequestMessage, Task<HttpResponseMessage>> answ
     {
         Interlocked.Increment(ref Calls);
         lock (Paths) Paths.Add(r.RequestUri!.PathAndQuery);
-        return answer(r);
+        return answer(r).WaitAsync(c); // like a real network call, stops when the request is cancelled
     }
 
     public static HttpResponseMessage Json(HttpStatusCode code, string body) =>

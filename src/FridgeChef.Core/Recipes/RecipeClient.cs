@@ -56,7 +56,7 @@ public sealed class RecipeClient(Api api)
     public async Task<List<SavedItem>> GetSavedAsync()
     {
         using var res = await api.SendAsync(HttpMethod.Get,
-            $"rest/v1/saved_recipes?select=recipe_id,created_at,recipes({Recipe.Columns})&recipe_id=not.is.null&order=created_at.desc");
+            $"rest/v1/saved_recipes?select=id,recipe_id,created_at,ai_recipe,recipes({Recipe.Columns})&order=created_at.desc");
         return await res.Content.ReadFromJsonAsync(RecipeJson.Default.ListSavedItem) ?? [];
     }
 
@@ -66,6 +66,21 @@ public sealed class RecipeClient(Api api)
         var row = new SaveRow { UserId = api.Auth.UserId, RecipeId = recipeId };
         using var _ = await api.SendAsync(HttpMethod.Post, "rest/v1/saved_recipes", JsonContent.Create(row, RecipeJson.Default.SaveRow),
             r => r.Headers.Add("Prefer", "return=minimal"), HttpStatusCode.Conflict);
+    }
+
+    // Saves a suggestion (it has no recipe row) and returns the new saved row.
+    public async Task<SavedItem> SaveSuggestionAsync(Suggestion suggestion)
+    {
+        var row = new SaveRow { UserId = api.Auth.UserId, AiRecipe = suggestion };
+        using var res = await api.SendAsync(HttpMethod.Post, "rest/v1/saved_recipes?select=id,recipe_id,created_at,ai_recipe",
+            JsonContent.Create(row, RecipeJson.Default.SaveRow), r => r.Headers.Add("Prefer", "return=representation"));
+        var rows = await res.Content.ReadFromJsonAsync(RecipeJson.Default.ListSavedItem);
+        return rows is [var saved, ..] ? saved : throw new AuthException("bad_response");
+    }
+
+    public async Task DeleteSavedRowAsync(string rowId)
+    {
+        using var _ = await api.SendAsync(HttpMethod.Delete, $"rest/v1/saved_recipes?id=eq.{Uri.EscapeDataString(rowId)}");
     }
 
     public async Task UnsaveAsync(string recipeId)
@@ -78,6 +93,7 @@ sealed class SaveRow
 {
     [JsonPropertyName("user_id")] public string? UserId { get; set; }
     [JsonPropertyName("recipe_id")] public string? RecipeId { get; set; }
+    [JsonPropertyName("ai_recipe")] public Suggestion? AiRecipe { get; set; }
 }
 
 [JsonSerializable(typeof(List<Recipe>))]

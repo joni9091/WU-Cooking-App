@@ -1,0 +1,116 @@
+<!-- Figma "13. AI recipe detail" with the AI wording replaced: tag "Chef's suggestion", calories marked as estimate.
+     No photo (suggestions are generated): a pale-yellow header with a chef hat instead. -->
+<ContentPage x:Class="FridgeChef.Views.SuggestionDetailPage"
+             xmlns:vm="clr-namespace:FridgeChef.Core.ViewModels;assembly=FridgeChef.Core"
+             xmlns:m="clr-namespace:FridgeChef.Core.Recipes;assembly=FridgeChef.Core"
+             xmlns:views="clr-namespace:FridgeChef.Views"
+             xmlns:res="clr-namespace:FridgeChef.Core.Resources;assembly=FridgeChef.Core"
+             x:DataType="vm:SuggestionDetailViewModel"
+             Shell.TabBarIsVisible="False">
+    <Grid>
+        <ScrollView>
+            <VerticalStackLayout Padding="0,0,0,32">
+                <Grid HeightRequest="200" BackgroundColor="{StaticResource PaleYellow}">
+                    <Image Source="ic_chef.png" WidthRequest="64" HeightRequest="64" />
+                    <Border WidthRequest="44" HeightRequest="44" StrokeShape="Ellipse" StrokeThickness="0" BackgroundColor="White"
+                            HorizontalOptions="Start" VerticalOptions="Start" Margin="20,24" SemanticProperties.Description="{x:Static res:AppResources.Back}">
+                        <Image Source="ic_back_dark.png" WidthRequest="22" HeightRequest="22" />
+                        <Border.GestureRecognizers><TapGestureRecognizer Command="{Binding BackCommand}" /></Border.GestureRecognizers>
+                    </Border>
+                    <Border WidthRequest="44" HeightRequest="44" StrokeShape="Ellipse" StrokeThickness="0" BackgroundColor="White"
+                            HorizontalOptions="End" VerticalOptions="Start" Margin="20,24" SemanticProperties.Description="{Binding SaveText}">
+                        <Image WidthRequest="22" HeightRequest="22">
+                            <Image.Triggers>
+                                <DataTrigger TargetType="Image" Binding="{Binding IsSaved}" Value="True"><Setter Property="Source" Value="ic_bookmark_filled.png" /></DataTrigger>
+                                <DataTrigger TargetType="Image" Binding="{Binding IsSaved}" Value="False"><Setter Property="Source" Value="ic_bookmark.png" /></DataTrigger>
+                            </Image.Triggers>
+                        </Image>
+                        <Border.GestureRecognizers><TapGestureRecognizer Command="{Binding ToggleSaveCommand}" /></Border.GestureRecognizers>
+                    </Border>
+                </Grid>
+
+                <VerticalStackLayout Padding="24,20,24,0" Spacing="14">
+                    <Border Style="{StaticResource KcalPill}" Padding="10,4">
+                        <HorizontalStackLayout Spacing="6">
+                            <Image Source="ic_sparkle.png" WidthRequest="12" HeightRequest="12" VerticalOptions="Center" />
+                            <Label Text="{x:Static res:AppResources.ChefSuggestion}" Style="{StaticResource KcalText}" />
+                        </HorizontalStackLayout>
+                    </Border>
+                    <Label Text="{Binding Suggestion.Name}" Style="{StaticResource Title}" FontSize="34" />
+
+                    <HorizontalStackLayout Spacing="8">
+                        <Border Style="{StaticResource Chip}"><Label Text="{Binding Suggestion.TimeText}" Style="{StaticResource OliveText}" /></Border>
+                        <Border Style="{StaticResource Chip}"><Label Text="{Binding Suggestion.ServingsText}" Style="{StaticResource OliveText}" /></Border>
+                    </HorizontalStackLayout>
+
+                    <Border Style="{StaticResource KcalPill}" Padding="12,4" StrokeShape="RoundRectangle 12">
+                        <Label Text="{Binding Suggestion.CaloriesEstimateText}" Style="{StaticResource OliveBold}" />
+                    </Border>
+
+                    <Label Text="{Binding Suggestion.Description}" FontSize="15" />
+
+                    <Border BackgroundColor="#FFFCE6" Stroke="{StaticResource PaleYellow}" StrokeThickness="1.5" StrokeShape="RoundRectangle 14" Padding="14,10">
+                        <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                            <Image Source="ic_check_green.png" WidthRequest="18" HeightRequest="18" VerticalOptions="Center" />
+                            <Label Grid.Column="1" Text="{Binding Suggestion.SummaryText}" FontSize="13" />
+                        </Grid>
+                    </Border>
+
+                    <Grid ColumnDefinitions="*,Auto" ColumnSpacing="10">
+                        <Border BackgroundColor="{StaticResource PaleYellow}" StrokeThickness="0" StrokeShape="RoundRectangle 20" HeightRequest="54">
+                            <HorizontalStackLayout Spacing="8" HorizontalOptions="Center">
+                                <Image Source="ic_bookmark.png" WidthRequest="18" HeightRequest="18" VerticalOptions="Center" />
+                                <Label Text="{Binding SaveText}" FontFamily="{DynamicResource AppBodyBoldFont}" FontSize="15" VerticalOptions="Center" />
+                            </HorizontalStackLayout>
+                            <Border.GestureRecognizers><TapGestureRecognizer Command="{Binding ToggleSaveCommand}" /></Border.GestureRecognizers>
+                        </Border>
+                        <Border Grid.Column="1" BackgroundColor="{StaticResource InputGrey}" StrokeThickness="0" StrokeShape="RoundRectangle 20" HeightRequest="54" Padding="22,0">
+                            <HorizontalStackLayout Spacing="8">
+                                <Image Source="ic_share.png" WidthRequest="18" HeightRequest="18" VerticalOptions="Center" />
+                                <Label Text="{x:Static res:AppResources.Share}" FontFamily="{DynamicResource AppBodyBoldFont}" FontSize="15" VerticalOptions="Center" />
+                            </HorizontalStackLayout>
+                            <Border.GestureRecognizers><TapGestureRecognizer Command="{Binding ShareCommand}" /></Border.GestureRecognizers>
+                        </Border>
+                    </Grid>
+
+                    <Label Text="{x:Static res:AppResources.Ingredients}" Style="{StaticResource Title}" FontSize="28" Margin="0,8,0,0" />
+                    <VerticalStackLayout BindableLayout.ItemsSource="{Binding Suggestion.Ingredients}" Spacing="10">
+                        <BindableLayout.ItemTemplate>
+                            <DataTemplate x:DataType="m:IngredientLine">
+                                <Grid ColumnDefinitions="26,*,Auto">
+                                    <Image WidthRequest="16" HeightRequest="16" VerticalOptions="Start" Margin="0,3,0,0">
+                                        <Image.Triggers>
+                                            <DataTrigger TargetType="Image" Binding="{Binding Have}" Value="True"><Setter Property="Source" Value="ic_check_green.png" /></DataTrigger>
+                                            <DataTrigger TargetType="Image" Binding="{Binding Have}" Value="False"><Setter Property="Source" Value="ic_x_red.png" /></DataTrigger>
+                                        </Image.Triggers>
+                                    </Image>
+                                    <Label Grid.Column="1" Text="{Binding Text}" FontSize="15" />
+                                    <Label Grid.Column="2" Text="{x:Static res:AppResources.MissingTag}" TextColor="{StaticResource Danger}" FontSize="12"
+                                           IsVisible="{Binding Have, Converter={StaticResource Not}}" VerticalOptions="Center" />
+                                </Grid>
+                            </DataTemplate>
+                        </BindableLayout.ItemTemplate>
+                    </VerticalStackLayout>
+
+                    <Label Text="{x:Static res:AppResources.Steps}" Style="{StaticResource Title}" FontSize="28" Margin="0,8,0,0" />
+                    <VerticalStackLayout BindableLayout.ItemsSource="{Binding Suggestion.StepList}" Spacing="16">
+                        <BindableLayout.ItemTemplate>
+                            <DataTemplate x:DataType="m:Step">
+                                <Grid ColumnDefinitions="40,*">
+                                    <Border WidthRequest="28" HeightRequest="28" StrokeShape="Ellipse" StrokeThickness="0"
+                                            BackgroundColor="{StaticResource PaleYellow}" VerticalOptions="Start">
+                                        <Label Text="{Binding Number}" Style="{StaticResource OliveBold}" FontSize="12"
+                                               HorizontalOptions="Center" VerticalOptions="Center" LineHeight="1" />
+                                    </Border>
+                                    <Label Grid.Column="1" Text="{Binding Text}" FontSize="15" />
+                                </Grid>
+                            </DataTemplate>
+                        </BindableLayout.ItemTemplate>
+                    </VerticalStackLayout>
+                    <Label Text="{x:Static res:AppResources.EstimateNote}" Style="{StaticResource Muted}" FontSize="11" Margin="0,12,0,0" />
+                </VerticalStackLayout>
+            </VerticalStackLayout>
+        </ScrollView>
+        <views:ToastView Margin="16,0,16,24" />
+    </Grid>
+</ContentPage>

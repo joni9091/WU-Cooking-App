@@ -141,4 +141,43 @@
   <data name="NoInternetTitle" xml:space="preserve"><value>គ្មានអ៊ីនធឺណិត</value></data>
   <data name="Remove" xml:space="preserve"><value>ដកចេញ</value></data>
   <data name="MaxCuisines" xml:space="preserve"><value>អ្នកអាចជ្រើសបានរហូតដល់ {0} ប្រភេទម្ហូប។</value></data>
+  <data name="FridgeTitle" xml:space="preserve"><value>ទូទឹកកក</value></data>
+  <data name="FridgeSubtitle" xml:space="preserve"><value>ប្រាប់យើងពីអ្វីដែលអ្នកមាន។ យើងនឹងរកអ្វីដែលអាចចម្អិនបាន។</value></data>
+  <data name="PickCuisines" xml:space="preserve"><value>១. ជ្រើសម្ហូបរហូតដល់ ៣ ប្រភេទ</value></data>
+  <data name="WhatInFridge" xml:space="preserve"><value>២. តើមានអ្វីក្នុងទូទឹកកករបស់អ្នក?</value></data>
+  <data name="TypeIngredient" xml:space="preserve"><value>វាយគ្រឿងផ្សំ</value></data>
+  <data name="AddIngredient" xml:space="preserve"><value>បន្ថែមគ្រឿងផ្សំ</value></data>
+  <data name="Added" xml:space="preserve"><value>បានបន្ថែម</value></data>
+  <data name="QuickAdd" xml:space="preserve"><value>បន្ថែមរហ័ស</value></data>
+  <data name="MoreCountries" xml:space="preserve"><value>ប្រទេសផ្សេងទៀត</value></data>
+  <data name="FindRecipes" xml:space="preserve"><value>រករូបមន្ត</value></data>
+  <data name="NeedTwo" xml:space="preserve"><value>សូមបន្ថែមគ្រឿងផ្សំយ៉ាងតិច ២។</value></data>
+  <data name="MaxIngredients" xml:space="preserve"><value>អ្នកអាចបន្ថែមគ្រឿងផ្សំបានរហូតដល់ ២០។</value></data>
+  <data name="BadIngredient" xml:space="preserve"><value>ប្រើតែអក្សរ លេខ និងដកឃ្លា (រហូតដល់ ៤០)។</value></data>
+  <data name="QuickOnion" xml:space="preserve"><value>ខ្ទឹមបារាំង</value></data>
+  <data name="QuickGarlic" xml:space="preserve"><value>ខ្ទឹមស</value></data>
+  <data name="QuickFish" xml:space="preserve"><value>ត្រី</value></data>
+  <data name="QuickLime" xml:space="preserve"><value>ក្រូចឆ្មា</value></data>
+  <data name="QuickPork" xml:space="preserve"><value>សាច់ជ្រូក</value></data>
+  <data name="QuickNoodles" xml:space="preserve"><value>មី</value></data>
+  <data name="CookingIdeas" xml:space="preserve"><value>កំពុងគិតរកម្ហូប…</value></data>
+  <data name="LookingFridge" xml:space="preserve"><value>កំពុងមើលទូទឹកកករបស់អ្នក។ ចំណាយពេលតែប៉ុន្មានវិនាទី។</value></data>
+  <data name="YouCanCook" xml:space="preserve"><value>អ្នកអាចចម្អិន</value></data>
+  <data name="FromIngredients" xml:space="preserve"><value>ពី {0}</value></data>
+  <data name="YouHaveXofY" xml:space="preserve"><value>អ្នកមាន {0} ក្នុងចំណោម {1}</value></data>
+  <data name="MissingList" xml:space="preserve"><value>ខ្វះ៖ {0}</value></data>
+  <data name="EstimateNote" xml:space="preserve"><value>កាឡូរីជាការប៉ាន់ស្មាន។</value></data>
+  <data name="AboutKcal" xml:space="preserve"><value>ប្រហែល {0} kcal / ចំណែក</value></data>
+  <data name="AboutKcalEstimate" xml:space="preserve"><value>ប្រហែល {0} kcal / ចំណែក (ប៉ាន់ស្មាន)</value></data>
+  <data name="ChefSuggestion" xml:space="preserve"><value>ការណែនាំពីចុងភៅ</value></data>
+  <data name="HaveSummary" xml:space="preserve"><value>អ្នកមានគ្រឿងផ្សំ {0} ក្នុងចំណោម {1}។</value></data>
+  <data name="HaveSummaryMissing" xml:space="preserve"><value>អ្នកមានគ្រឿងផ្សំ {0} ក្នុងចំណោម {1}។ ខ្វះ៖ {2}។</value></data>
+  <data name="MissingTag" xml:space="preserve"><value>ខ្វះ</value></data>
+  <data name="ChefBusyTitle" xml:space="preserve"><value>ចុងភៅរបស់យើងរវល់</value></data>
+  <data name="ChefBusyText" xml:space="preserve"><value>មានមនុស្សច្រើនកំពុងចម្អិនពេលនេះ។ សូមសាកម្តងទៀតក្នុងមួយនាទី។</value></data>
+  <data name="TryAgain" xml:space="preserve"><value>សាកម្តងទៀត</value></data>
+  <data name="BrowseRecipes" xml:space="preserve"><value>មើលរូបមន្ត</value></data>
+  <data name="LimitTitle" xml:space="preserve"><value>នោះជា {0} សម្រាប់ថ្ងៃនេះ</value></data>
+  <data name="LimitText" xml:space="preserve"><value>អ្នកបានប្រើការណែនាំរូបមន្តទាំងអស់សម្រាប់ថ្ងៃនេះហើយ។ វានឹងមកវិញនៅថ្ងៃស្អែក។ អ្នកនៅតែអាចមើល និងចម្អិនរូបមន្តដែលបានរក្សាទុក។</value></data>
+  <data name="OpenSaved" xml:space="preserve"><value>បើករូបមន្តដែលបានរក្សាទុក</value></data>
 </root>

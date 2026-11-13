@@ -12,6 +12,9 @@ namespace FridgeChef.Core.ViewModels;
 public interface IAppNavigator
 {
     Task OpenRecipeAsync(Recipe recipe);
+    Task OpenFridgeAsync();
+    Task OpenSuggestionsAsync(SuggestRequest request, string subtitle);
+    Task OpenSuggestionAsync(Suggestion suggestion);
     Task OpenTabAsync(string route);   // "recipe", "account"
     Task BackAsync();
     // Country picker sheet; max = null for the Recipe filter, 3 for the Fridge page. Null result = cancelled.
@@ -167,8 +170,7 @@ public sealed partial class RecipesViewModel(RecipeClient client, LocalCache cac
 
     [RelayCommand] Task Open(Recipe recipe) => nav.OpenRecipeAsync(recipe);
 
-    // Fridge page arrives in Phase 5.
-    [RelayCommand] void Fridge() => toast.Show(ToastKind.Info, AppResources.ComingSoon);
+    [RelayCommand] Task Fridge() => nav.OpenFridgeAsync();
 
     async Task ReloadAsync()
     {
@@ -312,13 +314,14 @@ public sealed partial class SavedViewModel(SavedRecipes saved, IAppNavigator nav
     {
         try
         {
-            await saved.RemoveAsync(item.RecipeId);
-            toast.Show(ToastKind.Removed, AppResources.RemovedToast, null, AppResources.Undo, () => saved.SaveAsync(item.Recipe!));
+            await saved.RemoveItemAsync(item);
+            toast.Show(ToastKind.Removed, AppResources.RemovedToast, null, AppResources.Undo,
+                item.IsAi ? () => saved.SaveSuggestionAsync(item.Ai!) : () => saved.SaveAsync(item.Recipe!));
         }
         catch (AuthException e) { Errors.Show(toast, e); }
     }
 
-    [RelayCommand] Task Open(SavedItem item) => nav.OpenRecipeAsync(item.Recipe!);
+    [RelayCommand] Task Open(SavedItem item) => item.IsAi ? nav.OpenSuggestionAsync(item.Ai!) : nav.OpenRecipeAsync(item.Recipe!);
 }
 
 public sealed partial class CuisineOption(Cuisine cuisine) : ObservableObject

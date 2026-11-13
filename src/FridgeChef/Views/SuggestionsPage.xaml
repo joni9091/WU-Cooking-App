@@ -1,0 +1,101 @@
+<!-- Figma 6.3 (loading), 6.2 (results), 14 (busy), 14.1 (daily limit). "AI" wording replaced (owner: never show AI).
+     Suggestions have no photo: a pale-yellow chef-hat tile replaces the picture. -->
+<ContentPage x:Class="FridgeChef.Views.SuggestionsPage"
+             xmlns:vm="clr-namespace:FridgeChef.Core.ViewModels;assembly=FridgeChef.Core"
+             xmlns:m="clr-namespace:FridgeChef.Core.Recipes;assembly=FridgeChef.Core"
+             xmlns:views="clr-namespace:FridgeChef.Views"
+             xmlns:res="clr-namespace:FridgeChef.Core.Resources;assembly=FridgeChef.Core"
+             x:DataType="vm:SuggestionsViewModel"
+             Shell.TabBarIsVisible="{Binding ShowResults}">
+    <Grid>
+        <!-- Loading -->
+        <VerticalStackLayout IsVisible="{Binding IsLoading}" Padding="24,140,24,0" Spacing="16">
+            <ActivityIndicator IsRunning="{Binding IsLoading}" WidthRequest="64" HeightRequest="64" />
+            <Label Text="{x:Static res:AppResources.CookingIdeas}" Style="{StaticResource Title}" HorizontalTextAlignment="Center" />
+            <Label Text="{x:Static res:AppResources.LookingFridge}" Style="{StaticResource OliveText}" HorizontalTextAlignment="Center" />
+            <Border Style="{StaticResource Skeleton}" HeightRequest="100" />
+            <Border Style="{StaticResource Skeleton}" HeightRequest="100" />
+            <Border Style="{StaticResource Skeleton}" HeightRequest="100" />
+            <Label Text="{x:Static res:AppResources.Cancel}" Style="{StaticResource OliveBold}" HorizontalTextAlignment="Center" Padding="16">
+                <Label.GestureRecognizers><TapGestureRecognizer Command="{Binding CancelCommand}" /></Label.GestureRecognizers>
+            </Label>
+        </VerticalStackLayout>
+
+        <!-- Results -->
+        <CollectionView IsVisible="{Binding ShowResults}" ItemsSource="{Binding Results}" SelectionMode="None" Margin="24,0">
+            <CollectionView.Header>
+                <VerticalStackLayout Padding="0,40,0,12" Spacing="8">
+                    <HorizontalStackLayout Spacing="12">
+                        <Image Source="ic_chevron_left.png" WidthRequest="24" HeightRequest="24" VerticalOptions="Center"
+                               SemanticProperties.Description="{x:Static res:AppResources.Back}">
+                            <Image.GestureRecognizers><TapGestureRecognizer Command="{Binding CancelCommand}" /></Image.GestureRecognizers>
+                        </Image>
+                        <Label Text="{x:Static res:AppResources.YouCanCook}" Style="{StaticResource Title}" />
+                    </HorizontalStackLayout>
+                    <Label Text="{Binding Subtitle}" Style="{StaticResource OliveText}" />
+                </VerticalStackLayout>
+            </CollectionView.Header>
+            <CollectionView.ItemsLayout><LinearItemsLayout Orientation="Vertical" ItemSpacing="12" /></CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="m:Suggestion">
+                    <Border Style="{StaticResource Card}">
+                        <Border.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding OpenCommand, Source={RelativeSource AncestorType={x:Type vm:SuggestionsViewModel}}, x:DataType=vm:SuggestionsViewModel}" CommandParameter="{Binding .}" />
+                        </Border.GestureRecognizers>
+                        <VerticalStackLayout Spacing="8">
+                            <Grid ColumnDefinitions="88,*" ColumnSpacing="12">
+                                <Border Style="{StaticResource Photo}" BackgroundColor="{StaticResource PaleYellow}" WidthRequest="88" HeightRequest="88">
+                                    <Image Source="ic_chef.png" WidthRequest="36" HeightRequest="36" />
+                                </Border>
+                                <VerticalStackLayout Grid.Column="1" Spacing="2" VerticalOptions="Center">
+                                    <Label Text="{Binding Name}" Style="{StaticResource CardTitle}" />
+                                    <Label Text="{Binding Description}" Style="{StaticResource CardDescription}" />
+                                    <Border Style="{StaticResource KcalPill}" Margin="0,4,0,0">
+                                        <Label Text="{Binding CaloriesText}" Style="{StaticResource KcalText}" />
+                                    </Border>
+                                </VerticalStackLayout>
+                            </Grid>
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="16" Padding="4,0">
+                                <HorizontalStackLayout Spacing="6">
+                                    <Image Source="ic_check_green.png" WidthRequest="14" HeightRequest="14" VerticalOptions="Center" />
+                                    <Label Text="{Binding HaveText}" TextColor="#2E7D32" FontSize="12" />
+                                </HorizontalStackLayout>
+                                <Label Grid.Column="1" Text="{Binding MissingText}" IsVisible="{Binding HasMissing}" TextColor="{StaticResource Danger}"
+                                       FontSize="12" MaxLines="2" LineBreakMode="TailTruncation" />
+                            </Grid>
+                        </VerticalStackLayout>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+            <CollectionView.Footer>
+                <VerticalStackLayout Padding="0,8,0,120">
+                    <Label Text="{x:Static res:AppResources.EstimateNote}" Style="{StaticResource Muted}" FontSize="11" />
+                </VerticalStackLayout>
+            </CollectionView.Footer>
+        </CollectionView>
+
+        <!-- Busy -->
+        <VerticalStackLayout IsVisible="{Binding IsBusy}" Padding="32,180,32,0" Spacing="18">
+            <Border WidthRequest="96" HeightRequest="96" StrokeShape="Ellipse" Stroke="{StaticResource Olive}" BackgroundColor="{StaticResource PaleYellow}">
+                <Image Source="ic_clock.png" WidthRequest="36" HeightRequest="36" />
+            </Border>
+            <Label Text="{x:Static res:AppResources.ChefBusyTitle}" Style="{StaticResource Title}" FontSize="34" HorizontalTextAlignment="Center" />
+            <Label Text="{x:Static res:AppResources.ChefBusyText}" Style="{StaticResource OliveText}" FontSize="15" HorizontalTextAlignment="Center" />
+            <Button Text="{x:Static res:AppResources.TryAgain}" Command="{Binding TryAgainCommand}" />
+            <Button Text="{x:Static res:AppResources.BrowseRecipes}" Command="{Binding GoToCommand}" CommandParameter="recipe" BackgroundColor="{StaticResource InputGrey}" />
+        </VerticalStackLayout>
+
+        <!-- Daily limit -->
+        <VerticalStackLayout IsVisible="{Binding IsLimit}" Padding="32,180,32,0" Spacing="18">
+            <Border WidthRequest="96" HeightRequest="96" StrokeShape="Ellipse" Stroke="{StaticResource Olive}" BackgroundColor="{StaticResource PaleYellow}">
+                <Image Source="ic_sparkle.png" WidthRequest="36" HeightRequest="36" />
+            </Border>
+            <Label Text="{Binding LimitTitle}" Style="{StaticResource Title}" FontSize="34" HorizontalTextAlignment="Center" />
+            <Label Text="{x:Static res:AppResources.LimitText}" Style="{StaticResource OliveText}" FontSize="15" HorizontalTextAlignment="Center" />
+            <Button Text="{x:Static res:AppResources.BrowseRecipes}" Command="{Binding GoToCommand}" CommandParameter="recipe" />
+            <Button Text="{x:Static res:AppResources.OpenSaved}" Command="{Binding GoToCommand}" CommandParameter="saved" BackgroundColor="{StaticResource InputGrey}" />
+        </VerticalStackLayout>
+
+        <views:ToastView />
+    </Grid>
+</ContentPage>

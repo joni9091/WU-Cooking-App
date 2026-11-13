@@ -7,10 +7,18 @@ namespace FridgeChef.Services;
 // Navigation, the country sheet and sharing for the recipe screens.
 public sealed class AppNavigator : IAppNavigator
 {
-    public const string DetailRoute = "recipe-detail";
+    public const string DetailRoute = "recipe-detail", FridgeRoute = "fridge", SuggestionsRoute = "suggestions", SuggestionRoute = "suggestion";
 
     public Task OpenRecipeAsync(Recipe recipe) =>
         Shell.Current.GoToAsync(DetailRoute, new ShellNavigationQueryParameters { ["recipe"] = recipe });
+
+    public Task OpenFridgeAsync() => Shell.Current.GoToAsync(FridgeRoute);
+
+    public Task OpenSuggestionsAsync(SuggestRequest request, string subtitle) =>
+        Shell.Current.GoToAsync(SuggestionsRoute, new ShellNavigationQueryParameters { ["request"] = request, ["subtitle"] = subtitle });
+
+    public Task OpenSuggestionAsync(Suggestion suggestion) =>
+        Shell.Current.GoToAsync(SuggestionRoute, new ShellNavigationQueryParameters { ["suggestion"] = suggestion });
 
     public Task OpenTabAsync(string route) => Shell.Current.GoToAsync("//" + route);
 

@@ -14,6 +14,7 @@ public sealed class SavedRecipes(RecipeClient client, LocalCache cache, AuthServ
 
     public bool IsSaved(string recipeId) => _items.Any(i => i.RecipeId == recipeId);
     public SavedItem? Find(string recipeId) => _items.FirstOrDefault(i => i.RecipeId == recipeId);
+    public SavedItem? FindSuggestion(Suggestion s) => _items.FirstOrDefault(i => i.Ai?.Name == s.Name && i.Ai.Description == s.Description);
 
     // Phone copy (instant, works offline).
     public async Task LoadCachedAsync()
@@ -44,11 +45,30 @@ public sealed class SavedRecipes(RecipeClient client, LocalCache cache, AuthServ
         await cache.PutAsync(Key, _items, RecipeJson.Default.ListSavedItem);
     }
 
+    public async Task<SavedItem> SaveSuggestionAsync(Suggestion suggestion)
+    {
+        if (FindSuggestion(suggestion) is { } existing) return existing;
+        var item = await client.SaveSuggestionAsync(suggestion);
+        Set([item, .. _items]);
+        await cache.PutAsync(Key, _items, RecipeJson.Default.ListSavedItem);
+        return item;
+    }
+
+    // Removes a recipe or a suggestion from Saved.
+    public async Task RemoveItemAsync(SavedItem item)
+    {
+        if (item.IsAi) await client.DeleteSavedRowAsync(item.RowId!);
+        else await client.UnsaveAsync(item.RecipeId!);
+        Set([.. _items.Where(i => i != item && !(i.RowId is not null && i.RowId == item.RowId))]);
+        await cache.PutAsync(Key, _items, RecipeJson.Default.ListSavedItem);
+    }
+
     // Log out: forget the previous user's list in memory.
     public void Clear() => Set([]);
 
     void Set(List<SavedItem> items)
     {
+        foreach (var i in items.Where(i => i.Ai is not null)) i.Recipe = SavedItem.FromSuggestion(i.Ai!, i.RowId);
         _items = [.. items.Where(i => i.Recipe is not null).OrderByDescending(i => i.SavedAt)];
         Changed?.Invoke();
     }

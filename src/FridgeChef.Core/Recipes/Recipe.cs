@@ -36,7 +36,8 @@ public sealed class Recipe
     [JsonIgnore] public string Description => Pick(DescriptionKm, DescriptionEn);
     [JsonIgnore] public string[] Ingredients => Pick(IngredientsKm, IngredientsEn);
     [JsonIgnore] public IReadOnlyList<Step> Steps => [.. Pick(StepsKm, StepsEn).Select((s, i) => new Step(Format.Number(i + 1), s))];
-    [JsonIgnore] public string CaloriesText => Format.Kcal(Calories);
+    [JsonIgnore] public bool IsSuggestion { get; set; } // estimated calories: shown as "About ..."
+    [JsonIgnore] public string CaloriesText => IsSuggestion ? string.Format(AppResources.AboutKcal, Format.Number(Calories)) : Format.Kcal(Calories);
     [JsonIgnore] public string TimeText => string.Format(AppResources.Minutes, Format.Number(PrepMinutes));
     [JsonIgnore] public string ServingsText => string.Format(AppResources.Servings, Format.Number(Servings));
     [JsonIgnore] public string DifficultyText => Difficulty switch
@@ -65,9 +66,20 @@ public sealed class Cuisine
 
 public sealed class SavedItem
 {
-    [JsonPropertyName("recipe_id")] public string RecipeId { get; set; } = "";
+    [JsonPropertyName("id")] public string? RowId { get; set; }
+    [JsonPropertyName("recipe_id")] public string? RecipeId { get; set; }
+    [JsonPropertyName("ai_recipe")] public Suggestion? Ai { get; set; }   // a saved suggestion (no row in recipes)
     [JsonPropertyName("created_at")] public DateTimeOffset SavedAt { get; set; }
     [JsonPropertyName("recipes")] public Recipe? Recipe { get; set; }
 
     [JsonIgnore] public string SavedOnText => string.Format(AppResources.SavedOn, Format.Date(SavedAt));
+    [JsonIgnore] public bool IsAi => Ai is not null;
+
+    // Lets saved suggestions use the same card as recipes (same text in both languages: it was written in one).
+    public static Recipe FromSuggestion(Suggestion s, string? rowId) => new()
+    {
+        Id = "suggestion-" + rowId, TitleEn = s.Name, TitleKm = s.Name, DescriptionEn = s.Description, DescriptionKm = s.Description,
+        Calories = s.Calories, PrepMinutes = s.CookTimeMin, Servings = s.Servings, IsSuggestion = true,
+        IngredientsEn = [.. s.Have, .. s.Missing], StepsEn = s.Steps,
+    };
 }

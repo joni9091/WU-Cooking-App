@@ -1,0 +1,104 @@
+<!-- Figma "6.1 Fridge page" (opened from the Fridge button on the Recipe tab). Chips wrap with FlexLayout (short lists). -->
+<ContentPage x:Class="FridgeChef.Views.FridgePage"
+             xmlns:vm="clr-namespace:FridgeChef.Core.ViewModels;assembly=FridgeChef.Core"
+             xmlns:views="clr-namespace:FridgeChef.Views"
+             xmlns:res="clr-namespace:FridgeChef.Core.Resources;assembly=FridgeChef.Core"
+             x:DataType="vm:FridgeViewModel"
+             Shell.TabBarIsVisible="False">
+    <Grid RowDefinitions="*,Auto">
+        <ScrollView>
+            <VerticalStackLayout Padding="24,40,24,16" Spacing="12">
+                <HorizontalStackLayout Spacing="12">
+                    <Image Source="ic_chevron_left.png" WidthRequest="24" HeightRequest="24" VerticalOptions="Center"
+                           SemanticProperties.Description="{x:Static res:AppResources.Back}">
+                        <Image.GestureRecognizers><TapGestureRecognizer Command="{Binding BackCommand}" /></Image.GestureRecognizers>
+                    </Image>
+                    <Label Text="{x:Static res:AppResources.FridgeTitle}" Style="{StaticResource Title}" />
+                </HorizontalStackLayout>
+                <Label Text="{x:Static res:AppResources.FridgeSubtitle}" Style="{StaticResource OliveText}" />
+
+                <!-- 1. Cuisines -->
+                <Grid ColumnDefinitions="*,Auto" Margin="0,6,0,0">
+                    <Label Text="{x:Static res:AppResources.PickCuisines}" Style="{StaticResource OliveBold}" FontSize="16" />
+                    <Label Grid.Column="1" Text="{Binding CounterText}" Style="{StaticResource OliveBold}" />
+                </Grid>
+                <FlexLayout Wrap="Wrap" BindableLayout.ItemsSource="{Binding CuisineChips}">
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate x:DataType="vm:CuisineChip">
+                            <Border Style="{StaticResource Chip}" Margin="0,0,8,8">
+                                <Border.Triggers>
+                                    <DataTrigger TargetType="Border" Binding="{Binding IsSelected}" Value="True">
+                                        <Setter Property="BackgroundColor" Value="{StaticResource PaleYellow}" />
+                                        <Setter Property="Stroke" Value="{StaticResource Olive}" />
+                                    </DataTrigger>
+                                </Border.Triggers>
+                                <Label Text="{Binding Cuisine.Adjective}" Style="{StaticResource OliveText}" />
+                                <Border.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding ToggleCuisineCommand, Source={RelativeSource AncestorType={x:Type vm:FridgeViewModel}}, x:DataType=vm:FridgeViewModel}" CommandParameter="{Binding .}" />
+                                </Border.GestureRecognizers>
+                            </Border>
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </FlexLayout>
+                <Border Style="{StaticResource Chip}" HorizontalOptions="Start" Margin="0,-8,0,0">
+                    <HorizontalStackLayout Spacing="6">
+                        <Image Source="ic_plus_small.png" WidthRequest="14" HeightRequest="14" VerticalOptions="Center" />
+                        <Label Text="{x:Static res:AppResources.MoreCountries}" Style="{StaticResource OliveText}" />
+                    </HorizontalStackLayout>
+                    <Border.GestureRecognizers><TapGestureRecognizer Command="{Binding MoreCountriesCommand}" /></Border.GestureRecognizers>
+                </Border>
+
+                <!-- 2. Ingredients -->
+                <Label Text="{x:Static res:AppResources.WhatInFridge}" Style="{StaticResource OliveBold}" FontSize="16" Margin="0,8,0,0" />
+                <Grid ColumnDefinitions="*,Auto" ColumnSpacing="10">
+                    <Border Style="{StaticResource InputBox}" HeightRequest="52" StrokeShape="RoundRectangle 18" Padding="16,0">
+                        <Entry Text="{Binding NewIngredient}" Placeholder="{x:Static res:AppResources.TypeIngredient}" MaxLength="40"
+                               ReturnType="Done" ReturnCommand="{Binding AddIngredientCommand}" />
+                    </Border>
+                    <Border Grid.Column="1" Style="{StaticResource IconButton}" SemanticProperties.Description="{x:Static res:AppResources.AddIngredient}">
+                        <Image Source="ic_plus.png" WidthRequest="22" HeightRequest="22" />
+                        <Border.GestureRecognizers><TapGestureRecognizer Command="{Binding AddIngredientCommand}" /></Border.GestureRecognizers>
+                    </Border>
+                </Grid>
+                <Label Text="{Binding Message}" Style="{StaticResource ErrorText}" HorizontalTextAlignment="Start" />
+
+                <Label Text="{x:Static res:AppResources.Added}" Style="{StaticResource OliveText}" FontSize="13" IsVisible="{Binding HasIngredients}" />
+                <FlexLayout Wrap="Wrap" BindableLayout.ItemsSource="{Binding Ingredients}">
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate x:DataType="x:String">
+                            <Border Style="{StaticResource ChipSelected}" Margin="0,0,8,8">
+                                <HorizontalStackLayout Spacing="6">
+                                    <Label Text="{Binding .}" Style="{StaticResource OliveBold}" VerticalOptions="Center" />
+                                    <Image Source="ic_x.png" WidthRequest="14" HeightRequest="14" VerticalOptions="Center" />
+                                </HorizontalStackLayout>
+                                <Border.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding RemoveIngredientCommand, Source={RelativeSource AncestorType={x:Type vm:FridgeViewModel}}, x:DataType=vm:FridgeViewModel}" CommandParameter="{Binding .}" />
+                                </Border.GestureRecognizers>
+                            </Border>
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </FlexLayout>
+
+                <Label Text="{x:Static res:AppResources.QuickAdd}" Style="{StaticResource OliveText}" FontSize="13" />
+                <FlexLayout Wrap="Wrap" BindableLayout.ItemsSource="{Binding QuickItems}">
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate x:DataType="x:String">
+                            <Border Style="{StaticResource Chip}" Margin="0,0,8,8">
+                                <HorizontalStackLayout Spacing="6">
+                                    <Image Source="ic_plus_small.png" WidthRequest="14" HeightRequest="14" VerticalOptions="Center" />
+                                    <Label Text="{Binding .}" Style="{StaticResource OliveText}" VerticalOptions="Center" />
+                                </HorizontalStackLayout>
+                                <Border.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding AddQuickCommand, Source={RelativeSource AncestorType={x:Type vm:FridgeViewModel}}, x:DataType=vm:FridgeViewModel}" CommandParameter="{Binding .}" />
+                                </Border.GestureRecognizers>
+                            </Border>
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </FlexLayout>
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <Button Grid.Row="1" Text="{x:Static res:AppResources.FindRecipes}" Command="{Binding FindRecipesCommand}" Margin="24,8,24,24" />
+        <views:ToastView Grid.RowSpan="2" Margin="16,0,16,96" />
+    </Grid>
+</ContentPage>

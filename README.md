@@ -50,8 +50,29 @@ The one-step `dotnet build -t:InstallAndroidDependencies` does the same, but it 
 ## Run the tests
 
 ```
-dotnet test tests/FridgeChef.Tests
+dotnet test tests/FridgeChef.Tests                                   # app logic (C#)
+node --test supabase/functions/suggest-recipes/logic.test.ts         # recipe-ideas function rules
 ```
+
+## Sign-in setup (Supabase + Google)
+
+1. **Google Cloud** (free, no billing needed; skip any "free trial" page):
+   - Create a project, then in Google Auth Platform set Audience = External, mode **Testing**, and add every tester's Gmail under **Test users** (max 100).
+   - Data access (scopes): `openid`, `userinfo.email`, `userinfo.profile`.
+   - Clients → Create → **Web application**, Authorized redirect URI: `https://vobwgptmuzichrcvutwq.supabase.co/auth/v1/callback`.
+2. **Supabase → Authentication**:
+   - Providers → Google: on, paste the Client ID and Client secret (the secret goes only here).
+   - Providers → Email: minimum password length `8`.
+   - URL Configuration: Site URL `fridgechef://auth-callback`, and add `fridgechef://auth-callback` to Redirect URLs.
+   - Email templates → Reset password: include `{{ .Token }}` (the app asks for this code).
+3. Supabase's built-in email only reaches members of your Supabase team, a few per hour. Friends should use **Continue with Google** until a custom SMTP service is set up.
+
+## Recipe ideas function (`supabase/functions/suggest-recipes`)
+
+- The app sends `{ ingredients, cuisines, language }` with the user's login; the function checks the input, the daily limit (10), a 7-day cache, then asks **Groq first and NVIDIA once as backup** (owner decision: NVIDIA's free service took 14-53 s).
+- Secrets (Supabase → Edge Functions → Secrets): `GROQ_API_KEY`, `GROQ_MODEL`, `NVIDIA_API_KEY`, `NVIDIA_MODEL`, optional `DAILY_LIMIT`. Keys never go in the app or the repo.
+- Deploy: it is deployed with **verify_jwt = false** because the function checks the user itself (required with the new publishable/secret keys). With the Supabase CLI: `supabase functions deploy suggest-recipes --no-verify-jwt`.
+- Logs: Supabase → Edge Functions → suggest-recipes → Logs. They only contain timings and provider status codes, never ingredients, emails or tokens.
 
 ## Text and languages
 
