@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <!-- Default looks for controls. Uses only values from Theme.xaml (no raw colours or sizes here).
      DynamicResource fonts let the font switch at once when the language changes. -->
-<ResourceDictionary>
+<ResourceDictionary xmlns:views="clr-namespace:FridgeChef.Views">
 
     <!-- Figma has no title bar: each screen draws its own heading. -->
     <Style TargetType="Page" ApplyToDerivedTypes="True">
@@ -95,7 +95,12 @@
         <Setter Property="VerticalOptions" Value="Center" />
     </Style>
 
+    <!-- Black icons on the page or in input boxes: light in dark mode (icons on pale-yellow/white buttons stay black). -->
+    <Style TargetType="View" x:Key="ThemedIcon">
+        <Setter Property="views:Icon.Tint" Value="{AppThemeBinding Light={StaticResource Text}, Dark={StaticResource TextDark}}" />
+    </Style>
     <Style TargetType="Image" x:Key="InputIcon">
+        <Setter Property="views:Icon.Tint" Value="{AppThemeBinding Light={StaticResource Text}, Dark={StaticResource TextDark}}" />
         <Setter Property="WidthRequest" Value="18" />
         <Setter Property="HeightRequest" Value="18" />
         <Setter Property="VerticalOptions" Value="Center" />

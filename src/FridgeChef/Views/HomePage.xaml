@@ -14,10 +14,10 @@
                     <VerticalStackLayout Spacing="16" Padding="0,48,0,8">
                         <Grid ColumnDefinitions="*,Auto,Auto" ColumnSpacing="14">
                             <Label Text="{x:Static res:AppResources.HomeTitle}" Style="{StaticResource Title}" />
-                            <ImageButton Grid.Column="1" Source="ic_search.png" WidthRequest="26" HeightRequest="26" VerticalOptions="Start" Margin="0,6,0,0"
+                            <ImageButton Grid.Column="1" Source="ic_search.png" Style="{StaticResource ThemedIcon}" WidthRequest="26" HeightRequest="26" VerticalOptions="Start" Margin="0,6,0,0"
                                          BackgroundColor="Transparent" Command="{Binding GoToCommand}" CommandParameter="recipe"
                                          SemanticProperties.Description="{x:Static res:AppResources.Search}" />
-                            <ImageButton Grid.Column="2" Source="tab_user.png" WidthRequest="26" HeightRequest="26" VerticalOptions="Start" Margin="0,6,0,0"
+                            <ImageButton Grid.Column="2" Source="tab_user.png" Style="{StaticResource ThemedIcon}" WidthRequest="26" HeightRequest="26" VerticalOptions="Start" Margin="0,6,0,0"
                                          BackgroundColor="Transparent" Command="{Binding GoToCommand}" CommandParameter="account"
                                          SemanticProperties.Description="{x:Static res:AppResources.TabAccount}" />
                         </Grid>
@@ -43,7 +43,7 @@
                                 </DataTemplate>
                             </CarouselView.ItemTemplate>
                         </CarouselView>
-                        <IndicatorView x:Name="Dots" HorizontalOptions="Center" IndicatorColor="#40000000" SelectedIndicatorColor="Black" IndicatorSize="7" />
+                        <IndicatorView x:Name="Dots" HorizontalOptions="Center" IndicatorColor="{AppThemeBinding Light=#40000000, Dark=#55FFFFFF}" SelectedIndicatorColor="{AppThemeBinding Light=Black, Dark={StaticResource PaleYellow}}" IndicatorSize="7" />
 
                         <Label Text="{x:Static res:AppResources.PopularNow}" Style="{StaticResource Title}" FontSize="26" />
                     </VerticalStackLayout>
