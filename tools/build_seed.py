@@ -32,7 +32,8 @@ for r in recipes:
     for part in ("ingredients", "steps"):
         en, km = r[part + "_en"], r[part + "_km"]
         check(len(en) > 0 and len(en) == len(km), f"{t}: {part} English/Khmer lists differ in length")
-    check(len(r["steps_en"]) <= 8, f"{t}: more than 8 steps")
+    # Full cooking steps from preparation to serving (owner: no 3-step summaries).
+    check(5 <= len(r["steps_en"]) <= 12, f"{t}: needs 5 to 12 detailed steps, has {len(r['steps_en'])}")
     check(bool(r.get("image_url")) or t in NO_PHOTO_YET, f"{t}: missing photo")
     check(not r.get("image_url") or r["image_url"].startswith("https://"), f"{t}: photo must use https")
     check(not r.get("image_url") or bool(r.get("image_credit")), f"{t}: photo without credit")
