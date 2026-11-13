@@ -60,6 +60,8 @@ public sealed class SuggestRequest
     [JsonPropertyName("ingredients")] public string[] Ingredients { get; set; } = [];
     [JsonPropertyName("cuisines")] public string[] Cuisines { get; set; } = [];
     [JsonPropertyName("language")] public string Language { get; set; } = "en";
+    // "More ideas": dishes already shown, so the server returns different ones.
+    [JsonPropertyName("exclude")] public string[] Exclude { get; set; } = [];
 }
 
 sealed class SuggestResponse

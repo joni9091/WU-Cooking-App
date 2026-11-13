@@ -247,4 +247,6 @@
 ព័ត៌មាន៖ The Guardian (ផ្នែកម្ហូប) ភ្ជាប់ទៅអត្ថបទដើម។
 
 កម្មវិធី៖ .NET MAUI និង CommunityToolkit.Mvvm (MIT), sqlite-net (MIT), SQLitePCLRaw (Apache 2.0), Supabase (Apache 2.0 / MIT)។</value></data>
+  <data name="MoreIdeas" xml:space="preserve"><value>គំនិតបន្ថែម</value></data>
+  <data name="LimitShort" xml:space="preserve"><value>ការស្វែងរករបស់អ្នកនឹងត្រឡប់មកវិញនៅថ្ងៃស្អែក។</value></data>
 </root>

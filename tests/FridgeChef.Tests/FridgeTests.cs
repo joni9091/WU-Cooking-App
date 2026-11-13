@@ -147,6 +147,42 @@ public class FridgeTests
     }
 
     [Fact]
+    public async Task More_ideas_sends_the_shown_dishes_and_adds_new_ones()
+    {
+        string? sent = null;
+        var calls = 0;
+        var (vm, _, _) = await Suggestions(async r =>
+        {
+            if (++calls == 2)
+            {
+                sent = await r.Content!.ReadAsStringAsync();
+                return FakeServer.Json(HttpStatusCode.OK, ThreeIdeas.Replace("\"A\"", "\"D\"").Replace("\"B\"", "\"E\"")); // C repeats
+            }
+            return FakeServer.Json(HttpStatusCode.OK, ThreeIdeas);
+        });
+        await vm.StartAsync(Request, "");
+        Assert.True(vm.CanLoadMore);
+        await vm.LoadMoreCommand.ExecuteAsync(null);
+        Assert.Contains("\"exclude\":[\"A\",\"B\",\"C\"]", sent);
+        Assert.Equal(["A", "B", "C", "D", "E"], vm.Results.Select(x => x.Name)); // the repeated C is not shown twice
+        Assert.False(vm.IsLoadingMore);
+    }
+
+    [Fact]
+    public async Task More_ideas_keeps_the_list_when_the_limit_is_reached()
+    {
+        var calls = 0;
+        var (vm, _, toast) = await Suggestions(_ => Task.FromResult(++calls == 1
+            ? FakeServer.Json(HttpStatusCode.OK, ThreeIdeas)
+            : FakeServer.Json(HttpStatusCode.TooManyRequests, """{"error":"RATE_LIMIT_USER"}""")));
+        await vm.StartAsync(Request, "");
+        await vm.LoadMoreCommand.ExecuteAsync(null);
+        Assert.True(vm.ShowResults);
+        Assert.Equal(3, vm.Results.Count);
+        Assert.Equal("That was 10 for today", Assert.Single(toast.Shown).Title);
+    }
+
+    [Fact]
     public async Task Daily_limit_shows_the_limit_screen()
     {
         var (vm, _, _) = await Suggestions(_ => Task.FromResult(FakeServer.Json(HttpStatusCode.TooManyRequests, """{"error":"RATE_LIMIT_USER"}""")));

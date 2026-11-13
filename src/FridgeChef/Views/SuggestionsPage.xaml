@@ -68,7 +68,10 @@
                 </DataTemplate>
             </CollectionView.ItemTemplate>
             <CollectionView.Footer>
-                <VerticalStackLayout Padding="0,8,0,120">
+                <VerticalStackLayout Padding="0,8,0,120" Spacing="12">
+                    <!-- "More ideas": 3 different dishes are added above this button (one more search) -->
+                    <Button Text="{x:Static res:AppResources.MoreIdeas}" Command="{Binding LoadMoreCommand}" IsVisible="{Binding CanLoadMore}" />
+                    <ActivityIndicator IsRunning="{Binding IsLoadingMore}" IsVisible="{Binding IsLoadingMore}" HeightRequest="40" />
                     <Label Text="{x:Static res:AppResources.EstimateNote}" Style="{StaticResource Muted}" FontSize="11" />
                 </VerticalStackLayout>
             </CollectionView.Footer>

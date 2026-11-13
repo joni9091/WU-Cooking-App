@@ -1,4 +1,4 @@
-// suggest-recipes: the app sends { ingredients, cuisines, language } with the user's login token and gets 3 recipe ideas.
+// suggest-recipes: the app sends { ingredients, cuisines, language, exclude? } with the user's login token and gets 3 recipe ideas.
 // Deploy with verify_jwt = false: the platform check doesn't understand the new key types, so the user is verified below.
 import { createClient } from "npm:@supabase/supabase-js@2";
 import { buildMessages, cacheKey, type Provider, suggest, validateInput } from "./logic.ts";

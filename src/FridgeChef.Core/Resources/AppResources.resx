@@ -247,4 +247,6 @@ Recipe photos: Wikimedia Commons, CC0 / CC BY / CC BY-SA; the photographer and l
 News: The Guardian food feed, linked to the original articles.
 
 Software: .NET MAUI and CommunityToolkit.Mvvm (MIT), sqlite-net (MIT), SQLitePCLRaw (Apache 2.0), Supabase (Apache 2.0 / MIT).</value></data>
+  <data name="MoreIdeas" xml:space="preserve"><value>More ideas</value></data>
+  <data name="LimitShort" xml:space="preserve"><value>Your searches come back tomorrow.</value></data>
 </root>

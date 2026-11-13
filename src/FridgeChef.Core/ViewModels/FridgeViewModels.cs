@@ -130,13 +130,18 @@ public sealed partial class FridgeViewModel(RecipeClient client, LocalCache cach
 public sealed partial class SuggestionsViewModel(SuggestClient client, IAppNavigator nav, IToast toast) : ObservableObject
 {
     public const int DailyLimit = 10;
+    public const int MaxShown = 15; // 3 + four "More ideas"; the server avoids up to 12 names
     SuggestRequest? _request;
     CancellationTokenSource? _cts;
 
     [ObservableProperty] public partial string Subtitle { get; set; } = "";
-    [ObservableProperty] public partial IReadOnlyList<Suggestion> Results { get; set; } = [];
+    public ObservableCollection<Suggestion> Results { get; } = [];
     [ObservableProperty]
-    [NotifyPropertyChangedFor(nameof(IsLoading), nameof(ShowResults), nameof(IsBusy), nameof(IsLimit))]
+    [NotifyPropertyChangedFor(nameof(CanLoadMore))]
+    public partial bool IsLoadingMore { get; set; }
+    public bool CanLoadMore => ShowResults && !IsLoadingMore && Results.Count < MaxShown;
+    [ObservableProperty]
+    [NotifyPropertyChangedFor(nameof(IsLoading), nameof(ShowResults), nameof(IsBusy), nameof(IsLimit), nameof(CanLoadMore))]
     public partial string State { get; set; } = "loading";
 
     public bool IsLoading => State == "loading";
@@ -159,7 +164,9 @@ public sealed partial class SuggestionsViewModel(SuggestClient client, IAppNavig
         State = "loading";
         try
         {
-            Results = await client.SuggestAsync(_request!, _cts.Token);
+            var list = await client.SuggestAsync(_request!, _cts.Token);
+            Results.Clear();
+            foreach (var s in list) Results.Add(s);
             State = "results";
         }
         catch (OperationCanceledException) { } // Cancel pressed: the page is already closing
@@ -173,6 +180,30 @@ public sealed partial class SuggestionsViewModel(SuggestClient client, IAppNavig
     }
 
     [RelayCommand] Task TryAgain() => RunAsync();
+
+    // "More ideas": 3 different dishes added under the ones shown (counts as one search). Errors keep the list.
+    [RelayCommand]
+    async Task LoadMore()
+    {
+        if (!CanLoadMore) return;
+        IsLoadingMore = true;
+        try
+        {
+            var more = new SuggestRequest
+            {
+                Ingredients = _request!.Ingredients, Cuisines = _request.Cuisines, Language = _request.Language,
+                Exclude = [.. Results.Select(r => r.Name)],
+            };
+            var known = Results.Select(r => r.Name.Trim().ToLowerInvariant()).ToHashSet();
+            foreach (var s in await client.SuggestAsync(more, _cts?.Token ?? default))
+                if (known.Add(s.Name.Trim().ToLowerInvariant())) Results.Add(s);
+        }
+        catch (OperationCanceledException) { }
+        catch (AuthException e) when (e.Code == SuggestClient.RateLimit) { toast.Show(ToastKind.Info, LimitTitle, AppResources.LimitShort); }
+        catch (AuthException e) when (e.Code == AuthException.Network) { toast.Show(ToastKind.Offline, AppResources.NoInternetTitle, AppResources.NoInternetSub); }
+        catch (AuthException) { toast.Show(ToastKind.Info, AppResources.ChefBusyTitle, AppResources.ChefBusyText); }
+        finally { IsLoadingMore = false; }
+    }
 
     [RelayCommand]
     Task Cancel()
