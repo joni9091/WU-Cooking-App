@@ -180,4 +180,9 @@
   <data name="LimitTitle" xml:space="preserve"><value>That was {0} for today</value></data>
   <data name="LimitText" xml:space="preserve"><value>You have used all your recipe ideas for today. They come back tomorrow. You can still browse and cook saved recipes.</value></data>
   <data name="OpenSaved" xml:space="preserve"><value>Open saved</value></data>
+  <data name="FoodNews" xml:space="preserve"><value>Food News</value></data>
+  <data name="NewsSubtitle" xml:space="preserve"><value>Stories from kitchens around the world</value></data>
+  <data name="Latest" xml:space="preserve"><value>Latest</value></data>
+  <data name="OpenOriginal" xml:space="preserve"><value>Open original article</value></data>
+  <data name="NewsEmpty" xml:space="preserve"><value>No news yet. Pull down to refresh.</value></data>
 </root>

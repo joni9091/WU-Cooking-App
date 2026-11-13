@@ -5,9 +5,15 @@ using FridgeChef.Views;
 namespace FridgeChef.Services;
 
 // Navigation, the country sheet and sharing for the recipe screens.
-public sealed class AppNavigator : IAppNavigator
+public sealed class AppNavigator : IAppNavigator, INewsNavigator
 {
-    public const string DetailRoute = "recipe-detail", FridgeRoute = "fridge", SuggestionsRoute = "suggestions", SuggestionRoute = "suggestion";
+    public const string DetailRoute = "recipe-detail", FridgeRoute = "fridge", SuggestionsRoute = "suggestions", SuggestionRoute = "suggestion", ArticleRoute = "news-article";
+
+    public Task OpenArticleAsync(NewsItem item) =>
+        Shell.Current.GoToAsync(ArticleRoute, new ShellNavigationQueryParameters { ["item"] = item });
+
+    // The phone's browser (Chrome custom tab), so the user stays signed in to the news site and can come back.
+    public Task OpenInBrowserAsync(Uri url) => Browser.Default.OpenAsync(url, BrowserLaunchMode.SystemPreferred);
 
     public Task OpenRecipeAsync(Recipe recipe) =>
         Shell.Current.GoToAsync(DetailRoute, new ShellNavigationQueryParameters { ["recipe"] = recipe });

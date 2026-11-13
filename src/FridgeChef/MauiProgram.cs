@@ -58,7 +58,10 @@ public static class MauiProgram
 		s.AddSingleton<RecipeClient>();
 		s.AddSingleton<SavedRecipes>();
 		s.AddSingleton<SuggestClient>();
-		s.AddSingleton<IAppNavigator, AppNavigator>();
+		s.AddSingleton<AppNavigator>();
+		s.AddSingleton<IAppNavigator>(sp => sp.GetRequiredService<AppNavigator>());
+		s.AddSingleton<INewsNavigator>(sp => sp.GetRequiredService<AppNavigator>());
+		s.AddSingleton<NewsClient>();
 		s.AddSingleton<IToast, ToastService>();
 		s.AddSingleton<Router>();
 		s.AddSingleton<IAuthNavigator>(sp => sp.GetRequiredService<Router>());
@@ -76,6 +79,8 @@ public static class MauiProgram
 		Routing.RegisterRoute(AppNavigator.FridgeRoute, typeof(FridgePage));
 		Routing.RegisterRoute(AppNavigator.SuggestionsRoute, typeof(SuggestionsPage));
 		Routing.RegisterRoute(AppNavigator.SuggestionRoute, typeof(SuggestionDetailPage));
+		s.AddTransient<NewsViewModel>().AddTransient<NewsArticleViewModel>().AddTransient<NewsPage>().AddTransient<NewsArticlePage>();
+		Routing.RegisterRoute(AppNavigator.ArticleRoute, typeof(NewsArticlePage));
 
 #if DEBUG
 		builder.Logging.AddDebug();

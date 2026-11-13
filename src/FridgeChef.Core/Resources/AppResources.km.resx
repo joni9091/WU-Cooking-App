@@ -180,4 +180,9 @@
   <data name="LimitTitle" xml:space="preserve"><value>នោះជា {0} សម្រាប់ថ្ងៃនេះ</value></data>
   <data name="LimitText" xml:space="preserve"><value>អ្នកបានប្រើការណែនាំរូបមន្តទាំងអស់សម្រាប់ថ្ងៃនេះហើយ។ វានឹងមកវិញនៅថ្ងៃស្អែក។ អ្នកនៅតែអាចមើល និងចម្អិនរូបមន្តដែលបានរក្សាទុក។</value></data>
   <data name="OpenSaved" xml:space="preserve"><value>បើករូបមន្តដែលបានរក្សាទុក</value></data>
+  <data name="FoodNews" xml:space="preserve"><value>ព័ត៌មានម្ហូប</value></data>
+  <data name="NewsSubtitle" xml:space="preserve"><value>រឿងរ៉ាវពីផ្ទះបាយជុំវិញពិភពលោក</value></data>
+  <data name="Latest" xml:space="preserve"><value>ថ្មីបំផុត</value></data>
+  <data name="OpenOriginal" xml:space="preserve"><value>បើកអត្ថបទដើម</value></data>
+  <data name="NewsEmpty" xml:space="preserve"><value>មិនទាន់មានព័ត៌មាននៅឡើយទេ។ ទាញចុះក្រោមដើម្បីផ្ទុកឡើងវិញ។</value></data>
 </root>

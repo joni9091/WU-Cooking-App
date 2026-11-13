@@ -1,7 +1,63 @@
-<!-- News tab. Placeholder until its phase; real content follows the Figma design. -->
+<!-- Figma "7. News": title, subtitle, newest story large (tag "Latest": the feed has no trending data), then a list. -->
 <ContentPage x:Class="FridgeChef.Views.NewsPage"
+             xmlns:m="clr-namespace:FridgeChef.Core.Recipes;assembly=FridgeChef.Core"
+             xmlns:views="clr-namespace:FridgeChef.Views"
              xmlns:res="clr-namespace:FridgeChef.Core.Resources;assembly=FridgeChef.Core"
+             x:DataType="m:NewsViewModel"
              Title="{x:Static res:AppResources.TabNews}">
-    <Label Text="{x:Static res:AppResources.ComingSoon}" Style="{StaticResource Muted}"
-           HorizontalOptions="Center" VerticalOptions="Center" />
+    <Grid>
+        <RefreshView IsRefreshing="{Binding IsRefreshing}" Command="{Binding RefreshCommand}">
+            <CollectionView ItemsSource="{Binding Items}" SelectionMode="None" Margin="24,0"
+                            RemainingItemsThreshold="4" RemainingItemsThresholdReachedCommand="{Binding LoadMoreCommand}">
+                <CollectionView.Header>
+                    <VerticalStackLayout Spacing="10" Padding="0,48,0,16">
+                        <Label Text="{x:Static res:AppResources.FoodNews}" Style="{StaticResource Title}" />
+                        <Label Text="{x:Static res:AppResources.NewsSubtitle}" Style="{StaticResource OliveText}" />
+                        <VerticalStackLayout Spacing="8" IsVisible="{Binding HasFeatured}" Margin="0,6,0,0">
+                            <VerticalStackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding OpenCommand}" CommandParameter="{Binding Featured}" />
+                            </VerticalStackLayout.GestureRecognizers>
+                            <Border Style="{StaticResource Photo}" HeightRequest="190" StrokeShape="RoundRectangle 20">
+                                <Image Source="{Binding Featured.ImageUrl}" Aspect="AspectFill" />
+                            </Border>
+                            <Border Style="{StaticResource KcalPill}">
+                                <Label Text="{x:Static res:AppResources.Latest}" Style="{StaticResource KcalText}" />
+                            </Border>
+                            <Label Text="{Binding Featured.Title}" Style="{StaticResource Title}" FontSize="24" MaxLines="3" LineBreakMode="TailTruncation" />
+                            <Label Text="{Binding Featured.MetaText}" Style="{StaticResource Muted}" FontSize="12" />
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                </CollectionView.Header>
+                <CollectionView.ItemsLayout><LinearItemsLayout Orientation="Vertical" ItemSpacing="14" /></CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="m:NewsItem">
+                        <Grid ColumnDefinitions="88,*" ColumnSpacing="14">
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding OpenCommand, Source={RelativeSource AncestorType={x:Type m:NewsViewModel}}, x:DataType=m:NewsViewModel}" CommandParameter="{Binding .}" />
+                            </Grid.GestureRecognizers>
+                            <Border Style="{StaticResource Photo}" WidthRequest="88" HeightRequest="72">
+                                <Image Source="{Binding ImageUrl}" Aspect="AspectFill" />
+                            </Border>
+                            <VerticalStackLayout Grid.Column="1" Spacing="4" VerticalOptions="Center">
+                                <Label Text="{Binding Title}" Style="{StaticResource Title}" FontSize="17" MaxLines="2" LineBreakMode="TailTruncation" />
+                                <Label Text="{Binding MetaText}" Style="{StaticResource Muted}" FontSize="12" />
+                            </VerticalStackLayout>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+                <CollectionView.EmptyView>
+                    <Label Text="{x:Static res:AppResources.NewsEmpty}" Style="{StaticResource Muted}" HorizontalTextAlignment="Center" Margin="24,40" />
+                </CollectionView.EmptyView>
+                <CollectionView.Footer><BoxView HeightRequest="110" Color="Transparent" /></CollectionView.Footer>
+            </CollectionView>
+        </RefreshView>
+
+        <VerticalStackLayout IsVisible="{Binding IsLoading}" Spacing="16" Padding="24,140,24,0" BackgroundColor="White">
+            <Border Style="{StaticResource Skeleton}" HeightRequest="190" />
+            <Border Style="{StaticResource Skeleton}" HeightRequest="72" />
+            <Border Style="{StaticResource Skeleton}" HeightRequest="72" />
+        </VerticalStackLayout>
+
+        <views:ToastView />
+    </Grid>
 </ContentPage>

@@ -1,0 +1,42 @@
+<!-- Figma "16. News article": photo with back + share, tag, title, source and date, summary, "Open original article". -->
+<ContentPage x:Class="FridgeChef.Views.NewsArticlePage"
+             xmlns:m="clr-namespace:FridgeChef.Core.Recipes;assembly=FridgeChef.Core"
+             xmlns:res="clr-namespace:FridgeChef.Core.Resources;assembly=FridgeChef.Core"
+             x:DataType="m:NewsArticleViewModel"
+             Shell.TabBarIsVisible="False">
+    <ScrollView>
+        <VerticalStackLayout Padding="0,0,0,32">
+            <Grid HeightRequest="260" BackgroundColor="{StaticResource InputGrey}">
+                <Image Source="{Binding Item.ImageUrl}" Aspect="AspectFill" />
+                <Border WidthRequest="44" HeightRequest="44" StrokeShape="Ellipse" StrokeThickness="0" BackgroundColor="White"
+                        HorizontalOptions="Start" VerticalOptions="Start" Margin="20,24" SemanticProperties.Description="{x:Static res:AppResources.Back}">
+                    <Image Source="ic_back_dark.png" WidthRequest="22" HeightRequest="22" />
+                    <Border.GestureRecognizers><TapGestureRecognizer Command="{Binding BackCommand}" /></Border.GestureRecognizers>
+                </Border>
+                <Border WidthRequest="44" HeightRequest="44" StrokeShape="Ellipse" StrokeThickness="0" BackgroundColor="White"
+                        HorizontalOptions="End" VerticalOptions="Start" Margin="20,24" SemanticProperties.Description="{x:Static res:AppResources.Share}">
+                    <Image Source="ic_share.png" WidthRequest="20" HeightRequest="20" />
+                    <Border.GestureRecognizers><TapGestureRecognizer Command="{Binding ShareCommand}" /></Border.GestureRecognizers>
+                </Border>
+            </Grid>
+
+            <VerticalStackLayout Padding="24,20,24,0" Spacing="14">
+                <Border Style="{StaticResource KcalPill}">
+                    <Label Text="{x:Static res:AppResources.Latest}" Style="{StaticResource KcalText}" />
+                </Border>
+                <!-- Articles stay in their original language (brief), so the title uses the English serif in both languages. -->
+                <Label Text="{Binding Item.Title}" FontFamily="InstrumentSerif" FontSize="32" TextColor="{StaticResource Olive}" />
+                <Label Text="{Binding Item.MetaText}" Style="{StaticResource Muted}" FontSize="13" />
+                <VerticalStackLayout BindableLayout.ItemsSource="{Binding Item.Paragraphs}" Spacing="14">
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate x:DataType="x:String">
+                            <Label Text="{Binding .}" FontFamily="Inter" FontSize="15" LineHeight="1.3" />
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </VerticalStackLayout>
+                <Button Text="{x:Static res:AppResources.OpenOriginal}" Command="{Binding OpenOriginalCommand}"
+                        BackgroundColor="{StaticResource InputGrey}" Margin="0,8,0,0" />
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
