@@ -610,5 +610,93 @@
   "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Meat_Moussaka_-_Kouzina%2C_Brighton_2023-11-24.jpg/500px-Meat_Moussaka_-_Kouzina%2C_Brighton_2023-11-24.jpg",
   "image_credit": "Photo: Andy Li, CC0, via Wikimedia Commons",
   "image_page": "https://commons.wikimedia.org/wiki/File:Meat_Moussaka_-_Kouzina,_Brighton_2023-11-24.jpg"
+ },
+ {
+  "title_en": "Fish and Chips",
+  "title_km": "ត្រីចៀន និងដំឡូងបំពង",
+  "cuisine": "GB",
+  "category": "main",
+  "calories": 840,
+  "prep_minutes": 40,
+  "servings": 2,
+  "difficulty": "medium",
+  "is_trending": false,
+  "popularity": 32,
+  "description_en": "British battered fried fish with thick chips and mushy peas.",
+  "description_km": "ត្រីស្រោបម្សៅចៀនបែបអង់គ្លេស ជាមួយដំឡូងបំពងក្រាស់ និងសណ្តែកបារាំងកិន។",
+  "ingredients_en": [
+   "2 white fish fillets",
+   "150 g flour",
+   "200 ml cold sparkling water",
+   "3 large potatoes",
+   "Oil for frying",
+   "Lemon and mushy peas"
+  ],
+  "ingredients_km": [
+   "សាច់ត្រីស ២ ដុំ",
+   "ម្សៅ ១៥០ ក្រាម",
+   "ទឹកសូដាត្រជាក់ ២០០ មីលីលីត្រ",
+   "ដំឡូងបារាំងធំ ៣ មើម",
+   "ប្រេងសម្រាប់ចៀន",
+   "ក្រូចឆ្មា និងសណ្តែកបារាំងកិន"
+  ],
+  "steps_en": [
+   "Cut the potatoes into thick chips and fry at 150 °C until soft.",
+   "Whisk flour and sparkling water into a batter and coat the fish.",
+   "Fry the fish at 180 °C for 6 minutes, then fry the chips again until crisp."
+  ],
+  "steps_km": [
+   "កាត់ដំឡូងជាបន្ទះក្រាស់ ហើយចៀន ១៥០ អង្សា រហូតទន់។",
+   "វាយម្សៅជាមួយទឹកសូដា ហើយស្រោបត្រី។",
+   "ចៀនត្រី ១៨០ អង្សា ៦ នាទី រួចចៀនដំឡូងម្តងទៀតឱ្យស្រួយ។"
+  ],
+  "image_file": "File:Fish and chips - Twickenham, UK.jpg",
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Fish_and_chips_-_Twickenham%2C_UK.jpg/500px-Fish_and_chips_-_Twickenham%2C_UK.jpg",
+  "image_credit": "Photo: Daderot, CC0, via Wikimedia Commons",
+  "image_page": "https://commons.wikimedia.org/wiki/File:Fish_and_chips_-_Twickenham,_UK.jpg"
+ },
+ {
+  "title_en": "Shepherd's Pie",
+  "title_km": "នំដុតសាច់ចៀមដំឡូង",
+  "cuisine": "GB",
+  "category": "main",
+  "calories": 560,
+  "prep_minutes": 75,
+  "servings": 4,
+  "difficulty": "medium",
+  "is_trending": false,
+  "popularity": 31,
+  "description_en": "Minced lamb in rich gravy, baked under a golden mashed potato crust.",
+  "description_km": "សាច់ចៀមចិញ្ច្រាំក្នុងទឹកខាប់ ដុតក្រោមស្រទាប់ដំឡូងកិនពណ៌មាស។",
+  "ingredients_en": [
+   "500 g minced lamb",
+   "1 onion and 1 carrot",
+   "1 tbsp tomato paste",
+   "300 ml stock",
+   "800 g potatoes",
+   "50 g butter and a splash of milk"
+  ],
+  "ingredients_km": [
+   "សាច់ចៀមចិញ្ច្រាំ ៥០០ ក្រាម",
+   "ខ្ទឹមបារាំង ១ និងការ៉ុត ១",
+   "ប៉េងប៉ោះខាប់ ១ ស្លាបព្រាបាយ",
+   "ទឹកស៊ុប ៣០០ មីលីលីត្រ",
+   "ដំឡូងបារាំង ៨០០ ក្រាម",
+   "ប៊ឺ ៥០ ក្រាម និងទឹកដោះគោបន្តិច"
+  ],
+  "steps_en": [
+   "Brown the lamb with onion and carrot, then add tomato paste and stock and simmer for 20 minutes.",
+   "Boil the potatoes and mash with butter and milk.",
+   "Spread the mash over the meat and bake at 200 °C for 25 minutes until golden."
+  ],
+  "steps_km": [
+   "ឆាសាច់ចៀមជាមួយខ្ទឹមបារាំង និងការ៉ុត រួចដាក់ប៉េងប៉ោះខាប់ និងទឹកស៊ុប រំងាស់ ២០ នាទី។",
+   "ស្ងោរដំឡូង ហើយកិនជាមួយប៊ឺ និងទឹកដោះគោ។",
+   "ពង្រាយដំឡូងកិនលើសាច់ ហើយដុត ២០០ អង្សា ២៥ នាទី រហូតពណ៌មាស។"
+  ],
+  "image_file": "File:Shepherds pie - The Kew Greenhouse Cafe 2025-05-14.jpg",
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Shepherds_pie_-_The_Kew_Greenhouse_Cafe_2025-05-14.jpg/500px-Shepherds_pie_-_The_Kew_Greenhouse_Cafe_2025-05-14.jpg",
+  "image_credit": "Photo: Andy Li, CC0, via Wikimedia Commons",
+  "image_page": "https://commons.wikimedia.org/wiki/File:Shepherds_pie_-_The_Kew_Greenhouse_Cafe_2025-05-14.jpg"
  }
 ]

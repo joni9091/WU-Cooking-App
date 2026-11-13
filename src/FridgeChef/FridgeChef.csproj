@@ -31,8 +31,8 @@
 		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.png" ForegroundScale="0.8" Color="#FFF7B2" />
 
 		<!-- Splash Screen -->
-		<!-- shortcut: splash colour is a placeholder (olive) until the owner confirms the Loading screen colour from Figma. -->
-		<MauiSplashScreen Include="Resources\Splash\splash_logo.png" Color="#8C6D00" BaseSize="231,231" />
+		<!-- Splash: logo on the app icon's dark brown (owner chose the common "match the icon" look). -->
+		<MauiSplashScreen Include="Resources\Splash\splash_logo.png" Color="#433400" BaseSize="231,231" />
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />

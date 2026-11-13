@@ -5,7 +5,7 @@ import collections, glob, json, re
 
 CATEGORIES = {"main", "soup", "rice", "noodles", "curry", "salad", "snack", "sweet", "drinks"}
 NO_PHOTO_YET = {"Khmer Chicken Curry"}  # no free photo found on Wikimedia Commons; app shows a placeholder
-OPTIONAL_CUISINES = {"GB"}              # not in the brief; owner still deciding
+OPTIONAL_CUISINES = set()                # every cuisine needs 2+ recipes (owner kept GB)
 
 cuisines = json.load(open("supabase/seed/cuisines.json"))
 recipes = [r for p in sorted(glob.glob("supabase/seed/recipes_*.json")) for r in json.load(open(p))]
