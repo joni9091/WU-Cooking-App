@@ -25,12 +25,12 @@
                     <Label Text="{x:Static res:AppResources.Latest}" Style="{StaticResource KcalText}" />
                 </Border>
                 <!-- Articles stay in their original language (brief), so the title uses the English serif in both languages. -->
-                <Label Text="{Binding Item.Title}" FontFamily="InstrumentSerif" FontSize="32" TextColor="{StaticResource Olive}" />
+                <Label Text="{Binding Item.Title}" FontFamily="{DynamicResource AppHeadingFont}" FontSize="32" TextColor="{StaticResource Olive}" />
                 <Label Text="{Binding Item.MetaText}" Style="{StaticResource Muted}" FontSize="13" />
                 <VerticalStackLayout BindableLayout.ItemsSource="{Binding Item.Paragraphs}" Spacing="14">
                     <BindableLayout.ItemTemplate>
                         <DataTemplate x:DataType="x:String">
-                            <Label Text="{Binding .}" FontFamily="Inter" FontSize="15" LineHeight="1.3" />
+                            <Label Text="{Binding .}" FontFamily="{DynamicResource AppBodyFont}" FontSize="15" LineHeight="1.3" />
                         </DataTemplate>
                     </BindableLayout.ItemTemplate>
                 </VerticalStackLayout>

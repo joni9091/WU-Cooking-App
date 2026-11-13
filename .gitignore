@@ -16,3 +16,6 @@ obj/
 supabase/.temp/
 supabase/.branches/
 publish/
+
+# Clash Grotesk: licence forbids public redistribution; fetch with tools/get_fonts.sh
+src/FridgeChef/Resources/Fonts/ClashGrotesk-*

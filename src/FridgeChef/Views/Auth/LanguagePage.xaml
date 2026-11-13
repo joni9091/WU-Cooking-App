@@ -15,8 +15,8 @@
         <Border x:Name="EnglishCard" Padding="18,14" StrokeShape="RoundRectangle 16">
             <Grid ColumnDefinitions="*,Auto">
                 <VerticalStackLayout>
-                    <Label Text="English" FontFamily="InstrumentSerif" FontSize="26" TextColor="{StaticResource Text}" />
-                    <Label Text="English" FontFamily="Inter" FontSize="12" TextColor="{StaticResource Grey}" />
+                    <Label Text="English" FontFamily="ClashGroteskMedium" FontSize="26" TextColor="{StaticResource Text}" />
+                    <Label Text="English" FontFamily="ClashGrotesk" FontSize="12" TextColor="{StaticResource Grey}" />
                 </VerticalStackLayout>
                 <Image x:Name="EnglishCheck" Grid.Column="1" Source="ic_check.png" WidthRequest="22" HeightRequest="22" />
             </Grid>
@@ -27,7 +27,7 @@
             <Grid ColumnDefinitions="*,Auto">
                 <VerticalStackLayout>
                     <Label Text="ភាសាខ្មែរ" FontFamily="KantumruyPro" FontSize="22" LineHeight="1.5" TextColor="{StaticResource Text}" />
-                    <Label Text="Khmer" FontFamily="Inter" FontSize="12" TextColor="{StaticResource Grey}" />
+                    <Label Text="Khmer" FontFamily="ClashGrotesk" FontSize="12" TextColor="{StaticResource Grey}" />
                 </VerticalStackLayout>
                 <Image x:Name="KhmerCheck" Grid.Column="1" Source="ic_check.png" WidthRequest="22" HeightRequest="22" />
             </Grid>

@@ -33,7 +33,7 @@
                                     <TapGestureRecognizer Command="{Binding ToggleCommand, Source={RelativeSource AncestorType={x:Type vm:CuisinePickerViewModel}}, x:DataType=vm:CuisinePickerViewModel}" CommandParameter="{Binding .}" />
                                 </Grid.GestureRecognizers>
                                 <Border WidthRequest="36" HeightRequest="36" StrokeShape="Ellipse" StrokeThickness="0" BackgroundColor="{StaticResource PaleYellow}">
-                                    <Label Text="{Binding Cuisine.Code}" Style="{StaticResource OliveBold}" FontSize="11" FontFamily="InterSemiBold"
+                                    <Label Text="{Binding Cuisine.Code}" Style="{StaticResource OliveBold}" FontSize="11" FontFamily="ClashGroteskSemibold"
                                            HorizontalOptions="Center" VerticalOptions="Center" />
                                 </Border>
                                 <Label Grid.Column="1" Text="{Binding Cuisine.Name}" FontSize="16" VerticalOptions="Center" />

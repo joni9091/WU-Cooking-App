@@ -19,12 +19,11 @@ public static class MauiProgram
 			.ConfigureFonts(fonts =>
 			{
 				// Second name = the alias used in Theme.xaml.
-				fonts.AddFont("InstrumentSerif-Regular.ttf", "InstrumentSerif");
-				fonts.AddFont("InstrumentSerif-Italic.ttf", "InstrumentSerifItalic");
+				fonts.AddFont("ClashGrotesk-Regular.ttf", "ClashGrotesk");
+				fonts.AddFont("ClashGrotesk-Medium.ttf", "ClashGroteskMedium");
+				fonts.AddFont("ClashGrotesk-Semibold.ttf", "ClashGroteskSemibold");
 				fonts.AddFont("KantumruyPro-Regular.ttf", "KantumruyPro");
 				fonts.AddFont("KantumruyPro-SemiBold.ttf", "KantumruyProSemiBold");
-				fonts.AddFont("Inter-Regular.ttf", "Inter");
-				fonts.AddFont("Inter-SemiBold.ttf", "InterSemiBold");
 			})
 			.ConfigureMauiHandlers(handlers =>
 			{

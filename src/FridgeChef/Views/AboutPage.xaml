@@ -14,7 +14,7 @@
             </HorizontalStackLayout>
 
             <Image Source="about_icon.png" WidthRequest="140" HeightRequest="140" HorizontalOptions="Center" Margin="0,4,0,0" />
-            <Label Text="Fridge Chef" Style="{StaticResource Title}" FontFamily="InstrumentSerif" FontSize="34" HorizontalTextAlignment="Center" />
+            <Label Text="Fridge Chef" Style="{StaticResource Title}" FontSize="34" HorizontalTextAlignment="Center" />
             <Label x:Name="VersionLabel" Style="{StaticResource Muted}" FontSize="13" HorizontalTextAlignment="Center" Margin="0,-8,0,0" />
             <Label Text="{x:Static res:AppResources.AboutText}" FontSize="14" HorizontalTextAlignment="Center" Margin="0,0,0,8" />
 

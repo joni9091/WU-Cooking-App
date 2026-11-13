@@ -11,7 +11,7 @@ A bilingual (English / Khmer) cooking app for Android, built with .NET MAUI and 
 | `tests/FridgeChef.Tests` | Unit tests |
 | `supabase/migrations` | Database changes, oldest first. Each file runs **once**, in order. The first file is already on the live project |
 | `supabase/seed.sql` | Starter recipes and countries (already on the live project) |
-| `docs/licenses` | Font licences (both fonts are free, SIL Open Font License) |
+| `docs/licenses` | Licences for Kantumruy Pro (SIL OFL) and Lucide icons. Clash Grotesk uses the ITF Free Font License, which comes with its download |
 
 ## One-time setup on a Mac
 
@@ -33,6 +33,9 @@ A bilingual (English / Khmer) cooking app for Android, built with .NET MAUI and 
 5. Tell the Android build to use Java 21: in `~/.config/xbuild/monodroid-config.xml`, set
    `<java-sdk path="/Users/<you>/Library/Developer/Xamarin/jdk-21/Contents/Home" />`.
    (The warning `XA0033 ... valid version number` during builds is harmless.)
+
+6. Download the English font, Clash Grotesk (free from Fontshare): `./tools/get_fonts.sh`.
+   Its licence does not allow the font files in a public repo, so git ignores them. Without this step the app still builds, but English text uses the phone's default font.
 
 The one-step `dotnet build -t:InstallAndroidDependencies` does the same, but it timed out on a slow connection, which is why the manual steps are listed.
 
