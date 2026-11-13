@@ -54,7 +54,7 @@
             </CollectionView>
         </RefreshView>
 
-        <VerticalStackLayout IsVisible="{Binding IsLoading}" Spacing="16" Padding="24,140,24,0" BackgroundColor="White">
+        <VerticalStackLayout IsVisible="{Binding IsLoading}" Spacing="16" Padding="24,140,24,0" BackgroundColor="{AppThemeBinding Light={StaticResource Background}, Dark={StaticResource BackgroundDark}}">
             <Border Style="{StaticResource Skeleton}" HeightRequest="112" />
             <Border Style="{StaticResource Skeleton}" HeightRequest="112" />
             <Border Style="{StaticResource Skeleton}" HeightRequest="112" />

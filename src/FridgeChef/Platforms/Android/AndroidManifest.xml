@@ -10,6 +10,11 @@
 		<intent>
 			<action android:name="android.support.customtabs.action.CustomTabsService" />
 		</intent>
+		<!-- About → Contact us opens the mail app -->
+		<intent>
+			<action android:name="android.intent.action.SENDTO" />
+			<data android:scheme="mailto" />
+		</intent>
 		<!-- Take a photo for the profile picture -->
 		<intent>
 			<action android:name="android.media.action.IMAGE_CAPTURE" />

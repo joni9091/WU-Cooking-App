@@ -16,10 +16,16 @@
     <Color x:Key="Danger">#C0392B</Color>       <!-- error text, Delete button -->
     <Color x:Key="OnOlive">#FFFFFF</Color>      <!-- text on the olive Welcome screen -->
 
-    <!-- shortcut: no dark-mode design yet, so dark mode reuses neutral dark colours; replace when Figma has a dark version. -->
+    <!-- shortcut: no dark-mode design in Figma; these dark colours were chosen to keep contrast. Replace when a dark design exists. -->
     <Color x:Key="BackgroundDark">#121212</Color>
     <Color x:Key="TextDark">#F2F2F2</Color>
     <Color x:Key="GreyDark">#A0A0A0</Color>
+    <Color x:Key="SurfaceDark">#1E1E1E</Color>      <!-- cards in dark mode -->
+    <Color x:Key="InputGreyDark">#2E2E2E</Color>    <!-- input boxes, secondary buttons in dark mode -->
+    <Color x:Key="OliveLight">#D9B84A</Color>       <!-- olive text on dark backgrounds -->
+    <Color x:Key="ChipDark">#3A3420</Color>         <!-- selected chips in dark mode -->
+    <Color x:Key="SkeletonLight">#F2F2F2</Color>
+    <Color x:Key="SkeletonDark">#2A2A2A</Color>
 
     <!-- Fonts per language. The app copies the right ones into AppHeadingFont / AppBodyFont / AppLineHeight
          when the language changes. Inter and Instrument Serif have no Khmer letters, so Khmer uses Kantumruy Pro for both. -->

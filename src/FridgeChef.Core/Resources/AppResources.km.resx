@@ -185,4 +185,66 @@
   <data name="Latest" xml:space="preserve"><value>ថ្មីបំផុត</value></data>
   <data name="OpenOriginal" xml:space="preserve"><value>បើកអត្ថបទដើម</value></data>
   <data name="NewsEmpty" xml:space="preserve"><value>មិនទាន់មានព័ត៌មាននៅឡើយទេ។ ទាញចុះក្រោមដើម្បីផ្ទុកឡើងវិញ។</value></data>
+  <data name="EditProfile" xml:space="preserve"><value>កែប្រែប្រវត្តិរូប</value></data>
+  <data name="SavedRecipes" xml:space="preserve"><value>រូបមន្តដែលបានរក្សាទុក</value></data>
+  <data name="Settings" xml:space="preserve"><value>ការកំណត់</value></data>
+  <data name="Preferences" xml:space="preserve"><value>ចំណូលចិត្ត</value></data>
+  <data name="DarkMode" xml:space="preserve"><value>របៀបងងឹត</value></data>
+  <data name="ClearCache" xml:space="preserve"><value>សម្អាតឃ្លាំងសម្ងាត់</value></data>
+  <data name="CacheCleared" xml:space="preserve"><value>បានសម្អាតឃ្លាំងសម្ងាត់</value></data>
+  <data name="AccountSection" xml:space="preserve"><value>គណនី</value></data>
+  <data name="AboutSection" xml:space="preserve"><value>អំពី</value></data>
+  <data name="ChangePassword" xml:space="preserve"><value>ប្តូរពាក្យសម្ងាត់</value></data>
+  <data name="DeleteAccount" xml:space="preserve"><value>លុបគណនី</value></data>
+  <data name="AboutLegal" xml:space="preserve"><value>អំពី និងច្បាប់</value></data>
+  <data name="Version" xml:space="preserve"><value>កំណែ {0}</value></data>
+  <data name="SaveChanges" xml:space="preserve"><value>រក្សាទុកការផ្លាស់ប្តូរ</value></data>
+  <data name="EmailCannotChange" xml:space="preserve"><value>មិនអាចប្តូរអ៊ីមែលនៅទីនេះបានទេ។</value></data>
+  <data name="CurrentPassword" xml:space="preserve"><value>ពាក្យសម្ងាត់បច្ចុប្បន្ន</value></data>
+  <data name="NewPassword" xml:space="preserve"><value>ពាក្យសម្ងាត់ថ្មី</value></data>
+  <data name="ConfirmNewPassword" xml:space="preserve"><value>បញ្ជាក់ពាក្យសម្ងាត់ថ្មី</value></data>
+  <data name="RepeatNewPassword" xml:space="preserve"><value>វាយពាក្យសម្ងាត់ថ្មីម្តងទៀត</value></data>
+  <data name="AtLeast8" xml:space="preserve"><value>យ៉ាងតិច ៨ តួ។</value></data>
+  <data name="UpdatePassword" xml:space="preserve"><value>ធ្វើបច្ចុប្បន្នភាពពាក្យសម្ងាត់</value></data>
+  <data name="PasswordChanged" xml:space="preserve"><value>បានប្តូរពាក្យសម្ងាត់</value></data>
+  <data name="ErrCurrentPassword" xml:space="preserve"><value>ពាក្យសម្ងាត់បច្ចុប្បន្នមិនត្រឹមត្រូវ។</value></data>
+  <data name="ErrSamePassword" xml:space="preserve"><value>សូមជ្រើសពាក្យសម្ងាត់ខុសពីពាក្យសម្ងាត់បច្ចុប្បន្ន។</value></data>
+  <data name="GoogleNoPassword" xml:space="preserve"><value>អ្នកចូលតាម Google ដូច្នេះគ្មានពាក្យសម្ងាត់ត្រូវប្តូរទេ។</value></data>
+  <data name="DeleteTitle" xml:space="preserve"><value>លុបគណនីរបស់អ្នកមែនទេ?</value></data>
+  <data name="DeleteText" xml:space="preserve"><value>វានឹងលុបប្រវត្តិរូប រូបមន្តដែលបានរក្សាទុក និងប្រវត្តិរូបមន្តរបស់អ្នក។ មិនអាចត្រឡប់វិញបានទេ។</value></data>
+  <data name="TypeDelete" xml:space="preserve"><value>វាយ DELETE ដើម្បីបញ្ជាក់</value></data>
+  <data name="DeleteMyAccount" xml:space="preserve"><value>លុបគណនីរបស់ខ្ញុំ</value></data>
+  <data name="AboutText" xml:space="preserve"><value>ប្រាប់យើងពីអ្វីដែលមានក្នុងទូទឹកកក ហើយ Fridge Chef នឹងណែនាំម្ហូបដែលអាចចម្អិនបាន ជាភាសាអង់គ្លេស និងខ្មែរ។</value></data>
+  <data name="Terms" xml:space="preserve"><value>លក្ខខណ្ឌប្រើប្រាស់</value></data>
+  <data name="Privacy" xml:space="preserve"><value>គោលការណ៍ឯកជនភាព</value></data>
+  <data name="Licenses" xml:space="preserve"><value>អាជ្ញាប័ណ្ណកូដចំហ</value></data>
+  <data name="ContactUs" xml:space="preserve"><value>ទាក់ទងយើង</value></data>
+  <data name="Copyright" xml:space="preserve"><value>© ២០២៦ Fridge Chef</value></data>
+  <data name="TermsText" xml:space="preserve"><value>Fridge Chef ជាកម្មវិធីឥតគិតថ្លៃ សម្រាប់ប្រើផ្ទាល់ខ្លួន និងមិនមែនពាណិជ្ជកម្ម។
+
+រូបមន្ត និងការណែនាំគឺសម្រាប់ព័ត៌មានទូទៅ។ កាឡូរីជាការប៉ាន់ស្មាន។ សូមពិនិត្យគ្រឿងផ្សំដែលអាចបង្កអាឡែស៊ី និងចម្អិនអាហារឱ្យមានសុវត្ថិភាព។
+
+អត្ថបទព័ត៌មានជាកម្មសិទ្ធិរបស់អ្នកបោះពុម្ព ហើយបើកនៅលើគេហទំព័ររបស់ពួកគេ។ រូបថតរូបមន្តមកពី Wikimedia Commons ហើយរូបមន្តនីមួយៗបង្ហាញឈ្មោះអ្នកថត និងអាជ្ញាប័ណ្ណ។
+
+កុំប្រើកម្មវិធីខុសគោលបំណង ដូចជាព្យាយាមចូលមើលទិន្នន័យអ្នកដទៃ។ យើងអាចបិទគណនីដែលធ្វើដូច្នេះ។
+
+កម្មវិធីនេះផ្តល់ជូនតាមស្ថានភាពជាក់ស្តែង ដោយគ្មានការធានា។ លក្ខខណ្ឌទាំងនេះអាចផ្លាស់ប្តូរ ហើយកម្មវិធីនឹងបង្ហាញកំណែចុងក្រោយ។</value></data>
+  <data name="PrivacyText" xml:space="preserve"><value>អ្វីដែលយើងរក្សាទុក៖ អ៊ីមែល @handle ឈ្មោះគណនី រូបថតប្រវត្តិរូប (ស្រេចចិត្ត) និងរូបមន្តដែលបានរក្សាទុក។ ទិន្នន័យទាំងនេះរក្សាទុកនៅ Supabase (ម៉ាស៊ីនមេនៅប្រទេសជប៉ុន) ហើយត្រូវបានការពារ ដូច្នេះមានតែអ្នកទេដែលអាចមើលទិន្នន័យរបស់អ្នក។
+
+អ្វីដែលយើងផ្ញើទៅអ្នកដទៃ៖ ពេលអ្នកស្នើការណែនាំរូបមន្ត គ្រឿងផ្សំ និងប្រភេទម្ហូបដែលអ្នកជ្រើស (មិនមែនឈ្មោះ ឬអ៊ីមែលរបស់អ្នកទេ) ត្រូវបានផ្ញើទៅអ្នកផ្តល់សេវារូបមន្តរបស់យើង (Groq និង NVIDIA) ដើម្បីបង្កើតការណែនាំ។ បើអ្នកចូលតាម Google, Google បញ្ជាក់ថាអ្នកជានរណា។
+
+នៅលើទូរសព្ទរបស់អ្នក៖ ច្បាប់ចម្លងរូបមន្ត ព័ត៌មាន និងបញ្ជីទូទឹកកកត្រូវបានរក្សាទុក ដើម្បីឱ្យកម្មវិធីដំណើរការដោយគ្មានអ៊ីនធឺណិត។ ការចូលគណនីត្រូវបានរក្សាទុកក្នុងកន្លែងសុវត្ថិភាពរបស់ទូរសព្ទ។ ការចាកចេញនឹងលុបវាចោល។
+
+ការលុបគណនី (ការកំណត់) នឹងលុបប្រវត្តិរូប រូបថត រូបមន្តដែលបានរក្សាទុក និងប្រវត្តិរបស់អ្នកជាអចិន្ត្រៃយ៍។
+
+យើងមិនលក់ទិន្នន័យរបស់អ្នក ឬបង្ហាញការផ្សាយពាណិជ្ជកម្មទេ។ សំណួរ៖ {0}</value></data>
+  <data name="LicensesText" xml:space="preserve"><value>ពុម្ពអក្សរ៖ Instrument Serif, Inter និង Kantumruy Pro, អាជ្ញាប័ណ្ណ SIL Open Font License 1.1។
+
+រូបតំណាង៖ Lucide, អាជ្ញាប័ណ្ណ ISC។
+
+រូបថតរូបមន្ត៖ Wikimedia Commons, CC0 / CC BY / CC BY-SA។ ឈ្មោះអ្នកថត និងអាជ្ញាប័ណ្ណបង្ហាញនៅលើរូបមន្តនីមួយៗ។
+
+ព័ត៌មាន៖ The Guardian (ផ្នែកម្ហូប) ភ្ជាប់ទៅអត្ថបទដើម។
+
+កម្មវិធី៖ .NET MAUI និង CommunityToolkit.Mvvm (MIT), sqlite-net (MIT), SQLitePCLRaw (Apache 2.0), Supabase (Apache 2.0 / MIT)។</value></data>
 </root>

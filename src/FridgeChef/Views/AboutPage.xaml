@@ -1,0 +1,28 @@
+<!-- Figma "22. About and legal". -->
+<ContentPage x:Class="FridgeChef.Views.AboutPage"
+             xmlns:views="clr-namespace:FridgeChef.Views"
+             xmlns:res="clr-namespace:FridgeChef.Core.Resources;assembly=FridgeChef.Core"
+             Shell.TabBarIsVisible="False">
+    <ScrollView>
+        <VerticalStackLayout Padding="{StaticResource PagePadding}" Spacing="12">
+            <HorizontalStackLayout Spacing="12">
+                <Image Source="ic_chevron_left.png" WidthRequest="24" HeightRequest="24" VerticalOptions="Center"
+                       SemanticProperties.Description="{x:Static res:AppResources.Back}">
+                    <Image.GestureRecognizers><TapGestureRecognizer Tapped="OnBack" /></Image.GestureRecognizers>
+                </Image>
+                <Label Text="{x:Static res:AppResources.AboutSection}" Style="{StaticResource Title}" />
+            </HorizontalStackLayout>
+
+            <Image Source="about_icon.png" WidthRequest="140" HeightRequest="140" HorizontalOptions="Center" Margin="0,4,0,0" />
+            <Label Text="Fridge Chef" Style="{StaticResource Title}" FontFamily="InstrumentSerif" FontSize="34" HorizontalTextAlignment="Center" />
+            <Label x:Name="VersionLabel" Style="{StaticResource Muted}" FontSize="13" HorizontalTextAlignment="Center" Margin="0,-8,0,0" />
+            <Label Text="{x:Static res:AppResources.AboutText}" FontSize="14" HorizontalTextAlignment="Center" Margin="0,0,0,8" />
+
+            <views:SettingsRow x:Name="TermsRow" Icon="ic_row_file.png" Text="{x:Static res:AppResources.Terms}" />
+            <views:SettingsRow x:Name="PrivacyRow" Icon="ic_row_lock.png" Text="{x:Static res:AppResources.Privacy}" />
+            <views:SettingsRow x:Name="LicensesRow" Icon="ic_row_file.png" Text="{x:Static res:AppResources.Licenses}" />
+            <views:SettingsRow x:Name="ContactRow" Icon="ic_row_mail.png" Text="{x:Static res:AppResources.ContactUs}" />
+            <Label Text="{x:Static res:AppResources.Copyright}" Style="{StaticResource Muted}" FontSize="12" HorizontalTextAlignment="Center" Margin="0,4" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

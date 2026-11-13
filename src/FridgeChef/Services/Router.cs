@@ -1,13 +1,15 @@
 using FridgeChef.Core.Auth;
 using FridgeChef.Core.Recipes;
+using FridgeChef.Core.Resources;
 using FridgeChef.Core.ViewModels;
+using FridgeChef.Views;
 using FridgeChef.Views.Auth;
 
 namespace FridgeChef.Services;
 
 // Decides which screen the app shows. The single gate, used at launch and after every sign-in:
 //   no session -> Welcome (first time) or Log in;  session but no @handle -> Profile setup;  otherwise -> tabs.
-public sealed class Router(IServiceProvider services, AuthService auth, ProfileClient profiles, LocalCache cache, SavedRecipes saved) : IAuthNavigator
+public sealed class Router(IServiceProvider services, AuthService auth, ProfileClient profiles, LocalCache cache, SavedRecipes saved) : IAuthNavigator, IAccountNavigator
 {
     const string WelcomeSeen = "welcome_seen";
     static string ProfileDone(string userId) => "profile_done_" + userId; // lets the app open offline
@@ -46,6 +48,36 @@ public sealed class Router(IServiceProvider services, AuthService auth, ProfileC
         await cache.ClearAsync(); // the next person on this phone must not see this user's saved recipes
         ShowSignedOut();
     }
+
+    // Account tab screens (Phase 7).
+    public async Task OpenAsync(string page)
+    {
+        var nav = Shell.Current.Navigation;
+        switch (page)
+        {
+            case "edit-profile":
+                var edit = Get<ProfileSetupPage>();
+                Shell.SetTabBarIsVisible(edit, false);
+                var vm = (ProfileSetupViewModel)edit.BindingContext;
+                vm.AfterSave = () => nav.PopAsync();
+                await nav.PushAsync(edit);
+                await vm.LoadForEditAsync(auth);
+                break;
+            case "settings": await nav.PushAsync(Get<SettingsPage>()); break;
+            case "language": await nav.PushAsync(Get<LanguagePage>()); break;
+            case "change-password": await nav.PushAsync(Get<ChangePasswordPage>()); break;
+            case "delete-account": await nav.PushAsync(Get<DeleteAccountPage>()); break;
+            case "about": await nav.PushAsync(new AboutPage()); break;
+            case "logout": // Figma 24 "Log out?" dialog
+                if (await Shell.Current.DisplayAlertAsync(AppResources.LogOutTitle, AppResources.LogOutText, AppResources.LogOut, AppResources.Cancel))
+                    await SignOutAsync();
+                break;
+            default: throw new ArgumentException(page);
+        }
+    }
+
+    // After Delete account the server account is gone: forget everything on the phone and show Log in.
+    public Task SignedOutAsync() => SignOutAsync();
 
     // After a language change: rebuild whatever is showing so every text is re-read.
     public void Rebuild()

@@ -65,6 +65,7 @@ public static class MauiProgram
 		s.AddSingleton<IToast, ToastService>();
 		s.AddSingleton<Router>();
 		s.AddSingleton<IAuthNavigator>(sp => sp.GetRequiredService<Router>());
+		s.AddSingleton<IAccountNavigator>(sp => sp.GetRequiredService<Router>());
 
 		// Screens and their view models: new ones each time a screen opens.
 		s.AddTransient<LoginViewModel>().AddTransient<SignUpViewModel>().AddTransient<ForgotPasswordViewModel>().AddTransient<ProfileSetupViewModel>();
@@ -81,6 +82,8 @@ public static class MauiProgram
 		Routing.RegisterRoute(AppNavigator.SuggestionRoute, typeof(SuggestionDetailPage));
 		s.AddTransient<NewsViewModel>().AddTransient<NewsArticleViewModel>().AddTransient<NewsPage>().AddTransient<NewsArticlePage>();
 		Routing.RegisterRoute(AppNavigator.ArticleRoute, typeof(NewsArticlePage));
+		s.AddTransient<AccountViewModel>().AddTransient<ChangePasswordViewModel>().AddTransient<DeleteAccountViewModel>();
+		s.AddTransient<SettingsPage>().AddTransient<ChangePasswordPage>().AddTransient<DeleteAccountPage>();
 
 #if DEBUG
 		builder.Logging.AddDebug();

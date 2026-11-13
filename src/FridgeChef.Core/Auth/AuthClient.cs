@@ -5,6 +5,11 @@ using System.Text.Json.Serialization;
 
 namespace FridgeChef.Core.Auth;
 
+public sealed record AccountInfo(string Email, string Provider)
+{
+    public bool HasPassword => Provider == "email"; // Google users have no password to change
+}
+
 // A logged-in session. ExpiresAt is Unix seconds (UTC).
 public sealed record Session(string AccessToken, string RefreshToken, long ExpiresAt, string UserId);
 
@@ -42,6 +47,13 @@ public sealed class AuthClient(HttpClient http)
 
     public Task SignOutAsync(string accessToken) => SendAsync(HttpMethod.Post, "logout", null, accessToken);
 
+    // Who is signed in: email and how they signed up ("email" or "google").
+    public async Task<AccountInfo> GetUserAsync(string accessToken)
+    {
+        var user = Parse(await SendTextAsync(HttpMethod.Get, "user", null, accessToken), AuthJson.Default.UserInfo);
+        return new AccountInfo(user?.Email ?? "", user?.AppMetadata?.Provider ?? "email");
+    }
+
     // Google (PKCE): open this URL in the browser, then pass the returned ?code= to ExchangeCodeAsync.
     public static (Uri Url, string Verifier) GoogleSignInUrl(string supabaseUrl)
     {
@@ -57,6 +69,12 @@ public sealed class AuthClient(HttpClient http)
 
     async Task<TokenResponse?> SendAsync(HttpMethod method, string path, Creds? body, string? accessToken = null)
     {
+        var text = await SendTextAsync(method, path, body, accessToken);
+        return text.Length > 0 && text.Contains("access_token") ? Parse(text, AuthJson.Default.TokenResponse) : null;
+    }
+
+    async Task<string> SendTextAsync(HttpMethod method, string path, Creds? body, string? accessToken)
+    {
         using var req = new HttpRequestMessage(method, "auth/v1/" + path);
         if (body is not null) req.Content = JsonContent.Create(body, AuthJson.Default.Creds);
         if (accessToken is not null) req.Headers.Authorization = new("Bearer", accessToken);
@@ -71,7 +89,7 @@ public sealed class AuthClient(HttpClient http)
                 var err = Parse(text, AuthJson.Default.ErrorResponse);
                 throw new AuthException(err?.ErrorCode ?? err?.Error ?? $"http_{(int)res.StatusCode}");
             }
-            return text.Length > 0 && text.Contains("access_token") ? Parse(text, AuthJson.Default.TokenResponse) : null;
+            return text;
         }
     }
 
@@ -107,7 +125,14 @@ sealed class TokenResponse
     [JsonPropertyName("user")] public UserInfo? User { get; set; }
 }
 
-sealed class UserInfo { [JsonPropertyName("id")] public string? Id { get; set; } }
+sealed class UserInfo
+{
+    [JsonPropertyName("id")] public string? Id { get; set; }
+    [JsonPropertyName("email")] public string? Email { get; set; }
+    [JsonPropertyName("app_metadata")] public AppMetadata? AppMetadata { get; set; }
+}
+
+sealed class AppMetadata { [JsonPropertyName("provider")] public string? Provider { get; set; } }
 
 sealed class ErrorResponse
 {
@@ -120,4 +145,5 @@ sealed class ErrorResponse
 [JsonSerializable(typeof(TokenResponse))]
 [JsonSerializable(typeof(ErrorResponse))]
 [JsonSerializable(typeof(Session))]
+[JsonSerializable(typeof(UserInfo))]
 partial class AuthJson : JsonSerializerContext;

@@ -1,25 +1,22 @@
-using FridgeChef.Core.Resources;
+using FridgeChef.Core.ViewModels;
 using FridgeChef.Services;
 
 namespace FridgeChef.Views;
 
 public partial class AccountPage : ContentPage
 {
-	readonly Router _router;
+	readonly AccountViewModel _vm;
 
-	public AccountPage(Router router)
+	public AccountPage(AccountViewModel vm)
 	{
 		InitializeComponent();
-		_router = router;
+		BindingContext = _vm = vm;
+		LanguageRow.Value = Language.Current == "km" ? "ខ្មែរ" : "English";
 	}
 
-	// Language picker (Figma 29); choosing a language rebuilds the app in that language.
-	async void OnLanguage(object? sender, EventArgs e) =>
-		await Navigation.PushAsync(Handler!.MauiContext!.Services.GetRequiredService<Views.Auth.LanguagePage>());
-
-	async void OnLogOut(object? sender, EventArgs e)
+	protected override async void OnAppearing()
 	{
-		if (await DisplayAlertAsync(AppResources.LogOutTitle, AppResources.LogOutText, AppResources.LogOut, AppResources.Cancel))
-			await _router.SignOutAsync();
+		base.OnAppearing();
+		await _vm.AppearingAsync(); // refresh after Edit profile or saving recipes
 	}
 }

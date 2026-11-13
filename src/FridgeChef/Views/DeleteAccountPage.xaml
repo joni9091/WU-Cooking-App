@@ -1,0 +1,25 @@
+<!-- Figma "21. Delete account" ("AI history" reworded: owner decision). Type DELETE to enable the button. -->
+<ContentPage x:Class="FridgeChef.Views.DeleteAccountPage"
+             xmlns:vm="clr-namespace:FridgeChef.Core.ViewModels;assembly=FridgeChef.Core"
+             xmlns:res="clr-namespace:FridgeChef.Core.Resources;assembly=FridgeChef.Core"
+             x:DataType="vm:DeleteAccountViewModel"
+             Shell.TabBarIsVisible="False">
+    <ScrollView>
+        <VerticalStackLayout Padding="32,120,32,32" Spacing="18">
+            <Border WidthRequest="96" HeightRequest="96" StrokeShape="Ellipse" Stroke="{StaticResource Danger}" BackgroundColor="{StaticResource PaleYellow}">
+                <Image Source="ic_alert.png" WidthRequest="40" HeightRequest="40" />
+            </Border>
+            <Label Text="{x:Static res:AppResources.DeleteTitle}" Style="{StaticResource Title}" FontSize="32" HorizontalTextAlignment="Center" />
+            <Label Text="{x:Static res:AppResources.DeleteText}" Style="{StaticResource OliveText}" FontSize="15" HorizontalTextAlignment="Center" />
+            <Border Style="{StaticResource InputBox}">
+                <Entry Text="{Binding Confirm}" Placeholder="{x:Static res:AppResources.TypeDelete}" IsSpellCheckEnabled="False"
+                       IsTextPredictionEnabled="False" Keyboard="Plain" />
+            </Border>
+            <Label Text="{Binding Error}" Style="{StaticResource ErrorText}" />
+            <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" />
+            <Button Text="{x:Static res:AppResources.DeleteMyAccount}" Command="{Binding DeleteCommand}" IsEnabled="{Binding CanDelete}"
+                    BackgroundColor="Transparent" TextColor="{StaticResource Danger}" BorderColor="{StaticResource Danger}" BorderWidth="1.5" />
+            <Button Text="{x:Static res:AppResources.Cancel}" Command="{Binding CancelCommand}" BackgroundColor="{StaticResource InputGrey}" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

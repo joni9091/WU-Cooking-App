@@ -9,8 +9,7 @@ public partial class App : Application
 	public App(Router router)
 	{
 		InitializeComponent();
-		// shortcut: Figma only has a light design, so the app stays light even in phone dark mode; remove when dark mode is designed (Phase 7).
-		UserAppTheme = AppTheme.Light;
+		UserAppTheme = ThemeService.IsDark ? AppTheme.Dark : AppTheme.Light; // Settings switch; light by default
 		Language.ApplySaved(); // must run before any page is built
 		_router = router;
 	}

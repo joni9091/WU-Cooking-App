@@ -52,7 +52,7 @@
                     <Border BackgroundColor="#FFFCE6" Stroke="{StaticResource PaleYellow}" StrokeThickness="1.5" StrokeShape="RoundRectangle 14" Padding="14,10">
                         <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                             <Image Source="ic_check_green.png" WidthRequest="18" HeightRequest="18" VerticalOptions="Center" />
-                            <Label Grid.Column="1" Text="{Binding Suggestion.SummaryText}" FontSize="13" />
+                            <Label Grid.Column="1" Text="{Binding Suggestion.SummaryText}" FontSize="13" TextColor="{StaticResource Text}" />
                         </Grid>
                     </Border>
 
@@ -60,14 +60,14 @@
                         <Border BackgroundColor="{StaticResource PaleYellow}" StrokeThickness="0" StrokeShape="RoundRectangle 20" HeightRequest="54">
                             <HorizontalStackLayout Spacing="8" HorizontalOptions="Center">
                                 <Image Source="ic_bookmark.png" WidthRequest="18" HeightRequest="18" VerticalOptions="Center" />
-                                <Label Text="{Binding SaveText}" FontFamily="{DynamicResource AppBodyBoldFont}" FontSize="15" VerticalOptions="Center" />
+                                <Label Text="{Binding SaveText}" FontFamily="{DynamicResource AppBodyBoldFont}" FontSize="15" VerticalOptions="Center" TextColor="{StaticResource Text}" />
                             </HorizontalStackLayout>
                             <Border.GestureRecognizers><TapGestureRecognizer Command="{Binding ToggleSaveCommand}" /></Border.GestureRecognizers>
                         </Border>
                         <Border Grid.Column="1" BackgroundColor="{StaticResource InputGrey}" StrokeThickness="0" StrokeShape="RoundRectangle 20" HeightRequest="54" Padding="22,0">
                             <HorizontalStackLayout Spacing="8">
                                 <Image Source="ic_share.png" WidthRequest="18" HeightRequest="18" VerticalOptions="Center" />
-                                <Label Text="{x:Static res:AppResources.Share}" FontFamily="{DynamicResource AppBodyBoldFont}" FontSize="15" VerticalOptions="Center" />
+                                <Label Text="{x:Static res:AppResources.Share}" FontFamily="{DynamicResource AppBodyBoldFont}" FontSize="15" VerticalOptions="Center" TextColor="{StaticResource Text}" />
                             </HorizontalStackLayout>
                             <Border.GestureRecognizers><TapGestureRecognizer Command="{Binding ShareCommand}" /></Border.GestureRecognizers>
                         </Border>

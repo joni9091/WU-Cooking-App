@@ -43,6 +43,13 @@ public sealed class LocalCache(string path)
             UpdatedAt = DateTimeOffset.UtcNow.ToUnixTimeSeconds(),
         });
 
+    // Settings → Clear cache: drop the given lists (they are fetched again when needed).
+    public async Task RemoveAsync(params string[] keys)
+    {
+        var db = await Db();
+        foreach (var k in keys) await db.DeleteAsync<Entry>(k);
+    }
+
     // Log out: forget everything of the previous user (saved list, fridge list).
     public async Task ClearAsync() => await (await Db()).DeleteAllAsync<Entry>();
 }

@@ -34,7 +34,7 @@
                                             <Border BackgroundColor="White" StrokeThickness="0" StrokeShape="RoundRectangle 14" Padding="12,6"
                                                     HorizontalOptions="Start" VerticalOptions="End" Margin="12">
                                                 <VerticalStackLayout>
-                                                    <Label Text="{Binding Title}" Style="{StaticResource CardTitle}" />
+                                                    <Label Text="{Binding Title}" Style="{StaticResource CardTitle}" TextColor="{StaticResource Olive}" />
                                                     <Label Text="{Binding CaloriesText}" Style="{StaticResource KcalText}" />
                                                 </VerticalStackLayout>
                                             </Border>
@@ -66,7 +66,7 @@
         </RefreshView>
 
         <!-- Loading placeholders (Figma 25) until the first data arrives -->
-        <VerticalStackLayout IsVisible="{Binding IsLoading}" Spacing="16" Padding="24,120,24,0" BackgroundColor="White">
+        <VerticalStackLayout IsVisible="{Binding IsLoading}" Spacing="16" Padding="24,120,24,0" BackgroundColor="{AppThemeBinding Light={StaticResource Background}, Dark={StaticResource BackgroundDark}}">
             <Border Style="{StaticResource Skeleton}" HeightRequest="227" />
             <Border Style="{StaticResource Skeleton}" HeightRequest="90" />
             <Border Style="{StaticResource Skeleton}" HeightRequest="90" />

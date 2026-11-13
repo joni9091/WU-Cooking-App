@@ -13,6 +13,10 @@ public partial class ProfileSetupPage : ContentPage
         {
             if (e.PropertyName == nameof(vm.Avatar) && vm.Avatar is { } jpeg)
                 AvatarImage.Source = ImageSource.FromStream(() => new MemoryStream(jpeg));
+            else if (e.PropertyName == nameof(vm.ExistingAvatarUrl) && vm.Avatar is null && vm.ExistingAvatarUrl is { } url)
+                AvatarImage.Source = url; // current photo when editing
         };
     }
+
+    void OnBack(object? s, TappedEventArgs e) => _ = Navigation.PopAsync();
 }

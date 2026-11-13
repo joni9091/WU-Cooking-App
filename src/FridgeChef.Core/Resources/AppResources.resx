@@ -185,4 +185,66 @@
   <data name="Latest" xml:space="preserve"><value>Latest</value></data>
   <data name="OpenOriginal" xml:space="preserve"><value>Open original article</value></data>
   <data name="NewsEmpty" xml:space="preserve"><value>No news yet. Pull down to refresh.</value></data>
+  <data name="EditProfile" xml:space="preserve"><value>Edit profile</value></data>
+  <data name="SavedRecipes" xml:space="preserve"><value>Saved recipes</value></data>
+  <data name="Settings" xml:space="preserve"><value>Settings</value></data>
+  <data name="Preferences" xml:space="preserve"><value>Preferences</value></data>
+  <data name="DarkMode" xml:space="preserve"><value>Dark mode</value></data>
+  <data name="ClearCache" xml:space="preserve"><value>Clear cache</value></data>
+  <data name="CacheCleared" xml:space="preserve"><value>Cache cleared</value></data>
+  <data name="AccountSection" xml:space="preserve"><value>Account</value></data>
+  <data name="AboutSection" xml:space="preserve"><value>About</value></data>
+  <data name="ChangePassword" xml:space="preserve"><value>Change password</value></data>
+  <data name="DeleteAccount" xml:space="preserve"><value>Delete account</value></data>
+  <data name="AboutLegal" xml:space="preserve"><value>About and legal</value></data>
+  <data name="Version" xml:space="preserve"><value>Version {0}</value></data>
+  <data name="SaveChanges" xml:space="preserve"><value>Save changes</value></data>
+  <data name="EmailCannotChange" xml:space="preserve"><value>Email cannot be changed here.</value></data>
+  <data name="CurrentPassword" xml:space="preserve"><value>Current password</value></data>
+  <data name="NewPassword" xml:space="preserve"><value>New password</value></data>
+  <data name="ConfirmNewPassword" xml:space="preserve"><value>Confirm new password</value></data>
+  <data name="RepeatNewPassword" xml:space="preserve"><value>Repeat new password</value></data>
+  <data name="AtLeast8" xml:space="preserve"><value>At least 8 characters.</value></data>
+  <data name="UpdatePassword" xml:space="preserve"><value>Update password</value></data>
+  <data name="PasswordChanged" xml:space="preserve"><value>Password changed</value></data>
+  <data name="ErrCurrentPassword" xml:space="preserve"><value>Your current password is not correct.</value></data>
+  <data name="ErrSamePassword" xml:space="preserve"><value>Choose a password different from the current one.</value></data>
+  <data name="GoogleNoPassword" xml:space="preserve"><value>You sign in with Google, so there is no password to change.</value></data>
+  <data name="DeleteTitle" xml:space="preserve"><value>Delete your account?</value></data>
+  <data name="DeleteText" xml:space="preserve"><value>This removes your profile, saved recipes and recipe history. This cannot be undone.</value></data>
+  <data name="TypeDelete" xml:space="preserve"><value>Type DELETE to confirm</value></data>
+  <data name="DeleteMyAccount" xml:space="preserve"><value>Delete my account</value></data>
+  <data name="AboutText" xml:space="preserve"><value>Tell us what is in your fridge and Fridge Chef suggests what to cook, in English and Khmer.</value></data>
+  <data name="Terms" xml:space="preserve"><value>Terms of service</value></data>
+  <data name="Privacy" xml:space="preserve"><value>Privacy policy</value></data>
+  <data name="Licenses" xml:space="preserve"><value>Open-source licenses</value></data>
+  <data name="ContactUs" xml:space="preserve"><value>Contact us</value></data>
+  <data name="Copyright" xml:space="preserve"><value>© 2026 Fridge Chef</value></data>
+  <data name="TermsText" xml:space="preserve"><value>Fridge Chef is a free app for personal, non-commercial use.
+
+Recipes and suggestions are for general information. Calories are estimates. Check ingredients for allergies and cook food safely.
+
+News stories belong to their publishers and open on the publisher's website. Recipe photos come from Wikimedia Commons; each recipe shows its photographer and licence.
+
+Do not misuse the app, for example by trying to access other people's data. We may close accounts that do.
+
+The app is provided as it is, without guarantees. These terms may change; the app will show the latest version.</value></data>
+  <data name="PrivacyText" xml:space="preserve"><value>What we keep: your email, @handle, account name, optional profile photo and saved recipes. They are stored with Supabase (servers in Japan), protected so that only you can see your own data.
+
+What we send to others: when you ask for recipe ideas, the ingredients and cuisines you chose (never your name or email) go to our recipe service providers (Groq and NVIDIA) to create suggestions. If you sign in with Google, Google confirms who you are.
+
+On your phone: a copy of recipes, news and your fridge list is kept so the app works offline. Your login is stored in the phone's secure storage. Log out removes them.
+
+Delete account (Settings) removes your profile, photo, saved recipes and history for good.
+
+We do not sell your data or show ads. Questions: {0}</value></data>
+  <data name="LicensesText" xml:space="preserve"><value>Fonts: Instrument Serif, Inter and Kantumruy Pro, SIL Open Font License 1.1.
+
+Icons: Lucide, ISC License.
+
+Recipe photos: Wikimedia Commons, CC0 / CC BY / CC BY-SA; the photographer and licence are shown on each recipe.
+
+News: The Guardian food feed, linked to the original articles.
+
+Software: .NET MAUI and CommunityToolkit.Mvvm (MIT), sqlite-net (MIT), SQLitePCLRaw (Apache 2.0), Supabase (Apache 2.0 / MIT).</value></data>
 </root>

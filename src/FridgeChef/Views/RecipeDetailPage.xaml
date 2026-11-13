@@ -51,7 +51,7 @@
                         <Border BackgroundColor="{StaticResource PaleYellow}" StrokeThickness="0" StrokeShape="RoundRectangle 20" HeightRequest="54">
                             <HorizontalStackLayout Spacing="8" HorizontalOptions="Center">
                                 <Image Source="ic_bookmark.png" WidthRequest="18" HeightRequest="18" VerticalOptions="Center" />
-                                <Label Text="{Binding SaveText}" FontFamily="{DynamicResource AppBodyBoldFont}" FontSize="15" VerticalOptions="Center" />
+                                <Label Text="{Binding SaveText}" FontFamily="{DynamicResource AppBodyBoldFont}" FontSize="15" VerticalOptions="Center" TextColor="{StaticResource Text}" />
                             </HorizontalStackLayout>
                             <Border.GestureRecognizers><TapGestureRecognizer Command="{Binding ToggleSaveCommand}" /></Border.GestureRecognizers>
                         </Border>
@@ -59,7 +59,7 @@
                                 HeightRequest="54" Padding="22,0">
                             <HorizontalStackLayout Spacing="8">
                                 <Image Source="ic_share.png" WidthRequest="18" HeightRequest="18" VerticalOptions="Center" />
-                                <Label Text="{x:Static res:AppResources.Share}" FontFamily="{DynamicResource AppBodyBoldFont}" FontSize="15" VerticalOptions="Center" />
+                                <Label Text="{x:Static res:AppResources.Share}" FontFamily="{DynamicResource AppBodyBoldFont}" FontSize="15" VerticalOptions="Center" TextColor="{StaticResource Text}" />
                             </HorizontalStackLayout>
                             <Border.GestureRecognizers><TapGestureRecognizer Command="{Binding ShareCommand}" /></Border.GestureRecognizers>
                         </Border>

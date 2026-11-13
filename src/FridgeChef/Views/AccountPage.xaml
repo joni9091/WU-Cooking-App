@@ -1,10 +1,37 @@
-<!-- Account tab. Placeholder until Phase 7; has Language and Log out now (both are rows in the Figma Account screen). -->
+<!-- Figma "8. Account": photo, name, @handle, saved count (no daily-ideas counter: owner decision), rows. -->
 <ContentPage x:Class="FridgeChef.Views.AccountPage"
+             xmlns:vm="clr-namespace:FridgeChef.Core.ViewModels;assembly=FridgeChef.Core"
+             xmlns:views="clr-namespace:FridgeChef.Views"
              xmlns:res="clr-namespace:FridgeChef.Core.Resources;assembly=FridgeChef.Core"
+             x:DataType="vm:AccountViewModel"
              Title="{x:Static res:AppResources.TabAccount}">
-    <VerticalStackLayout Padding="{StaticResource PagePadding}" Spacing="24" VerticalOptions="Center">
-        <Label Text="{x:Static res:AppResources.ComingSoon}" Style="{StaticResource Muted}" HorizontalOptions="Center" />
-        <Button Text="{x:Static res:AppResources.LanguageTitle}" Clicked="OnLanguage" BackgroundColor="{StaticResource InputGrey}" />
-        <Button Text="{x:Static res:AppResources.LogOut}" Clicked="OnLogOut" />
-    </VerticalStackLayout>
+    <ScrollView>
+        <VerticalStackLayout Padding="24,48,24,120" Spacing="12">
+            <Label Text="{x:Static res:AppResources.TabAccount}" Style="{StaticResource Title}" />
+
+            <Border WidthRequest="96" HeightRequest="96" StrokeShape="Ellipse" Stroke="{StaticResource Olive}" StrokeThickness="1"
+                    BackgroundColor="{StaticResource PaleYellow}" HorizontalOptions="Center" Margin="0,8,0,0">
+                <Grid>
+                    <Image Source="ic_user_round.png" WidthRequest="40" HeightRequest="40" Opacity="0.85" />
+                    <Image Source="{Binding AvatarUrl}" Aspect="AspectFill" />
+                </Grid>
+            </Border>
+            <Label Text="{Binding DisplayName}" Style="{StaticResource Title}" FontSize="30" HorizontalTextAlignment="Center" />
+            <Label Text="{Binding HandleText}" Style="{StaticResource Muted}" HorizontalTextAlignment="Center" Margin="0,-8,0,4" />
+
+            <Border BackgroundColor="{StaticResource PaleYellow}" StrokeThickness="0" StrokeShape="RoundRectangle 16" Padding="16,12">
+                <VerticalStackLayout>
+                    <Label Text="{Binding SavedCount}" FontFamily="{DynamicResource AppHeadingFont}" FontSize="26" TextColor="{StaticResource Olive}" HorizontalTextAlignment="Center" />
+                    <Label Text="{x:Static res:AppResources.SavedRecipes}" TextColor="{StaticResource Olive}" FontSize="12" HorizontalTextAlignment="Center" />
+                </VerticalStackLayout>
+                <Border.GestureRecognizers><TapGestureRecognizer Command="{Binding GoToSavedCommand}" /></Border.GestureRecognizers>
+            </Border>
+
+            <views:SettingsRow Icon="ic_row_user.png" Text="{x:Static res:AppResources.EditProfile}" Command="{Binding OpenCommand}" CommandParameter="edit-profile" />
+            <views:SettingsRow Icon="ic_row_bookmark.png" Text="{x:Static res:AppResources.SavedRecipes}" Command="{Binding GoToSavedCommand}" />
+            <views:SettingsRow x:Name="LanguageRow" Icon="ic_row_globe.png" Text="{x:Static res:AppResources.LanguageTitle}" Command="{Binding OpenCommand}" CommandParameter="language" />
+            <views:SettingsRow Icon="ic_row_settings.png" Text="{x:Static res:AppResources.Settings}" Command="{Binding OpenCommand}" CommandParameter="settings" />
+            <views:SettingsRow Icon="ic_row_logout.png" Text="{x:Static res:AppResources.LogOut}" IsDanger="True" ShowChevron="False" Command="{Binding OpenCommand}" CommandParameter="logout" />
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

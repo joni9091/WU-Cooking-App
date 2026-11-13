@@ -69,6 +69,19 @@ public sealed class AuthService(AuthClient client, ISessionStore store, Func<Dat
         }
     }
 
+    public async Task<AccountInfo> GetAccountAsync() =>
+        await client.GetUserAsync(await GetAccessTokenAsync() ?? throw new AuthException("not_signed_in"));
+
+    // Change password (Figma 20): proves the current password by signing in with it, then sets the new one.
+    public async Task ChangePasswordAsync(string currentPassword, string newPassword)
+    {
+        var account = await GetAccountAsync();
+        if (!account.HasPassword) throw new AuthException("no_password");
+        var session = await client.SignInAsync(account.Email, currentPassword); // invalid_credentials if wrong
+        await SetSessionAsync(session);
+        await client.UpdatePasswordAsync(session.AccessToken, newPassword);
+    }
+
     // Log out: tell the server (best effort), then always forget the session on the phone.
     public async Task SignOutAsync()
     {

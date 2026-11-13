@@ -44,7 +44,7 @@
 
     <!-- Olive text: subtitles, field labels, links -->
     <Style TargetType="Label" x:Key="OliveText" BasedOn="{StaticResource BaseLabel}">
-        <Setter Property="TextColor" Value="{StaticResource Olive}" />
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Olive}, Dark={StaticResource OliveLight}}" />
     </Style>
 
     <Style TargetType="Label" x:Key="OliveBold" BasedOn="{StaticResource OliveText}">
@@ -70,15 +70,15 @@
     <Style TargetType="Button" x:Key="SecondaryButton">
         <Setter Property="FontFamily" Value="{DynamicResource AppBodyFont}" />
         <Setter Property="FontSize" Value="{StaticResource FontSizeInput}" />
-        <Setter Property="BackgroundColor" Value="{StaticResource InputGrey}" />
-        <Setter Property="TextColor" Value="{StaticResource Grey}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource InputGrey}, Dark={StaticResource InputGreyDark}}" />
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Grey}, Dark={StaticResource GreyDark}}" />
         <Setter Property="HeightRequest" Value="{StaticResource ControlHeight}" />
         <Setter Property="CornerRadius" Value="24" />
     </Style>
 
     <!-- Grey rounded box that holds an icon and an Entry -->
     <Style TargetType="Border" x:Key="InputBox">
-        <Setter Property="BackgroundColor" Value="{StaticResource InputGrey}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource InputGrey}, Dark={StaticResource InputGreyDark}}" />
         <Setter Property="StrokeThickness" Value="0" />
         <Setter Property="StrokeShape" Value="RoundRectangle 24" />
         <Setter Property="HeightRequest" Value="{StaticResource ControlHeight}" />
@@ -89,8 +89,8 @@
     <Style TargetType="Entry">
         <Setter Property="FontFamily" Value="{DynamicResource AppBodyFont}" />
         <Setter Property="FontSize" Value="{StaticResource FontSizeInput}" />
-        <Setter Property="TextColor" Value="{StaticResource Text}" />
-        <Setter Property="PlaceholderColor" Value="{StaticResource Grey}" />
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Text}, Dark={StaticResource TextDark}}" />
+        <Setter Property="PlaceholderColor" Value="{AppThemeBinding Light={StaticResource Grey}, Dark={StaticResource GreyDark}}" />
         <Setter Property="BackgroundColor" Value="Transparent" />
         <Setter Property="VerticalOptions" Value="Center" />
     </Style>
@@ -103,7 +103,7 @@
 
     <!-- Recipe cards (Figma Home / Saved): white, thin pale-yellow border, rounded -->
     <Style TargetType="Border" x:Key="Card">
-        <Setter Property="BackgroundColor" Value="{StaticResource Background}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Background}, Dark={StaticResource SurfaceDark}}" />
         <Setter Property="Stroke" Value="{StaticResource PaleYellow}" />
         <Setter Property="StrokeThickness" Value="1.5" />
         <Setter Property="StrokeShape" Value="RoundRectangle 16" />
@@ -112,7 +112,7 @@
 
     <!-- Rounded photo frame; grey shows while the photo loads (or if there is none) -->
     <Style TargetType="Border" x:Key="Photo">
-        <Setter Property="BackgroundColor" Value="{StaticResource InputGrey}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource InputGrey}, Dark={StaticResource InputGreyDark}}" />
         <Setter Property="StrokeThickness" Value="0" />
         <Setter Property="StrokeShape" Value="RoundRectangle 12" />
     </Style>
@@ -140,13 +140,15 @@
         <Setter Property="HorizontalOptions" Value="Start" />
     </Style>
 
+    <!-- Always dark olive: it sits on the pale-yellow pill in both modes -->
     <Style TargetType="Label" x:Key="KcalText" BasedOn="{StaticResource OliveBold}">
+        <Setter Property="TextColor" Value="{StaticResource Olive}" />
         <Setter Property="FontSize" Value="11" />
     </Style>
 
     <!-- Category / info chips: white with pale-yellow border; selected = pale yellow fill + olive border -->
     <Style TargetType="Border" x:Key="Chip">
-        <Setter Property="BackgroundColor" Value="{StaticResource Background}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Background}, Dark={StaticResource SurfaceDark}}" />
         <Setter Property="Stroke" Value="{StaticResource PaleYellow}" />
         <Setter Property="StrokeThickness" Value="1.5" />
         <Setter Property="StrokeShape" Value="RoundRectangle 18" />
@@ -154,8 +156,8 @@
     </Style>
 
     <Style TargetType="Border" x:Key="ChipSelected" BasedOn="{StaticResource Chip}">
-        <Setter Property="BackgroundColor" Value="{StaticResource PaleYellow}" />
-        <Setter Property="Stroke" Value="{StaticResource Olive}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource PaleYellow}, Dark={StaticResource ChipDark}}" />
+        <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource Olive}, Dark={StaticResource OliveLight}}" />
     </Style>
 
     <!-- Square pale-yellow icon buttons (Filter, Fridge) -->
@@ -169,7 +171,7 @@
 
     <!-- Loading placeholder blocks (Figma 25) -->
     <Style TargetType="Border" x:Key="Skeleton">
-        <Setter Property="BackgroundColor" Value="#F2F2F2" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource SkeletonLight}, Dark={StaticResource SkeletonDark}}" />
         <Setter Property="StrokeThickness" Value="0" />
         <Setter Property="StrokeShape" Value="RoundRectangle 16" />
     </Style>

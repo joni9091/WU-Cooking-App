@@ -1,0 +1,34 @@
+<!-- Figma "19. Settings" without Notifications (no such feature: owner decision), plus Dark mode and Clear cache (brief). -->
+<ContentPage x:Class="FridgeChef.Views.SettingsPage"
+             xmlns:views="clr-namespace:FridgeChef.Views"
+             xmlns:res="clr-namespace:FridgeChef.Core.Resources;assembly=FridgeChef.Core"
+             Shell.TabBarIsVisible="False">
+    <Grid>
+        <ScrollView>
+            <VerticalStackLayout Padding="{StaticResource PagePadding}" Spacing="12">
+                <HorizontalStackLayout Spacing="12" Margin="0,0,0,4">
+                    <Image Source="ic_chevron_left.png" WidthRequest="24" HeightRequest="24" VerticalOptions="Center"
+                           SemanticProperties.Description="{x:Static res:AppResources.Back}">
+                        <Image.GestureRecognizers><TapGestureRecognizer Tapped="OnBack" /></Image.GestureRecognizers>
+                    </Image>
+                    <Label Text="{x:Static res:AppResources.Settings}" Style="{StaticResource Title}" />
+                </HorizontalStackLayout>
+
+                <Label Text="{x:Static res:AppResources.Preferences}" Style="{StaticResource OliveBold}" />
+                <views:SettingsRow x:Name="LanguageRow" Icon="ic_row_globe.png" Text="{x:Static res:AppResources.LanguageTitle}" />
+                <views:SettingsRow x:Name="DarkRow" Icon="ic_row_moon.png" Text="{x:Static res:AppResources.DarkMode}" />
+                <views:SettingsRow x:Name="CacheRow" Icon="ic_row_eraser.png" Text="{x:Static res:AppResources.ClearCache}" ShowChevron="False" />
+
+                <Label Text="{x:Static res:AppResources.AccountSection}" Style="{StaticResource OliveBold}" Margin="0,8,0,0" />
+                <views:SettingsRow x:Name="PasswordRow" Icon="ic_row_lock.png" Text="{x:Static res:AppResources.ChangePassword}" />
+                <views:SettingsRow x:Name="DeleteRow" Icon="ic_row_trash.png" Text="{x:Static res:AppResources.DeleteAccount}" IsDanger="True" />
+
+                <Label Text="{x:Static res:AppResources.AboutSection}" Style="{StaticResource OliveBold}" Margin="0,8,0,0" />
+                <views:SettingsRow x:Name="AboutRow" Icon="ic_row_info.png" Text="{x:Static res:AppResources.AboutLegal}" />
+                <views:SettingsRow x:Name="LogOutRow" Icon="ic_row_logout.png" Text="{x:Static res:AppResources.LogOut}" IsDanger="True" ShowChevron="False" />
+                <Label x:Name="VersionLabel" Style="{StaticResource Muted}" FontSize="12" HorizontalTextAlignment="Center" Margin="0,4" />
+            </VerticalStackLayout>
+        </ScrollView>
+        <views:ToastView Margin="16,0,16,24" />
+    </Grid>
+</ContentPage>

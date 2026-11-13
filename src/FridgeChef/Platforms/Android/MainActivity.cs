@@ -1,7 +1,6 @@
 ﻿using Android.App;
 using Android.Content.PM;
 using Android.OS;
-using AndroidX.Core.View;
 
 namespace FridgeChef;
 
@@ -11,9 +10,6 @@ public class MainActivity : MauiAppCompatActivity
 	protected override void OnCreate(Bundle? savedInstanceState)
 	{
 		base.OnCreate(savedInstanceState);
-		// Figma: white status bar with dark icons, matching the page background.
-		var window = Window!;
-		window.SetStatusBarColor(Android.Graphics.Color.White);
-		WindowCompat.GetInsetsController(window, window.DecorView)!.AppearanceLightStatusBars = true;
+		FridgeChef.Services.ThemeService.Apply(); // status bar colour for light / dark mode
 	}
 }

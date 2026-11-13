@@ -8,3 +8,9 @@ public static class SupabaseConfig
     public const string Url = "https://vobwgptmuzichrcvutwq.supabase.co";
     public const string PublishableKey = "sb_publishable_DXzqXtvM8jrZEKEErEFl1Q_XvupVU1x";
 }
+
+// Shown in About → Contact us and the privacy policy (owner approved it being public).
+public static class AppContact
+{
+    public const string Email = "sanlong73@gmail.com";
+}

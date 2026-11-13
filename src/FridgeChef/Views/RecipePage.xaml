@@ -55,8 +55,8 @@
                         <Border Style="{StaticResource Chip}">
                             <Border.Triggers>
                                 <DataTrigger TargetType="Border" Binding="{Binding IsSelected}" Value="True">
-                                    <Setter Property="BackgroundColor" Value="{StaticResource PaleYellow}" />
-                                    <Setter Property="Stroke" Value="{StaticResource Olive}" />
+                                    <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource PaleYellow}, Dark={StaticResource ChipDark}}" />
+                                    <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource Olive}, Dark={StaticResource OliveLight}}" />
                                 </DataTrigger>
                             </Border.Triggers>
                             <Label Text="{Binding Label}" Style="{StaticResource Muted}" FontSize="14" />
