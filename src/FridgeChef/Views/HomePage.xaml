@@ -1,7 +1,77 @@
-<!-- Home tab. Placeholder until its phase; real content follows the Figma design. -->
+<!-- Figma "4. Home": greeting + search/profile icons, trending carousel, "Popular now" list.
+     One CollectionView (virtualised) with the carousel as its header, so long lists scroll smoothly on low-end phones. -->
 <ContentPage x:Class="FridgeChef.Views.HomePage"
+             xmlns:vm="clr-namespace:FridgeChef.Core.ViewModels;assembly=FridgeChef.Core"
+             xmlns:m="clr-namespace:FridgeChef.Core.Recipes;assembly=FridgeChef.Core"
+             xmlns:views="clr-namespace:FridgeChef.Views"
              xmlns:res="clr-namespace:FridgeChef.Core.Resources;assembly=FridgeChef.Core"
+             x:DataType="vm:HomeViewModel"
              Title="{x:Static res:AppResources.TabHome}">
-    <Label Text="{x:Static res:AppResources.ComingSoon}" Style="{StaticResource Muted}"
-           HorizontalOptions="Center" VerticalOptions="Center" />
+    <Grid>
+        <RefreshView IsRefreshing="{Binding IsRefreshing}" Command="{Binding RefreshCommand}">
+            <CollectionView ItemsSource="{Binding Popular}" SelectionMode="None" Margin="24,0">
+                <CollectionView.Header>
+                    <VerticalStackLayout Spacing="16" Padding="0,48,0,8">
+                        <Grid ColumnDefinitions="*,Auto,Auto" ColumnSpacing="14">
+                            <Label Text="{x:Static res:AppResources.HomeTitle}" Style="{StaticResource Title}" />
+                            <ImageButton Grid.Column="1" Source="ic_search.png" WidthRequest="26" HeightRequest="26" VerticalOptions="Start" Margin="0,6,0,0"
+                                         BackgroundColor="Transparent" Command="{Binding GoToCommand}" CommandParameter="recipe"
+                                         SemanticProperties.Description="{x:Static res:AppResources.Search}" />
+                            <ImageButton Grid.Column="2" Source="tab_user.png" WidthRequest="26" HeightRequest="26" VerticalOptions="Start" Margin="0,6,0,0"
+                                         BackgroundColor="Transparent" Command="{Binding GoToCommand}" CommandParameter="account"
+                                         SemanticProperties.Description="{x:Static res:AppResources.TabAccount}" />
+                        </Grid>
+
+                        <CarouselView ItemsSource="{Binding Trending}" IndicatorView="Dots" HeightRequest="227" Loop="False">
+                            <CarouselView.ItemTemplate>
+                                <DataTemplate x:DataType="m:Recipe">
+                                    <Border Style="{StaticResource Photo}" StrokeShape="RoundRectangle 24">
+                                        <Border.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding OpenCommand, Source={RelativeSource AncestorType={x:Type vm:HomeViewModel}}, x:DataType=vm:HomeViewModel}" CommandParameter="{Binding .}" />
+                                        </Border.GestureRecognizers>
+                                        <Grid>
+                                            <Image Source="{Binding ImageUrl}" Aspect="AspectFill" />
+                                            <Border BackgroundColor="White" StrokeThickness="0" StrokeShape="RoundRectangle 14" Padding="12,6"
+                                                    HorizontalOptions="Start" VerticalOptions="End" Margin="12">
+                                                <VerticalStackLayout>
+                                                    <Label Text="{Binding Title}" Style="{StaticResource CardTitle}" />
+                                                    <Label Text="{Binding CaloriesText}" Style="{StaticResource KcalText}" />
+                                                </VerticalStackLayout>
+                                            </Border>
+                                        </Grid>
+                                    </Border>
+                                </DataTemplate>
+                            </CarouselView.ItemTemplate>
+                        </CarouselView>
+                        <IndicatorView x:Name="Dots" HorizontalOptions="Center" IndicatorColor="#40000000" SelectedIndicatorColor="Black" IndicatorSize="7" />
+
+                        <Label Text="{x:Static res:AppResources.PopularNow}" Style="{StaticResource Title}" FontSize="26" />
+                    </VerticalStackLayout>
+                </CollectionView.Header>
+
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical" ItemSpacing="12" />
+                </CollectionView.ItemsLayout>
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="m:Recipe">
+                        <views:RecipeRow />
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+                <CollectionView.Footer>
+                    <BoxView HeightRequest="110" Color="Transparent" /><!-- room above the floating tab bar -->
+                </CollectionView.Footer>
+            </CollectionView>
+        </RefreshView>
+
+        <!-- Loading placeholders (Figma 25) until the first data arrives -->
+        <VerticalStackLayout IsVisible="{Binding IsLoading}" Spacing="16" Padding="24,120,24,0" BackgroundColor="White">
+            <Border Style="{StaticResource Skeleton}" HeightRequest="227" />
+            <Border Style="{StaticResource Skeleton}" HeightRequest="90" />
+            <Border Style="{StaticResource Skeleton}" HeightRequest="90" />
+        </VerticalStackLayout>
+
+        <views:ToastView />
+    </Grid>
 </ContentPage>

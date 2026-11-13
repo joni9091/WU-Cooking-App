@@ -1,0 +1,22 @@
+<!-- Recipe card used in lists (Figma Home "Popular now"): photo, name, 2-line description, kcal pill. Tap opens the detail. -->
+<Border x:Class="FridgeChef.Views.RecipeRow"
+        xmlns:m="clr-namespace:FridgeChef.Core.Recipes;assembly=FridgeChef.Core"
+        x:DataType="m:Recipe"
+        Style="{StaticResource Card}">
+    <Border.GestureRecognizers><TapGestureRecognizer Tapped="OnTapped" /></Border.GestureRecognizers>
+    <Grid ColumnDefinitions="76,*" ColumnSpacing="12">
+        <Border Style="{StaticResource Photo}" WidthRequest="76" HeightRequest="76" VerticalOptions="Center">
+            <Grid>
+                <Image Source="ic_utensils.png" WidthRequest="26" HeightRequest="26" IsVisible="{Binding HasImage, Converter={StaticResource Not}}" />
+                <Image Source="{Binding ImageUrl}" Aspect="AspectFill" />
+            </Grid>
+        </Border>
+        <VerticalStackLayout Grid.Column="1" Spacing="2" VerticalOptions="Center">
+            <Label Text="{Binding Title}" Style="{StaticResource CardTitle}" />
+            <Label Text="{Binding Description}" Style="{StaticResource CardDescription}" />
+            <Border Style="{StaticResource KcalPill}" Margin="0,4,0,0">
+                <Label Text="{Binding CaloriesText}" Style="{StaticResource KcalText}" />
+            </Border>
+        </VerticalStackLayout>
+    </Grid>
+</Border>

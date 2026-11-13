@@ -1,0 +1,53 @@
+<!-- Figma "28. Country filter sheet": bottom sheet over a dimmed page; search, checkbox list (Cambodia first), Clear / Apply.
+     The "1 / 3" counter only shows on the Fridge page (max 3). -->
+<ContentPage x:Class="FridgeChef.Views.CuisinePickerPage"
+             xmlns:vm="clr-namespace:FridgeChef.Core.ViewModels;assembly=FridgeChef.Core"
+             xmlns:res="clr-namespace:FridgeChef.Core.Resources;assembly=FridgeChef.Core"
+             x:DataType="vm:CuisinePickerViewModel"
+             BackgroundColor="#992B240F">
+    <Grid RowDefinitions="*,Auto">
+        <BoxView Color="Transparent">
+            <BoxView.GestureRecognizers><TapGestureRecognizer Tapped="OnCancel" /></BoxView.GestureRecognizers>
+        </BoxView>
+
+        <Border Grid.Row="1" BackgroundColor="White" StrokeThickness="0" StrokeShape="RoundRectangle 28,28,0,0" Padding="24,12,24,24">
+            <Grid RowDefinitions="Auto,Auto,Auto,Auto,420,Auto" RowSpacing="14">
+                <BoxView WidthRequest="48" HeightRequest="4" CornerRadius="2" Color="{StaticResource InputGrey}" HorizontalOptions="Center" />
+                <Grid Grid.Row="1" ColumnDefinitions="*,Auto">
+                    <Label Text="{x:Static res:AppResources.ChooseCuisines}" Style="{StaticResource Title}" FontSize="28" />
+                    <Label Grid.Column="1" Text="{Binding CounterText}" IsVisible="{Binding ShowCounter}" Style="{StaticResource OliveBold}" VerticalOptions="Center" />
+                </Grid>
+                <Border Grid.Row="2" Style="{StaticResource InputBox}" HeightRequest="52" StrokeShape="RoundRectangle 18" Padding="16,0">
+                    <Grid ColumnDefinitions="Auto,*" ColumnSpacing="8">
+                        <Image Source="ic_search.png" Style="{StaticResource InputIcon}" />
+                        <Entry Grid.Column="1" Text="{Binding Search}" Placeholder="{x:Static res:AppResources.SearchCountries}" />
+                    </Grid>
+                </Border>
+                <Label Grid.Row="3" Text="{Binding Message}" Style="{StaticResource ErrorText}" />
+
+                <CollectionView Grid.Row="4" ItemsSource="{Binding Visible}" SelectionMode="None">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="vm:CuisineOption">
+                            <Grid ColumnDefinitions="Auto,*,Auto" ColumnSpacing="14" Padding="0,10">
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding ToggleCommand, Source={RelativeSource AncestorType={x:Type vm:CuisinePickerViewModel}}, x:DataType=vm:CuisinePickerViewModel}" CommandParameter="{Binding .}" />
+                                </Grid.GestureRecognizers>
+                                <Border WidthRequest="36" HeightRequest="36" StrokeShape="Ellipse" StrokeThickness="0" BackgroundColor="{StaticResource PaleYellow}">
+                                    <Label Text="{Binding Cuisine.Code}" Style="{StaticResource OliveBold}" FontSize="11" FontFamily="InterSemiBold"
+                                           HorizontalOptions="Center" VerticalOptions="Center" />
+                                </Border>
+                                <Label Grid.Column="1" Text="{Binding Cuisine.Name}" FontSize="16" VerticalOptions="Center" />
+                                <CheckBox Grid.Column="2" IsChecked="{Binding IsChecked}" Color="{StaticResource Olive}" InputTransparent="True" />
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+                <Grid Grid.Row="5" ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                    <Button Text="{x:Static res:AppResources.Clear}" Command="{Binding ClearCommand}" BackgroundColor="{StaticResource InputGrey}" Padding="28,0" />
+                    <Button Grid.Column="1" Text="{x:Static res:AppResources.Apply}" Clicked="OnApply" />
+                </Grid>
+            </Grid>
+        </Border>
+    </Grid>
+</ContentPage>

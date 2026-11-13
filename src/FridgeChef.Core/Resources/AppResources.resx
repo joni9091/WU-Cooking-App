@@ -86,4 +86,59 @@
   <data name="ErrEmailNotAllowed" xml:space="preserve"><value>We could not send an email to this address. Please continue with Google.</value></data>
   <data name="ErrGeneric" xml:space="preserve"><value>Something went wrong. Please try again.</value></data>
   <data name="ErrPhoto" xml:space="preserve"><value>Could not use that photo. Please try another.</value></data>
+  <data name="Month1" xml:space="preserve"><value>Jan</value></data>
+  <data name="Month2" xml:space="preserve"><value>Feb</value></data>
+  <data name="Month3" xml:space="preserve"><value>Mar</value></data>
+  <data name="Month4" xml:space="preserve"><value>Apr</value></data>
+  <data name="Month5" xml:space="preserve"><value>May</value></data>
+  <data name="Month6" xml:space="preserve"><value>Jun</value></data>
+  <data name="Month7" xml:space="preserve"><value>Jul</value></data>
+  <data name="Month8" xml:space="preserve"><value>Aug</value></data>
+  <data name="Month9" xml:space="preserve"><value>Sep</value></data>
+  <data name="Month10" xml:space="preserve"><value>Oct</value></data>
+  <data name="Month11" xml:space="preserve"><value>Nov</value></data>
+  <data name="Month12" xml:space="preserve"><value>Dec</value></data>
+  <data name="KcalPerServing" xml:space="preserve"><value>{0} kcal / serving</value></data>
+  <data name="Minutes" xml:space="preserve"><value>{0} min</value></data>
+  <data name="Servings" xml:space="preserve"><value>{0} servings</value></data>
+  <data name="DifficultyEasy" xml:space="preserve"><value>Easy</value></data>
+  <data name="DifficultyMedium" xml:space="preserve"><value>Medium</value></data>
+  <data name="DifficultyHard" xml:space="preserve"><value>Hard</value></data>
+  <data name="SavedOn" xml:space="preserve"><value>Saved on {0}</value></data>
+  <data name="HomeTitle" xml:space="preserve"><value>Greetings, check out trending recipes</value></data>
+  <data name="PopularNow" xml:space="preserve"><value>Popular now</value></data>
+  <data name="SavedSubtitle" xml:space="preserve"><value>Your recipes, newest first</value></data>
+  <data name="SavedEmpty" xml:space="preserve"><value>No saved recipes yet. Tap the bookmark on a recipe to save it.</value></data>
+  <data name="RecipesTitle" xml:space="preserve"><value>Recipes</value></data>
+  <data name="SearchRecipes" xml:space="preserve"><value>Search recipes</value></data>
+  <data name="CatAll" xml:space="preserve"><value>All</value></data>
+  <data name="CatSoup" xml:space="preserve"><value>Soup</value></data>
+  <data name="CatRice" xml:space="preserve"><value>Rice</value></data>
+  <data name="CatSweet" xml:space="preserve"><value>Sweet</value></data>
+  <data name="CatDrinks" xml:space="preserve"><value>Drinks</value></data>
+  <data name="CatNoodles" xml:space="preserve"><value>Noodles</value></data>
+  <data name="CatCurry" xml:space="preserve"><value>Curry</value></data>
+  <data name="CatMain" xml:space="preserve"><value>Main</value></data>
+  <data name="CatSalad" xml:space="preserve"><value>Salad</value></data>
+  <data name="CatSnack" xml:space="preserve"><value>Snack</value></data>
+  <data name="NoResults" xml:space="preserve"><value>No recipes found.</value></data>
+  <data name="SaveRecipe" xml:space="preserve"><value>Save recipe</value></data>
+  <data name="SavedButton" xml:space="preserve"><value>Saved</value></data>
+  <data name="Share" xml:space="preserve"><value>Share</value></data>
+  <data name="Ingredients" xml:space="preserve"><value>Ingredients</value></data>
+  <data name="Steps" xml:space="preserve"><value>Steps</value></data>
+  <data name="RecipeSavedToast" xml:space="preserve"><value>Recipe saved</value></data>
+  <data name="RemovedToast" xml:space="preserve"><value>Removed from saved</value></data>
+  <data name="Undo" xml:space="preserve"><value>Undo</value></data>
+  <data name="ChooseCuisines" xml:space="preserve"><value>Choose cuisines</value></data>
+  <data name="SearchCountries" xml:space="preserve"><value>Search countries</value></data>
+  <data name="Clear" xml:space="preserve"><value>Clear</value></data>
+  <data name="Apply" xml:space="preserve"><value>Apply</value></data>
+  <data name="Filter" xml:space="preserve"><value>Filter</value></data>
+  <data name="Fridge" xml:space="preserve"><value>Fridge</value></data>
+  <data name="Search" xml:space="preserve"><value>Search</value></data>
+  <data name="NoInternetSub" xml:space="preserve"><value>Check your network</value></data>
+  <data name="NoInternetTitle" xml:space="preserve"><value>No internet connection</value></data>
+  <data name="Remove" xml:space="preserve"><value>Remove</value></data>
+  <data name="MaxCuisines" xml:space="preserve"><value>You can pick up to {0} cuisines.</value></data>
 </root>

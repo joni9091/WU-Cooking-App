@@ -5,6 +5,7 @@ using FridgeChef.Core.ViewModels;
 
 namespace FridgeChef.Tests;
 
+[Collection("Language")] // reads translated text; must not overlap with tests that switch language
 public class ViewModelTests
 {
     static readonly long Later = DateTimeOffset.UtcNow.AddHours(1).ToUnixTimeSeconds();
@@ -136,7 +137,7 @@ public class ViewModelTests
         var auth = Auth(server);
         await auth.SetSessionAsync(new Session("a1", "r1", Later, "u1"));
         var nav = new FakeNav();
-        var profiles = new ProfileClient(new HttpClient(server) { BaseAddress = new Uri("https://x.test/") }, auth, "https://x.test");
+        var profiles = new ProfileClient(new Api(new HttpClient(server) { BaseAddress = new Uri("https://x.test/") }, auth), "https://x.test");
         return (new ProfileSetupViewModel(profiles, nav, new FakePicker(photo)) { CheckDelay = TimeSpan.Zero }, nav, server);
     }
 

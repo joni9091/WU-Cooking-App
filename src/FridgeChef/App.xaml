@@ -1,10 +1,12 @@
-﻿<Application x:Class="FridgeChef.App">
+﻿<Application x:Class="FridgeChef.App"
+             xmlns:views="clr-namespace:FridgeChef.Views">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Resources/Styles/Theme.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
             </ResourceDictionary.MergedDictionaries>
+            <views:NotConverter x:Key="Not" />
         </ResourceDictionary>
     </Application.Resources>
 </Application>

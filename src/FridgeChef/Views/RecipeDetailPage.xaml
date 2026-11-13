@@ -1,0 +1,104 @@
+<!-- Figma "7. Recipe detail": photo with back + bookmark, name, time/servings/difficulty chips, kcal, full description,
+     Save + Share, save date (brief), ingredients, numbered steps, and the photo credit (required by the photo licences). -->
+<ContentPage x:Class="FridgeChef.Views.RecipeDetailPage"
+             xmlns:vm="clr-namespace:FridgeChef.Core.ViewModels;assembly=FridgeChef.Core"
+             xmlns:m="clr-namespace:FridgeChef.Core.Recipes;assembly=FridgeChef.Core"
+             xmlns:views="clr-namespace:FridgeChef.Views"
+             xmlns:res="clr-namespace:FridgeChef.Core.Resources;assembly=FridgeChef.Core"
+             x:DataType="vm:RecipeDetailViewModel"
+             Shell.TabBarIsVisible="False">
+    <Grid>
+        <ScrollView>
+            <VerticalStackLayout Spacing="0" Padding="0,0,0,32">
+                <Grid HeightRequest="300" BackgroundColor="{StaticResource InputGrey}">
+                    <Image Source="ic_utensils.png" WidthRequest="40" HeightRequest="40" IsVisible="{Binding Recipe.HasImage, Converter={StaticResource Not}}" />
+                    <Image Source="{Binding Recipe.ImageUrl}" Aspect="AspectFill" />
+                </Grid>
+
+                <VerticalStackLayout Padding="24,20,24,0" Spacing="14">
+                    <Label Text="{Binding Recipe.Title}" Style="{StaticResource Title}" FontSize="36" />
+
+                    <HorizontalStackLayout Spacing="8">
+                        <Border Style="{StaticResource Chip}"><Label Text="{Binding Recipe.TimeText}" Style="{StaticResource OliveText}" /></Border>
+                        <Border Style="{StaticResource Chip}"><Label Text="{Binding Recipe.ServingsText}" Style="{StaticResource OliveText}" /></Border>
+                        <Border Style="{StaticResource Chip}"><Label Text="{Binding Recipe.DifficultyText}" Style="{StaticResource OliveText}" /></Border>
+                    </HorizontalStackLayout>
+
+                    <Border Style="{StaticResource KcalPill}" Padding="12,4" StrokeShape="RoundRectangle 12">
+                        <Label Text="{Binding Recipe.CaloriesText}" Style="{StaticResource OliveBold}" />
+                    </Border>
+
+                    <Label Text="{Binding Recipe.Description}" FontSize="15" />
+
+                    <Grid ColumnDefinitions="*,Auto" ColumnSpacing="10">
+                        <Border BackgroundColor="{StaticResource PaleYellow}" StrokeThickness="0" StrokeShape="RoundRectangle 20" HeightRequest="54">
+                            <HorizontalStackLayout Spacing="8" HorizontalOptions="Center">
+                                <Image Source="ic_bookmark.png" WidthRequest="18" HeightRequest="18" VerticalOptions="Center" />
+                                <Label Text="{Binding SaveText}" FontFamily="{DynamicResource AppBodyBoldFont}" FontSize="15" VerticalOptions="Center" />
+                            </HorizontalStackLayout>
+                            <Border.GestureRecognizers><TapGestureRecognizer Command="{Binding ToggleSaveCommand}" /></Border.GestureRecognizers>
+                        </Border>
+                        <Border Grid.Column="1" BackgroundColor="{StaticResource InputGrey}" StrokeThickness="0" StrokeShape="RoundRectangle 20"
+                                HeightRequest="54" Padding="22,0">
+                            <HorizontalStackLayout Spacing="8">
+                                <Image Source="ic_share.png" WidthRequest="18" HeightRequest="18" VerticalOptions="Center" />
+                                <Label Text="{x:Static res:AppResources.Share}" FontFamily="{DynamicResource AppBodyBoldFont}" FontSize="15" VerticalOptions="Center" />
+                            </HorizontalStackLayout>
+                            <Border.GestureRecognizers><TapGestureRecognizer Command="{Binding ShareCommand}" /></Border.GestureRecognizers>
+                        </Border>
+                    </Grid>
+                    <Label Text="{Binding SavedOnText}" Style="{StaticResource Muted}" FontSize="13" IsVisible="{Binding IsSaved}" />
+
+                    <Label Text="{x:Static res:AppResources.Ingredients}" Style="{StaticResource Title}" FontSize="28" Margin="0,8,0,0" />
+                    <VerticalStackLayout BindableLayout.ItemsSource="{Binding Recipe.Ingredients}" Spacing="10">
+                        <BindableLayout.ItemTemplate>
+                            <DataTemplate x:DataType="x:String">
+                                <Grid ColumnDefinitions="18,*">
+                                    <Ellipse Fill="{StaticResource Olive}" WidthRequest="7" HeightRequest="7" VerticalOptions="Start" Margin="0,7,0,0" />
+                                    <Label Grid.Column="1" Text="{Binding .}" FontSize="15" />
+                                </Grid>
+                            </DataTemplate>
+                        </BindableLayout.ItemTemplate>
+                    </VerticalStackLayout>
+
+                    <Label Text="{x:Static res:AppResources.Steps}" Style="{StaticResource Title}" FontSize="28" Margin="0,8,0,0" />
+                    <VerticalStackLayout BindableLayout.ItemsSource="{Binding Recipe.Steps}" Spacing="16">
+                        <BindableLayout.ItemTemplate>
+                            <DataTemplate x:DataType="m:Step">
+                                <Grid ColumnDefinitions="40,*">
+                                    <Border WidthRequest="28" HeightRequest="28" StrokeShape="Ellipse" StrokeThickness="0"
+                                            BackgroundColor="{StaticResource PaleYellow}" VerticalOptions="Start">
+                                        <Label Text="{Binding Number}" Style="{StaticResource OliveBold}" FontSize="12"
+                                               HorizontalOptions="Center" VerticalOptions="Center" LineHeight="1" />
+                                    </Border>
+                                    <Label Grid.Column="1" Text="{Binding Text}" FontSize="15" />
+                                </Grid>
+                            </DataTemplate>
+                        </BindableLayout.ItemTemplate>
+                    </VerticalStackLayout>
+
+                    <Label Text="{Binding Recipe.ImageCredit}" Style="{StaticResource Muted}" FontSize="11" Margin="0,16,0,0" />
+                </VerticalStackLayout>
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <!-- Round white buttons over the photo -->
+        <Border WidthRequest="44" HeightRequest="44" StrokeShape="Ellipse" StrokeThickness="0" BackgroundColor="White"
+                HorizontalOptions="Start" VerticalOptions="Start" Margin="20,24" SemanticProperties.Description="{x:Static res:AppResources.Back}">
+            <Image Source="ic_back_dark.png" WidthRequest="22" HeightRequest="22" />
+            <Border.GestureRecognizers><TapGestureRecognizer Command="{Binding BackCommand}" /></Border.GestureRecognizers>
+        </Border>
+        <Border WidthRequest="44" HeightRequest="44" StrokeShape="Ellipse" StrokeThickness="0" BackgroundColor="White"
+                HorizontalOptions="End" VerticalOptions="Start" Margin="20,24" SemanticProperties.Description="{Binding SaveText}">
+            <Image WidthRequest="22" HeightRequest="22">
+                <Image.Triggers>
+                    <DataTrigger TargetType="Image" Binding="{Binding IsSaved}" Value="True"><Setter Property="Source" Value="ic_bookmark_filled.png" /></DataTrigger>
+                    <DataTrigger TargetType="Image" Binding="{Binding IsSaved}" Value="False"><Setter Property="Source" Value="ic_bookmark.png" /></DataTrigger>
+                </Image.Triggers>
+            </Image>
+            <Border.GestureRecognizers><TapGestureRecognizer Command="{Binding ToggleSaveCommand}" /></Border.GestureRecognizers>
+        </Border>
+
+        <views:ToastView Margin="16,0,16,24" />
+    </Grid>
+</ContentPage>

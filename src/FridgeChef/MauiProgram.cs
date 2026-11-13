@@ -1,5 +1,6 @@
 using FridgeChef.Core;
 using FridgeChef.Core.Auth;
+using FridgeChef.Core.Recipes;
 using FridgeChef.Core.ViewModels;
 using FridgeChef.Services;
 using FridgeChef.Views;
@@ -49,9 +50,15 @@ public static class MauiProgram
 		s.AddSingleton<AuthClient>();
 		s.AddSingleton<ISessionStore, SecureSessionStore>();
 		s.AddSingleton<AuthService>(sp => new AuthService(sp.GetRequiredService<AuthClient>(), sp.GetRequiredService<ISessionStore>()));
-		s.AddSingleton(sp => new ProfileClient(sp.GetRequiredService<HttpClient>(), sp.GetRequiredService<AuthService>(), SupabaseConfig.Url));
+		s.AddSingleton<Api>();
+		s.AddSingleton(sp => new ProfileClient(sp.GetRequiredService<Api>(), SupabaseConfig.Url));
 		s.AddSingleton<IWebSignIn, WebSignIn>();
 		s.AddSingleton<IPhotoPicker, PhotoPicker>();
+		s.AddSingleton(_ => new LocalCache(Path.Combine(FileSystem.AppDataDirectory, "fridgechef.db3")));
+		s.AddSingleton<RecipeClient>();
+		s.AddSingleton<SavedRecipes>();
+		s.AddSingleton<IAppNavigator, AppNavigator>();
+		s.AddSingleton<IToast, ToastService>();
 		s.AddSingleton<Router>();
 		s.AddSingleton<IAuthNavigator>(sp => sp.GetRequiredService<Router>());
 
@@ -59,6 +66,9 @@ public static class MauiProgram
 		s.AddTransient<LoginViewModel>().AddTransient<SignUpViewModel>().AddTransient<ForgotPasswordViewModel>().AddTransient<ProfileSetupViewModel>();
 		s.AddTransient<WelcomePage>().AddTransient<LanguagePage>().AddTransient<LoginPage>().AddTransient<SignUpPage>()
 		 .AddTransient<ForgotPasswordPage>().AddTransient<ProfileSetupPage>().AddTransient<AccountPage>();
+		s.AddTransient<HomeViewModel>().AddTransient<RecipesViewModel>().AddTransient<RecipeDetailViewModel>().AddTransient<SavedViewModel>();
+		s.AddTransient<HomePage>().AddTransient<RecipePage>().AddTransient<RecipeDetailPage>().AddTransient<SavedPage>();
+		Routing.RegisterRoute(AppNavigator.DetailRoute, typeof(RecipeDetailPage)); // once per app run (AppShell is rebuilt often)
 
 #if DEBUG
 		builder.Logging.AddDebug();

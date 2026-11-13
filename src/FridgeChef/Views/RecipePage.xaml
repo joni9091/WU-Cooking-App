@@ -1,7 +1,109 @@
-<!-- Recipe tab. Placeholder until its phase; real content follows the Figma design. -->
+<!-- Figma "6. Recipe": title, search bar + Filter + Fridge buttons, chosen countries, category chips, 2-column grid (20 per page). -->
 <ContentPage x:Class="FridgeChef.Views.RecipePage"
+             xmlns:vm="clr-namespace:FridgeChef.Core.ViewModels;assembly=FridgeChef.Core"
+             xmlns:m="clr-namespace:FridgeChef.Core.Recipes;assembly=FridgeChef.Core"
+             xmlns:views="clr-namespace:FridgeChef.Views"
              xmlns:res="clr-namespace:FridgeChef.Core.Resources;assembly=FridgeChef.Core"
+             x:DataType="vm:RecipesViewModel"
              Title="{x:Static res:AppResources.TabRecipe}">
-    <Label Text="{x:Static res:AppResources.ComingSoon}" Style="{StaticResource Muted}"
-           HorizontalOptions="Center" VerticalOptions="Center" />
+    <Grid RowDefinitions="Auto,*">
+        <VerticalStackLayout Spacing="14" Padding="24,48,24,8">
+            <Label Text="{x:Static res:AppResources.RecipesTitle}" Style="{StaticResource Title}" />
+
+            <Grid ColumnDefinitions="*,Auto,Auto" ColumnSpacing="10">
+                <Border Style="{StaticResource InputBox}" HeightRequest="52" StrokeShape="RoundRectangle 18" Padding="16,0">
+                    <Grid ColumnDefinitions="Auto,*" ColumnSpacing="8">
+                        <Image Source="ic_search.png" Style="{StaticResource InputIcon}" />
+                        <Entry Grid.Column="1" Text="{Binding Search}" Placeholder="{x:Static res:AppResources.SearchRecipes}"
+                               ReturnType="Search" MaxLength="40" IsTextPredictionEnabled="False" />
+                    </Grid>
+                </Border>
+                <Border Grid.Column="1" Style="{StaticResource IconButton}" SemanticProperties.Description="{x:Static res:AppResources.Filter}">
+                    <Image Source="ic_filter.png" WidthRequest="22" HeightRequest="22" />
+                    <Border.GestureRecognizers><TapGestureRecognizer Command="{Binding FilterCommand}" /></Border.GestureRecognizers>
+                </Border>
+                <Border Grid.Column="2" Style="{StaticResource IconButton}" SemanticProperties.Description="{x:Static res:AppResources.Fridge}">
+                    <Image Source="ic_fridge.png" WidthRequest="22" HeightRequest="22" />
+                    <Border.GestureRecognizers><TapGestureRecognizer Command="{Binding FridgeCommand}" /></Border.GestureRecognizers>
+                </Border>
+            </Grid>
+
+            <!-- Chosen countries: tap to remove -->
+            <CollectionView ItemsSource="{Binding SelectedCuisines}" HeightRequest="40" SelectionMode="None"
+                            IsVisible="{Binding HasCuisines}">
+                <CollectionView.ItemsLayout><LinearItemsLayout Orientation="Horizontal" ItemSpacing="8" /></CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="m:Cuisine">
+                        <Border Style="{StaticResource ChipSelected}" Padding="12,6">
+                            <HorizontalStackLayout Spacing="6">
+                                <Label Text="{Binding Name}" Style="{StaticResource OliveBold}" FontSize="13" VerticalOptions="Center" />
+                                <Image Source="ic_x.png" WidthRequest="14" HeightRequest="14" VerticalOptions="Center" />
+                            </HorizontalStackLayout>
+                            <Border.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding RemoveCuisineCommand, Source={RelativeSource AncestorType={x:Type vm:RecipesViewModel}}, x:DataType=vm:RecipesViewModel}" CommandParameter="{Binding .}" />
+                            </Border.GestureRecognizers>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <!-- Category chips -->
+            <CollectionView ItemsSource="{Binding Categories}" HeightRequest="40" SelectionMode="None">
+                <CollectionView.ItemsLayout><LinearItemsLayout Orientation="Horizontal" ItemSpacing="8" /></CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="vm:CategoryChip">
+                        <Border Style="{StaticResource Chip}">
+                            <Border.Triggers>
+                                <DataTrigger TargetType="Border" Binding="{Binding IsSelected}" Value="True">
+                                    <Setter Property="BackgroundColor" Value="{StaticResource PaleYellow}" />
+                                    <Setter Property="Stroke" Value="{StaticResource Olive}" />
+                                </DataTrigger>
+                            </Border.Triggers>
+                            <Label Text="{Binding Label}" Style="{StaticResource Muted}" FontSize="14" />
+                            <Border.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding SelectCategoryCommand, Source={RelativeSource AncestorType={x:Type vm:RecipesViewModel}}, x:DataType=vm:RecipesViewModel}" CommandParameter="{Binding .}" />
+                            </Border.GestureRecognizers>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+
+        <RefreshView Grid.Row="1" IsRefreshing="{Binding IsRefreshing}" Command="{Binding RefreshCommand}">
+            <CollectionView ItemsSource="{Binding Items}" SelectionMode="None" Margin="24,0"
+                            RemainingItemsThreshold="4" RemainingItemsThresholdReachedCommand="{Binding LoadMoreCommand}">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical" Span="2" HorizontalItemSpacing="14" VerticalItemSpacing="16" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="m:Recipe">
+                        <VerticalStackLayout Spacing="2">
+                            <VerticalStackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding OpenCommand, Source={RelativeSource AncestorType={x:Type vm:RecipesViewModel}}, x:DataType=vm:RecipesViewModel}" CommandParameter="{Binding .}" />
+                            </VerticalStackLayout.GestureRecognizers>
+                            <Border Style="{StaticResource Photo}" HeightRequest="120" StrokeShape="RoundRectangle 16" Margin="0,0,0,6">
+                                <Grid>
+                                    <Image Source="ic_utensils.png" WidthRequest="28" HeightRequest="28" IsVisible="{Binding HasImage, Converter={StaticResource Not}}" />
+                                    <Image Source="{Binding ImageUrl}" Aspect="AspectFill" />
+                                </Grid>
+                            </Border>
+                            <Label Text="{Binding Title}" Style="{StaticResource CardTitle}" />
+                            <Label Text="{Binding CaloriesText}" Style="{StaticResource KcalText}" FontSize="12" />
+                            <Label Text="{Binding Description}" Style="{StaticResource CardDescription}" />
+                        </VerticalStackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+                <CollectionView.EmptyView>
+                    <Label Text="{x:Static res:AppResources.NoResults}" Style="{StaticResource Muted}" HorizontalOptions="Center" Margin="0,40" />
+                </CollectionView.EmptyView>
+                <CollectionView.Footer>
+                    <Grid HeightRequest="120">
+                        <ActivityIndicator IsRunning="{Binding IsLoading}" IsVisible="{Binding IsLoading}" VerticalOptions="Start" />
+                    </Grid>
+                </CollectionView.Footer>
+            </CollectionView>
+        </RefreshView>
+
+        <views:ToastView Grid.RowSpan="2" />
+    </Grid>
 </ContentPage>

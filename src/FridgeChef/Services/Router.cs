@@ -1,4 +1,5 @@
 using FridgeChef.Core.Auth;
+using FridgeChef.Core.Recipes;
 using FridgeChef.Core.ViewModels;
 using FridgeChef.Views.Auth;
 
@@ -6,7 +7,7 @@ namespace FridgeChef.Services;
 
 // Decides which screen the app shows. The single gate, used at launch and after every sign-in:
 //   no session -> Welcome (first time) or Log in;  session but no @handle -> Profile setup;  otherwise -> tabs.
-public sealed class Router(IServiceProvider services, AuthService auth, ProfileClient profiles) : IAuthNavigator
+public sealed class Router(IServiceProvider services, AuthService auth, ProfileClient profiles, LocalCache cache, SavedRecipes saved) : IAuthNavigator
 {
     const string WelcomeSeen = "welcome_seen";
     static string ProfileDone(string userId) => "profile_done_" + userId; // lets the app open offline
@@ -41,6 +42,8 @@ public sealed class Router(IServiceProvider services, AuthService auth, ProfileC
     public async Task SignOutAsync()
     {
         await auth.SignOutAsync();
+        saved.Clear();
+        await cache.ClearAsync(); // the next person on this phone must not see this user's saved recipes
         ShowSignedOut();
     }
 

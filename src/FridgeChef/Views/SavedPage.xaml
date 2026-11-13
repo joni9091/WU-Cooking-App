@@ -1,7 +1,65 @@
-<!-- Saved tab. Placeholder until its phase; real content follows the Figma design. -->
+<!-- Figma "5. Saved": newest first, each card with its save date; bookmark removes it (toast with Undo). Works offline. -->
 <ContentPage x:Class="FridgeChef.Views.SavedPage"
+             xmlns:vm="clr-namespace:FridgeChef.Core.ViewModels;assembly=FridgeChef.Core"
+             xmlns:m="clr-namespace:FridgeChef.Core.Recipes;assembly=FridgeChef.Core"
+             xmlns:views="clr-namespace:FridgeChef.Views"
              xmlns:res="clr-namespace:FridgeChef.Core.Resources;assembly=FridgeChef.Core"
+             x:DataType="vm:SavedViewModel"
              Title="{x:Static res:AppResources.TabSaved}">
-    <Label Text="{x:Static res:AppResources.ComingSoon}" Style="{StaticResource Muted}"
-           HorizontalOptions="Center" VerticalOptions="Center" />
+    <Grid>
+        <RefreshView IsRefreshing="{Binding IsRefreshing}" Command="{Binding RefreshCommand}">
+            <CollectionView ItemsSource="{Binding Items}" SelectionMode="None" Margin="24,0">
+                <CollectionView.Header>
+                    <VerticalStackLayout Spacing="10" Padding="0,48,0,16">
+                        <Label Text="{x:Static res:AppResources.TabSaved}" Style="{StaticResource Title}" />
+                        <Label Text="{x:Static res:AppResources.SavedSubtitle}" Style="{StaticResource OliveText}" />
+                    </VerticalStackLayout>
+                </CollectionView.Header>
+                <CollectionView.ItemsLayout><LinearItemsLayout Orientation="Vertical" ItemSpacing="12" /></CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="m:SavedItem">
+                        <Border Style="{StaticResource Card}">
+                            <Border.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding OpenCommand, Source={RelativeSource AncestorType={x:Type vm:SavedViewModel}}, x:DataType=vm:SavedViewModel}" CommandParameter="{Binding .}" />
+                            </Border.GestureRecognizers>
+                            <Grid ColumnDefinitions="96,*,Auto" ColumnSpacing="12">
+                                <Border Style="{StaticResource Photo}" WidthRequest="96" HeightRequest="96" VerticalOptions="Center">
+                                    <Grid>
+                                        <Image Source="ic_utensils.png" WidthRequest="26" HeightRequest="26" IsVisible="{Binding Recipe.HasImage, Converter={StaticResource Not}}" />
+                                        <Image Source="{Binding Recipe.ImageUrl}" Aspect="AspectFill" />
+                                    </Grid>
+                                </Border>
+                                <VerticalStackLayout Grid.Column="1" Spacing="2" VerticalOptions="Center">
+                                    <Label Text="{Binding Recipe.Title}" Style="{StaticResource CardTitle}" />
+                                    <Label Text="{Binding Recipe.Description}" Style="{StaticResource CardDescription}" />
+                                    <Border Style="{StaticResource KcalPill}" Margin="0,4">
+                                        <Label Text="{Binding Recipe.CaloriesText}" Style="{StaticResource KcalText}" />
+                                    </Border>
+                                    <Label Text="{Binding SavedOnText}" Style="{StaticResource OliveText}" FontSize="12" />
+                                </VerticalStackLayout>
+                                <ImageButton Grid.Column="2" Source="ic_bookmark_filled.png" WidthRequest="26" HeightRequest="26" Padding="2"
+                                             BackgroundColor="Transparent" VerticalOptions="Center"
+                                             SemanticProperties.Description="{x:Static res:AppResources.Remove}"
+                                             Command="{Binding RemoveCommand, Source={RelativeSource AncestorType={x:Type vm:SavedViewModel}}, x:DataType=vm:SavedViewModel}"
+                                             CommandParameter="{Binding .}" />
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+                <CollectionView.EmptyView>
+                    <Label Text="{x:Static res:AppResources.SavedEmpty}" Style="{StaticResource Muted}" IsVisible="{Binding IsEmpty}"
+                           HorizontalTextAlignment="Center" Margin="24,40" />
+                </CollectionView.EmptyView>
+                <CollectionView.Footer><BoxView HeightRequest="110" Color="Transparent" /></CollectionView.Footer>
+            </CollectionView>
+        </RefreshView>
+
+        <VerticalStackLayout IsVisible="{Binding IsLoading}" Spacing="16" Padding="24,140,24,0" BackgroundColor="White">
+            <Border Style="{StaticResource Skeleton}" HeightRequest="112" />
+            <Border Style="{StaticResource Skeleton}" HeightRequest="112" />
+            <Border Style="{StaticResource Skeleton}" HeightRequest="112" />
+        </VerticalStackLayout>
+
+        <views:ToastView />
+    </Grid>
 </ContentPage>

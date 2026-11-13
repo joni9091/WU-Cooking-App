@@ -13,13 +13,13 @@ public sealed record Profile(string? Handle, string? DisplayName, string? Avatar
 }
 
 // The signed-in user's own profile row and avatar (Row Level Security limits both to this user).
-public sealed class ProfileClient(HttpClient http, AuthService auth, string supabaseUrl)
+public sealed class ProfileClient(Api api, string supabaseUrl)
 {
     public const string HandleTaken = "handle_taken";
 
     public async Task<Profile?> GetMineAsync()
     {
-        using var res = await SendAsync(HttpMethod.Get, $"rest/v1/profiles?select=handle,display_name,avatar_url&id=eq.{auth.UserId}");
+        using var res = await SendAsync(HttpMethod.Get, $"rest/v1/profiles?select=handle,display_name,avatar_url&id=eq.{api.Auth.UserId}");
         var rows = await res.Content.ReadFromJsonAsync(ProfileJson.Default.ProfileRowArray);
         return rows is [var r, ..] ? new Profile(r.Handle, r.DisplayName, r.AvatarUrl) : null;
     }
@@ -35,36 +35,25 @@ public sealed class ProfileClient(HttpClient http, AuthService auth, string supa
     public async Task SaveAsync(string handle, string displayName, string? avatarUrl)
     {
         var row = new ProfileRow { Handle = Validation.NormalizeHandle(handle), DisplayName = displayName.Trim(), AvatarUrl = avatarUrl };
-        using var res = await SendAsync(HttpMethod.Patch, $"rest/v1/profiles?id=eq.{auth.UserId}",
-            JsonContent.Create(row, ProfileJson.Default.ProfileRow), allowConflict: true);
+        using var res = await SendAsync(HttpMethod.Patch, $"rest/v1/profiles?id=eq.{api.Auth.UserId}",
+            JsonContent.Create(row, ProfileJson.Default.ProfileRow), r => r.Headers.Add("Prefer", "return=minimal"), HttpStatusCode.Conflict);
         if (res.StatusCode == HttpStatusCode.Conflict) throw new AuthException(HandleTaken); // unique index on handle
     }
 
     // Uploads a ready-made JPEG (already 300 px, < 200 KB) to avatars/<user id>/avatar.jpg and returns its public URL.
     public async Task<string> UploadAvatarAsync(byte[] jpeg)
     {
-        var path = $"{auth.UserId}/avatar.jpg";
+        var path = $"{api.Auth.UserId}/avatar.jpg";
         var content = new ByteArrayContent(jpeg);
         content.Headers.ContentType = new MediaTypeHeaderValue("image/jpeg");
-        using var res = await SendAsync(HttpMethod.Post, $"storage/v1/object/avatars/{path}", content, upsert: true);
+        using var res = await SendAsync(HttpMethod.Post, $"storage/v1/object/avatars/{path}", content, r => r.Headers.Add("x-upsert", "true"));
         // ?v= makes phones reload the picture after it changes (same file name).
         return $"{supabaseUrl}/storage/v1/object/public/avatars/{path}?v={DateTimeOffset.UtcNow.ToUnixTimeSeconds()}";
     }
 
-    async Task<HttpResponseMessage> SendAsync(HttpMethod method, string path, HttpContent? body = null, bool upsert = false, bool allowConflict = false)
-    {
-        var token = await auth.GetAccessTokenAsync() ?? throw new AuthException("not_signed_in");
-        var req = new HttpRequestMessage(method, path) { Content = body };
-        req.Headers.Authorization = new("Bearer", token);
-        if (upsert) req.Headers.Add("x-upsert", "true");
-        if (method == HttpMethod.Patch) req.Headers.Add("Prefer", "return=minimal");
-        HttpResponseMessage res;
-        try { res = await http.SendAsync(req); }
-        catch (Exception e) when (e is HttpRequestException or TaskCanceledException) { throw new AuthException(AuthException.Network); }
-        if (res.IsSuccessStatusCode || (allowConflict && res.StatusCode == HttpStatusCode.Conflict)) return res;
-        res.Dispose();
-        throw new AuthException($"http_{(int)res.StatusCode}");
-    }
+    Task<HttpResponseMessage> SendAsync(HttpMethod method, string path, HttpContent? body = null,
+        Action<HttpRequestMessage>? configure = null, params HttpStatusCode[] alsoOk) =>
+        api.SendAsync(method, path, body, configure, alsoOk);
 }
 
 sealed class ProfileRow

@@ -101,6 +101,83 @@
         <Setter Property="VerticalOptions" Value="Center" />
     </Style>
 
+    <!-- Recipe cards (Figma Home / Saved): white, thin pale-yellow border, rounded -->
+    <Style TargetType="Border" x:Key="Card">
+        <Setter Property="BackgroundColor" Value="{StaticResource Background}" />
+        <Setter Property="Stroke" Value="{StaticResource PaleYellow}" />
+        <Setter Property="StrokeThickness" Value="1.5" />
+        <Setter Property="StrokeShape" Value="RoundRectangle 16" />
+        <Setter Property="Padding" Value="8" />
+    </Style>
+
+    <!-- Rounded photo frame; grey shows while the photo loads (or if there is none) -->
+    <Style TargetType="Border" x:Key="Photo">
+        <Setter Property="BackgroundColor" Value="{StaticResource InputGrey}" />
+        <Setter Property="StrokeThickness" Value="0" />
+        <Setter Property="StrokeShape" Value="RoundRectangle 12" />
+    </Style>
+
+    <!-- Recipe name on cards, e.g. "Lok Lak" -->
+    <Style TargetType="Label" x:Key="CardTitle" BasedOn="{StaticResource Title}">
+        <Setter Property="FontSize" Value="20" />
+        <Setter Property="MaxLines" Value="1" />
+        <Setter Property="LineBreakMode" Value="TailTruncation" />
+    </Style>
+
+    <!-- Short description: always 2 lines max (brief) -->
+    <Style TargetType="Label" x:Key="CardDescription" BasedOn="{StaticResource Muted}">
+        <Setter Property="FontSize" Value="{StaticResource FontSizeSmall}" />
+        <Setter Property="MaxLines" Value="2" />
+        <Setter Property="LineBreakMode" Value="TailTruncation" />
+    </Style>
+
+    <!-- "420 kcal / serving" pill -->
+    <Style TargetType="Border" x:Key="KcalPill">
+        <Setter Property="BackgroundColor" Value="{StaticResource PaleYellow}" />
+        <Setter Property="StrokeThickness" Value="0" />
+        <Setter Property="StrokeShape" Value="RoundRectangle 8" />
+        <Setter Property="Padding" Value="8,2" />
+        <Setter Property="HorizontalOptions" Value="Start" />
+    </Style>
+
+    <Style TargetType="Label" x:Key="KcalText" BasedOn="{StaticResource OliveBold}">
+        <Setter Property="FontSize" Value="11" />
+    </Style>
+
+    <!-- Category / info chips: white with pale-yellow border; selected = pale yellow fill + olive border -->
+    <Style TargetType="Border" x:Key="Chip">
+        <Setter Property="BackgroundColor" Value="{StaticResource Background}" />
+        <Setter Property="Stroke" Value="{StaticResource PaleYellow}" />
+        <Setter Property="StrokeThickness" Value="1.5" />
+        <Setter Property="StrokeShape" Value="RoundRectangle 18" />
+        <Setter Property="Padding" Value="14,6" />
+    </Style>
+
+    <Style TargetType="Border" x:Key="ChipSelected" BasedOn="{StaticResource Chip}">
+        <Setter Property="BackgroundColor" Value="{StaticResource PaleYellow}" />
+        <Setter Property="Stroke" Value="{StaticResource Olive}" />
+    </Style>
+
+    <!-- Square pale-yellow icon buttons (Filter, Fridge) -->
+    <Style TargetType="Border" x:Key="IconButton">
+        <Setter Property="BackgroundColor" Value="{StaticResource PaleYellow}" />
+        <Setter Property="StrokeThickness" Value="0" />
+        <Setter Property="StrokeShape" Value="RoundRectangle 16" />
+        <Setter Property="WidthRequest" Value="52" />
+        <Setter Property="HeightRequest" Value="52" />
+    </Style>
+
+    <!-- Loading placeholder blocks (Figma 25) -->
+    <Style TargetType="Border" x:Key="Skeleton">
+        <Setter Property="BackgroundColor" Value="#F2F2F2" />
+        <Setter Property="StrokeThickness" Value="0" />
+        <Setter Property="StrokeShape" Value="RoundRectangle 16" />
+    </Style>
+
+    <Style TargetType="RefreshView">
+        <Setter Property="RefreshColor" Value="{StaticResource Olive}" />
+    </Style>
+
     <Style TargetType="ActivityIndicator">
         <Setter Property="Color" Value="{StaticResource Olive}" />
     </Style>

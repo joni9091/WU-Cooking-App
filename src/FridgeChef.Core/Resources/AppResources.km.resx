@@ -86,4 +86,59 @@
   <data name="ErrEmailNotAllowed" xml:space="preserve"><value>យើងមិនអាចផ្ញើអ៊ីមែលទៅអាសយដ្ឋាននេះបានទេ។ សូមបន្តជាមួយ Google។</value></data>
   <data name="ErrGeneric" xml:space="preserve"><value>មានបញ្ហាអ្វីមួយ។ សូមសាកម្តងទៀត។</value></data>
   <data name="ErrPhoto" xml:space="preserve"><value>មិនអាចប្រើរូបថតនោះបានទេ។ សូមសាករូបផ្សេង។</value></data>
+  <data name="Month1" xml:space="preserve"><value>មករា</value></data>
+  <data name="Month2" xml:space="preserve"><value>កុម្ភៈ</value></data>
+  <data name="Month3" xml:space="preserve"><value>មីនា</value></data>
+  <data name="Month4" xml:space="preserve"><value>មេសា</value></data>
+  <data name="Month5" xml:space="preserve"><value>ឧសភា</value></data>
+  <data name="Month6" xml:space="preserve"><value>មិថុនា</value></data>
+  <data name="Month7" xml:space="preserve"><value>កក្កដា</value></data>
+  <data name="Month8" xml:space="preserve"><value>សីហា</value></data>
+  <data name="Month9" xml:space="preserve"><value>កញ្ញា</value></data>
+  <data name="Month10" xml:space="preserve"><value>តុលា</value></data>
+  <data name="Month11" xml:space="preserve"><value>វិច្ឆិកា</value></data>
+  <data name="Month12" xml:space="preserve"><value>ធ្នូ</value></data>
+  <data name="KcalPerServing" xml:space="preserve"><value>{0} kcal / ចំណែក</value></data>
+  <data name="Minutes" xml:space="preserve"><value>{0} នាទី</value></data>
+  <data name="Servings" xml:space="preserve"><value>{0} ចំណែក</value></data>
+  <data name="DifficultyEasy" xml:space="preserve"><value>ងាយ</value></data>
+  <data name="DifficultyMedium" xml:space="preserve"><value>មធ្យម</value></data>
+  <data name="DifficultyHard" xml:space="preserve"><value>ពិបាក</value></data>
+  <data name="SavedOn" xml:space="preserve"><value>បានរក្សាទុកថ្ងៃ {0}</value></data>
+  <data name="HomeTitle" xml:space="preserve"><value>សួស្តី! មើលរូបមន្តពេញនិយម</value></data>
+  <data name="PopularNow" xml:space="preserve"><value>ពេញនិយមឥឡូវនេះ</value></data>
+  <data name="SavedSubtitle" xml:space="preserve"><value>រូបមន្តរបស់អ្នក ថ្មីបំផុតមុនគេ</value></data>
+  <data name="SavedEmpty" xml:space="preserve"><value>មិនទាន់មានរូបមន្តរក្សាទុកទេ។ ចុចសញ្ញាចំណាំលើរូបមន្តដើម្បីរក្សាទុក។</value></data>
+  <data name="RecipesTitle" xml:space="preserve"><value>រូបមន្ត</value></data>
+  <data name="SearchRecipes" xml:space="preserve"><value>ស្វែងរករូបមន្ត</value></data>
+  <data name="CatAll" xml:space="preserve"><value>ទាំងអស់</value></data>
+  <data name="CatSoup" xml:space="preserve"><value>សម្ល</value></data>
+  <data name="CatRice" xml:space="preserve"><value>បាយ</value></data>
+  <data name="CatSweet" xml:space="preserve"><value>បង្អែម</value></data>
+  <data name="CatDrinks" xml:space="preserve"><value>ភេសជ្ជៈ</value></data>
+  <data name="CatNoodles" xml:space="preserve"><value>មី</value></data>
+  <data name="CatCurry" xml:space="preserve"><value>ការី</value></data>
+  <data name="CatMain" xml:space="preserve"><value>ម្ហូបចម្បង</value></data>
+  <data name="CatSalad" xml:space="preserve"><value>សាឡាត់</value></data>
+  <data name="CatSnack" xml:space="preserve"><value>អាហារសម្រន់</value></data>
+  <data name="NoResults" xml:space="preserve"><value>រកមិនឃើញរូបមន្ត។</value></data>
+  <data name="SaveRecipe" xml:space="preserve"><value>រក្សាទុករូបមន្ត</value></data>
+  <data name="SavedButton" xml:space="preserve"><value>បានរក្សាទុក</value></data>
+  <data name="Share" xml:space="preserve"><value>ចែករំលែក</value></data>
+  <data name="Ingredients" xml:space="preserve"><value>គ្រឿងផ្សំ</value></data>
+  <data name="Steps" xml:space="preserve"><value>របៀបធ្វើ</value></data>
+  <data name="RecipeSavedToast" xml:space="preserve"><value>បានរក្សាទុករូបមន្ត</value></data>
+  <data name="RemovedToast" xml:space="preserve"><value>បានដកចេញពីការរក្សាទុក</value></data>
+  <data name="Undo" xml:space="preserve"><value>មិនធ្វើវិញ</value></data>
+  <data name="ChooseCuisines" xml:space="preserve"><value>ជ្រើសរើសប្រភេទម្ហូប</value></data>
+  <data name="SearchCountries" xml:space="preserve"><value>ស្វែងរកប្រទេស</value></data>
+  <data name="Clear" xml:space="preserve"><value>សម្អាត</value></data>
+  <data name="Apply" xml:space="preserve"><value>អនុវត្ត</value></data>
+  <data name="Filter" xml:space="preserve"><value>តម្រង</value></data>
+  <data name="Fridge" xml:space="preserve"><value>ទូទឹកកក</value></data>
+  <data name="Search" xml:space="preserve"><value>ស្វែងរក</value></data>
+  <data name="NoInternetSub" xml:space="preserve"><value>សូមពិនិត្យបណ្តាញរបស់អ្នក</value></data>
+  <data name="NoInternetTitle" xml:space="preserve"><value>គ្មានអ៊ីនធឺណិត</value></data>
+  <data name="Remove" xml:space="preserve"><value>ដកចេញ</value></data>
+  <data name="MaxCuisines" xml:space="preserve"><value>អ្នកអាចជ្រើសបានរហូតដល់ {0} ប្រភេទម្ហូប។</value></data>
 </root>
