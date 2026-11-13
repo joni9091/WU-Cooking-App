@@ -16,7 +16,9 @@ public static class ThemeService
         // Status bar matches the page: white with dark icons, or near-black with light icons.
         if (Platform.CurrentActivity?.Window is { } window)
         {
-            window.SetStatusBarColor(dark ? Android.Graphics.Color.ParseColor("#121212") : Android.Graphics.Color.White);
+            // Android 15+ draws the page behind the status bar, so only older phones need the colour.
+            if (!OperatingSystem.IsAndroidVersionAtLeast(35))
+                window.SetStatusBarColor(dark ? Android.Graphics.Color.ParseColor("#121212") : Android.Graphics.Color.White);
             AndroidX.Core.View.WindowCompat.GetInsetsController(window, window.DecorView)!.AppearanceLightStatusBars = !dark;
         }
 #endif

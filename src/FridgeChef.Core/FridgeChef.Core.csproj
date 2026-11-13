@@ -20,6 +20,8 @@
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.2" />
     <PackageReference Include="sqlite-net-pcl" Version="1.11.285" />
     <PackageReference Include="SQLitePCLRaw.bundle_green" Version="2.1.11" />
+    <!-- Native SQLite 2.1.12+ fixes GHSA-2m69-gcr7-jv3q; bundle_green 2.1.11 alone pulls the vulnerable build. -->
+    <PackageReference Include="SQLitePCLRaw.lib.e_sqlite3" Version="2.1.14" />
   </ItemGroup>
 
 </Project>

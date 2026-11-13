@@ -47,6 +47,33 @@ The one-step `dotnet build -t:InstallAndroidDependencies` does the same, but it 
    dotnet build src/FridgeChef -t:Run -f net11.0-android
    ```
 
+## Release build (the APK you can share)
+
+The release build is smaller and faster (trimmed and pre-compiled) and is signed with **your own key**.
+
+**The key** lives outside the project, in `~/.fridgechef/` (never in git):
+- `fridgechef.keystore`: the signing key.
+- `keystore-pass.txt`: its password, written twice on two lines (the signing tool reads one line for the keystore and one for the key).
+
+**Back up this folder** (for example to a USB stick or a private cloud drive). If you lose it, phones that have the app cannot install updates; people would have to uninstall first. If the folder is missing, the build still works but signs with the debug key.
+
+To create a new key on another Mac (only if you have no backup):
+```
+mkdir -m 700 ~/.fridgechef
+P=$(openssl rand -base64 24 | tr -d '/+=\n'); printf '%s\n%s\n' "$P" "$P" > ~/.fridgechef/keystore-pass.txt; unset P
+keytool -genkeypair -keystore ~/.fridgechef/fridgechef.keystore -alias fridgechef -keyalg RSA -keysize 2048 -validity 10000 \
+  -storepass:file ~/.fridgechef/keystore-pass.txt -keypass:file ~/.fridgechef/keystore-pass.txt -dname "CN=Fridge Chef"
+```
+
+Build and install the release APK:
+```
+dotnet publish src/FridgeChef -f net11.0-android -c Release -o publish
+adb install -r publish/com.fridgechef.app-Signed.apk
+```
+The release APK is for 64-bit ARM phones (nearly every phone since 2017). Before each new release, raise `ApplicationVersion` (and `ApplicationDisplayVersion`) in `src/FridgeChef/FridgeChef.csproj`.
+
+Switching between the debug build (`dotnet build ... -t:Run`) and the release APK on the same phone needs an uninstall first (`adb uninstall com.fridgechef.app`), because they are signed with different keys. Uninstalling logs you out.
+
 ## Run the tests
 
 ```

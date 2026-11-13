@@ -25,6 +25,22 @@
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">24.0</SupportedOSPlatformVersion>
 	</PropertyGroup>
 
+	<!-- Release APK for real phones: 64-bit ARM only (every phone from ~2017 on; Debug still builds the emulator ones). -->
+	<PropertyGroup Condition="'$(Configuration)' == 'Release'">
+		<RuntimeIdentifiers>android-arm64</RuntimeIdentifiers>
+		<AndroidPackageFormat>apk</AndroidPackageFormat>
+	</PropertyGroup>
+
+	<!-- keystore-pass.txt holds the password on two lines: apksigner reads line 1 for the store and line 2 for the key. -->
+	<!-- Release signing key lives OUTSIDE the repo in ~/.fridgechef (see README). Without it the build signs with the debug key. -->
+	<PropertyGroup Condition="'$(Configuration)' == 'Release' And Exists('$(HOME)/.fridgechef/fridgechef.keystore')">
+		<AndroidKeyStore>true</AndroidKeyStore>
+		<AndroidSigningKeyStore>$(HOME)/.fridgechef/fridgechef.keystore</AndroidSigningKeyStore>
+		<AndroidSigningKeyAlias>fridgechef</AndroidSigningKeyAlias>
+		<AndroidSigningStorePass>file:$(HOME)/.fridgechef/keystore-pass.txt</AndroidSigningStorePass>
+		<AndroidSigningKeyPass>file:$(HOME)/.fridgechef/keystore-pass.txt</AndroidSigningKeyPass>
+	</PropertyGroup>
+
 	<ItemGroup>
 		<!-- App Icon -->
 		<!-- App icon from Figma ("26. App icon"); the yellow background matches its border so Android's round/squircle masks look right. -->
@@ -47,6 +63,8 @@
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="11.0.0" />
+		<!-- Same security fix as in FridgeChef.Core, for the Android native SQLite. -->
+		<PackageReference Include="SQLitePCLRaw.lib.e_sqlite3.android" Version="2.1.14" />
 	</ItemGroup>
 
 	<ItemGroup>

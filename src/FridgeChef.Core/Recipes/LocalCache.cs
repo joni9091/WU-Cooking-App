@@ -1,4 +1,5 @@
 using System.Text.Json.Serialization.Metadata;
+using System.Diagnostics.CodeAnalysis;
 using SQLite;
 
 namespace FridgeChef.Core.Recipes;
@@ -16,6 +17,8 @@ public sealed class LocalCache(string path)
 
     SQLiteAsyncConnection? _db;
 
+    // sqlite-net finds Entry's constructor and properties by reflection; keep them in the trimmed release build.
+    [DynamicDependency(DynamicallyAccessedMemberTypes.PublicConstructors | DynamicallyAccessedMemberTypes.PublicProperties, typeof(Entry))]
     async Task<SQLiteAsyncConnection> Db()
     {
         if (_db is null)
