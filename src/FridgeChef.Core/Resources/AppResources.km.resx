@@ -12,4 +12,78 @@
   <data name="TabNews" xml:space="preserve"><value>ព័ត៌មាន</value></data>
   <data name="TabAccount" xml:space="preserve"><value>គណនី</value></data>
   <data name="ComingSoon" xml:space="preserve"><value>នឹងមកដល់ឆាប់ៗ</value></data>
+  <data name="Welcome1Title" xml:space="preserve"><value>សូមស្វាគមន៍មកកាន់ Fridge Chef</value></data>
+  <data name="Welcome1Text" xml:space="preserve"><value>Fridge Chef ប្រែក្លាយម្ហូបសល់ក្នុងទូទឹកកករបស់អ្នកទៅជាអាហារពេលល្ងាច។ វាយអ្វីដែលអ្នកមាន ជ្រើសម្ហូបរហូតដល់ ៣ ប្រភេទ ហើយទទួលបានរូបមន្ត ៣ ក្នុងរយៈពេលប៉ុន្មានវិនាទី។</value></data>
+  <data name="Welcome2Title" xml:space="preserve"><value>ចម្អិនដូចអ្នកស្រុក</value></data>
+  <data name="Welcome2Text" xml:space="preserve"><value>រកមើលម្ហូបខ្មែរដែលគេចូលចិត្ត និងម្ហូបពីជុំវិញពិភពលោក មានកាឡូរី និងជំហានងាយៗ។</value></data>
+  <data name="Welcome3Title" xml:space="preserve"><value>ប្រើអ្វីដែលអ្នកមាន</value></data>
+  <data name="Welcome3Text" xml:space="preserve"><value>ប្រាប់យើងពីអ្វីដែលមានក្នុងទូទឹកកក យើងនឹងណែនាំរូបមន្តដែលប្រើវា ដើម្បីកុំឱ្យខ្ជះខ្ជាយអាហារ។</value></data>
+  <data name="Welcome4Title" xml:space="preserve"><value>រក្សាទុករូបមន្តដែលអ្នកចូលចិត្ត</value></data>
+  <data name="Welcome4Text" xml:space="preserve"><value>រក្សាទុករូបមន្តដែលអ្នកស្រឡាញ់ ហើយរកឃើញវាវិញគ្រប់ពេល ទោះគ្មានអ៊ីនធឺណិតក៏ដោយ។</value></data>
+  <data name="GetStarted" xml:space="preserve"><value>ចាប់ផ្តើម</value></data>
+  <data name="LanguageLink" xml:space="preserve"><value>English / ខ្មែរ</value></data>
+  <data name="LanguageTitle" xml:space="preserve"><value>ភាសា</value></data>
+  <data name="LanguageSubtitle" xml:space="preserve"><value>ជ្រើសរើសភាសាសម្រាប់កម្មវិធី។</value></data>
+  <data name="Back" xml:space="preserve"><value>ត្រឡប់</value></data>
+  <data name="LoginTitle" xml:space="preserve"><value>សូមស្វាគមន៍ការត្រឡប់មកវិញ!</value></data>
+  <data name="LoginSubtitle" xml:space="preserve"><value>ចូលគណនីដើម្បីមើលរូបមន្តដែលអ្នកបានរក្សាទុក។</value></data>
+  <data name="EmailPlaceholder" xml:space="preserve"><value>អ៊ីមែល</value></data>
+  <data name="PasswordPlaceholder" xml:space="preserve"><value>ពាក្យសម្ងាត់</value></data>
+  <data name="ConfirmPasswordPlaceholder" xml:space="preserve"><value>បញ្ជាក់ពាក្យសម្ងាត់</value></data>
+  <data name="ShowPassword" xml:space="preserve"><value>បង្ហាញពាក្យសម្ងាត់</value></data>
+  <data name="HidePassword" xml:space="preserve"><value>លាក់ពាក្យសម្ងាត់</value></data>
+  <data name="ForgotLink" xml:space="preserve"><value>ភ្លេចពាក្យសម្ងាត់?</value></data>
+  <data name="SignIn" xml:space="preserve"><value>ចូលគណនី</value></data>
+  <data name="OrContinueWith" xml:space="preserve"><value>ឬបន្តជាមួយ</value></data>
+  <data name="ContinueGoogle" xml:space="preserve"><value>បន្តជាមួយ Google</value></data>
+  <data name="NoAccount" xml:space="preserve"><value>មិនទាន់មានគណនីមែនទេ?</value></data>
+  <data name="SignUpLink" xml:space="preserve"><value>ចុះឈ្មោះ</value></data>
+  <data name="SignUpTitle" xml:space="preserve"><value>ចុះឈ្មោះឥឡូវនេះ</value></data>
+  <data name="SignUpSubtitle" xml:space="preserve"><value>បង្កើតគណនីដើម្បីរក្សាទុករូបមន្តរបស់អ្នក។</value></data>
+  <data name="SignUpButton" xml:space="preserve"><value>ចុះឈ្មោះ</value></data>
+  <data name="HaveAccount" xml:space="preserve"><value>មានគណនីរួចហើយមែនទេ?</value></data>
+  <data name="SignUpDone" xml:space="preserve"><value>សូមពិនិត្យអ៊ីមែល ហើយចុចតំណដើម្បីបញ្ជាក់គណនី បន្ទាប់មកចូលគណនី។</value></data>
+  <data name="ForgotTitle" xml:space="preserve"><value>ភ្លេចពាក្យសម្ងាត់?</value></data>
+  <data name="ForgotText" xml:space="preserve"><value>បញ្ចូលអ៊ីមែលរបស់អ្នក យើងនឹងផ្ញើលេខកូដដើម្បីកំណត់ពាក្យសម្ងាត់ឡើងវិញ។</value></data>
+  <data name="EmailLabel" xml:space="preserve"><value>អ៊ីមែល</value></data>
+  <data name="SendCode" xml:space="preserve"><value>ផ្ញើលេខកូដ</value></data>
+  <data name="RememberedLogin" xml:space="preserve"><value>នឹកឃើញហើយ? ចូលគណនី</value></data>
+  <data name="CodeText" xml:space="preserve"><value>បើមានគណនីប្រើអ៊ីមែលនេះ យើងបានផ្ញើលេខកូដទៅ។ បញ្ចូលលេខកូដ ហើយជ្រើសពាក្យសម្ងាត់ថ្មី។</value></data>
+  <data name="CodeLabel" xml:space="preserve"><value>លេខកូដ</value></data>
+  <data name="CodePlaceholder" xml:space="preserve"><value>លេខកូដពីអ៊ីមែល</value></data>
+  <data name="NewPasswordPlaceholder" xml:space="preserve"><value>ពាក្យសម្ងាត់ថ្មី</value></data>
+  <data name="SavePassword" xml:space="preserve"><value>រក្សាទុកពាក្យសម្ងាត់ថ្មី</value></data>
+  <data name="ProfileTitle" xml:space="preserve"><value>រៀបចំប្រវត្តិរូបរបស់អ្នក</value></data>
+  <data name="ProfileText" xml:space="preserve"><value>ជ្រើសរើសរបៀបដែលមិត្តភក្តិនឹងឃើញអ្នក។ អ្នកអាចប្តូរវាពេលក្រោយ។</value></data>
+  <data name="AddPhoto" xml:space="preserve"><value>បន្ថែមរូបថត</value></data>
+  <data name="ChangePhoto" xml:space="preserve"><value>ប្តូររូបថត</value></data>
+  <data name="HandleLabel" xml:space="preserve"><value>@handle</value></data>
+  <data name="HandlePlaceholder" xml:space="preserve"><value>@ជ្រើស-handle</value></data>
+  <data name="HandleHint" xml:space="preserve"><value>អក្សរ លេខ ចំណុច និង _ ប៉ុណ្ណោះ។ ត្រូវតែមិនជាន់គេ។</value></data>
+  <data name="HandleChecking" xml:space="preserve"><value>កំពុងពិនិត្យ…</value></data>
+  <data name="HandleFree" xml:space="preserve"><value>អាចប្រើបាន</value></data>
+  <data name="HandleTaken" xml:space="preserve"><value>@handle នេះមានគេប្រើហើយ។</value></data>
+  <data name="AccountNameLabel" xml:space="preserve"><value>ឈ្មោះគណនី</value></data>
+  <data name="AccountNamePlaceholder" xml:space="preserve"><value>ឈ្មោះរបស់អ្នក</value></data>
+  <data name="Finish" xml:space="preserve"><value>បញ្ចប់</value></data>
+  <data name="PhotoFromGallery" xml:space="preserve"><value>ជ្រើសពីវិចិត្រសាល</value></data>
+  <data name="PhotoFromCamera" xml:space="preserve"><value>ថតរូប</value></data>
+  <data name="Cancel" xml:space="preserve"><value>បោះបង់</value></data>
+  <data name="LogOut" xml:space="preserve"><value>ចាកចេញ</value></data>
+  <data name="LogOutTitle" xml:space="preserve"><value>ចាកចេញមែនទេ?</value></data>
+  <data name="LogOutText" xml:space="preserve"><value>អ្នកនឹងត្រូវចូលគណនីម្តងទៀត ដើម្បីមើលរូបមន្តដែលបានរក្សាទុក។</value></data>
+  <data name="ErrEmail" xml:space="preserve"><value>សូមបញ្ចូលអ៊ីមែលឱ្យបានត្រឹមត្រូវ។</value></data>
+  <data name="ErrPassword" xml:space="preserve"><value>ពាក្យសម្ងាត់ត្រូវមានយ៉ាងតិច ៨ តួ។</value></data>
+  <data name="ErrPasswordMatch" xml:space="preserve"><value>ពាក្យសម្ងាត់មិនដូចគ្នា។</value></data>
+  <data name="ErrHandle" xml:space="preserve"><value>ប្រើអក្សរ លេខ ចំណុច ឬ _ ពី ៣ ដល់ ២០ តួ។</value></data>
+  <data name="ErrName" xml:space="preserve"><value>សូមបញ្ចូលឈ្មោះរបស់អ្នក។</value></data>
+  <data name="ErrCode" xml:space="preserve"><value>សូមបញ្ចូលលេខកូដពីអ៊ីមែល។</value></data>
+  <data name="ErrLogin" xml:space="preserve"><value>អ៊ីមែល ឬពាក្យសម្ងាត់មិនត្រឹមត្រូវ។</value></data>
+  <data name="ErrNotConfirmed" xml:space="preserve"><value>សូមបញ្ជាក់អ៊ីមែលរបស់អ្នកជាមុនសិន។ ពិនិត្យប្រអប់សំបុត្រ។</value></data>
+  <data name="ErrNoInternet" xml:space="preserve"><value>គ្មានអ៊ីនធឺណិត។ សូមពិនិត្យបណ្តាញរបស់អ្នក។</value></data>
+  <data name="ErrTooMany" xml:space="preserve"><value>ព្យាយាមច្រើនដងពេក។ សូមរង់ចាំប៉ុន្មាននាទី ហើយសាកម្តងទៀត។</value></data>
+  <data name="ErrCodeWrong" xml:space="preserve"><value>លេខកូដនេះខុស ឬផុតកំណត់ហើយ។</value></data>
+  <data name="ErrEmailNotAllowed" xml:space="preserve"><value>យើងមិនអាចផ្ញើអ៊ីមែលទៅអាសយដ្ឋាននេះបានទេ។ សូមបន្តជាមួយ Google។</value></data>
+  <data name="ErrGeneric" xml:space="preserve"><value>មានបញ្ហាអ្វីមួយ។ សូមសាកម្តងទៀត។</value></data>
+  <data name="ErrPhoto" xml:space="preserve"><value>មិនអាចប្រើរូបថតនោះបានទេ។ សូមសាករូបផ្សេង។</value></data>
 </root>

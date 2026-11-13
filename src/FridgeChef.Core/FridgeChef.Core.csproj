@@ -9,12 +9,11 @@
 
   <ItemGroup>
     <!-- Generates the AppResources class at build time (works from the terminal, no Visual Studio needed). -->
-    <EmbeddedResource Update="Resources\AppResources.resx"
-                      StronglyTypedLanguage="CSharp"
-                      StronglyTypedClassName="AppResources"
-                      StronglyTypedNamespace="FridgeChef.Core.Resources"
-                      StronglyTypedFileName="$(IntermediateOutputPath)AppResources.Designer.cs"
-                      PublicClass="true" />
+    <EmbeddedResource Update="Resources\AppResources.resx" StronglyTypedLanguage="CSharp" StronglyTypedClassName="AppResources" StronglyTypedNamespace="FridgeChef.Core.Resources" StronglyTypedFileName="$(IntermediateOutputPath)AppResources.Designer.cs" PublicClass="true" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.2" />
   </ItemGroup>
 
 </Project>

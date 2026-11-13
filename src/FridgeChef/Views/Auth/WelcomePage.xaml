@@ -1,0 +1,41 @@
+<!-- Figma "2. Welcome": 4 swipeable slides on olive, language link top-right, Get started. -->
+<ContentPage x:Class="FridgeChef.Views.Auth.WelcomePage"
+             xmlns:local="clr-namespace:FridgeChef.Views.Auth"
+             xmlns:res="clr-namespace:FridgeChef.Core.Resources;assembly=FridgeChef.Core"
+             x:DataType="local:WelcomePage"
+             BackgroundColor="{StaticResource Olive}">
+    <Grid RowDefinitions="*,Auto" Padding="0,0,0,40">
+
+        <CarouselView x:Name="Slides" IndicatorView="Dots" Loop="False">
+            <CarouselView.ItemTemplate>
+                <DataTemplate x:DataType="local:WelcomeSlide">
+                    <VerticalStackLayout>
+                        <Border StrokeThickness="0" StrokeShape="RoundRectangle 0,0,24,24" HeightRequest="400">
+                            <Image Source="{Binding Image}" Aspect="AspectFill" />
+                        </Border>
+                        <Label Text="{Binding Title}" Style="{StaticResource Title}" TextColor="{StaticResource OnOlive}"
+                               FontSize="34" HorizontalTextAlignment="Center" Margin="32,56,32,16" />
+                        <Label Text="{Binding Text}" FontFamily="{DynamicResource AppHeadingFont}" FontSize="17"
+                               TextColor="{StaticResource OnOlive}" HorizontalTextAlignment="Center" Margin="48,0" />
+                    </VerticalStackLayout>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+
+        <IndicatorView x:Name="Dots" VerticalOptions="Start" HorizontalOptions="Center" Margin="0,418,0,0"
+                       IndicatorColor="#66000000" SelectedIndicatorColor="Black" IndicatorSize="8" />
+
+        <!-- Language switch (brief requirement; not in the Figma frame, owner chose top-right) -->
+        <Border VerticalOptions="Start" HorizontalOptions="End" Margin="0,16,16,0" Padding="12,6"
+                BackgroundColor="#992B240F" StrokeThickness="0" StrokeShape="RoundRectangle 14">
+            <Label Text="{x:Static res:AppResources.LanguageLink}" TextColor="{StaticResource PaleYellow}"
+                   FontFamily="{DynamicResource AppBodyBoldFont}" FontSize="13" />
+            <Border.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnLanguageTapped" />
+            </Border.GestureRecognizers>
+        </Border>
+
+        <Button Grid.Row="1" Text="{x:Static res:AppResources.GetStarted}" Clicked="OnGetStarted"
+                FontFamily="{DynamicResource AppHeadingFont}" FontSize="22" Margin="32,0" />
+    </Grid>
+</ContentPage>

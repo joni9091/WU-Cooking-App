@@ -11,6 +11,10 @@
     <Color x:Key="Background">#FFFFFF</Color>
     <Color x:Key="Text">#1A1A1A</Color>
     <Color x:Key="Icon">#000000</Color>
+    <Color x:Key="InputGrey">#D9D9D9</Color>    <!-- input boxes, secondary buttons -->
+    <Color x:Key="ToastBrown">#2B240F</Color>   <!-- toasts -->
+    <Color x:Key="Danger">#C0392B</Color>       <!-- error text, Delete button -->
+    <Color x:Key="OnOlive">#FFFFFF</Color>      <!-- text on the olive Welcome screen -->
 
     <!-- shortcut: no dark-mode design yet, so dark mode reuses neutral dark colours; replace when Figma has a dark version. -->
     <Color x:Key="BackgroundDark">#121212</Color>
@@ -21,26 +25,35 @@
          when the language changes. Inter and Instrument Serif have no Khmer letters, so Khmer uses Kantumruy Pro for both. -->
     <x:String x:Key="HeadingFontEn">InstrumentSerif</x:String>   <!-- Regular + Italic only -->
     <x:String x:Key="BodyFontEn">Inter</x:String>                <!-- inputs, descriptions, small text -->
+    <x:String x:Key="BodyBoldFontEn">InterSemiBold</x:String>    <!-- buttons, labels -->
     <x:String x:Key="HeadingFontKm">KantumruyPro</x:String>
     <x:String x:Key="BodyFontKm">KantumruyPro</x:String>
+    <x:String x:Key="BodyBoldFontKm">KantumruyProSemiBold</x:String>
     <x:Double x:Key="LineHeightEn">1.0</x:Double>
     <x:Double x:Key="LineHeightKm">1.5</x:Double>                <!-- stops Khmer letters being clipped -->
 
     <!-- Defaults until the language is applied at startup. -->
     <x:String x:Key="AppHeadingFont">InstrumentSerif</x:String>
     <x:String x:Key="AppBodyFont">Inter</x:String>
+    <x:String x:Key="AppBodyBoldFont">InterSemiBold</x:String>
     <x:Double x:Key="AppLineHeight">1.0</x:Double>
 
     <!-- Text sizes -->
     <x:Double x:Key="FontSizeSmall">12</x:Double>
     <x:Double x:Key="FontSizeBody">14</x:Double>
+    <x:Double x:Key="FontSizeInput">16</x:Double>
     <x:Double x:Key="FontSizeHeading">22</x:Double>
     <x:Double x:Key="FontSizeTitle">30</x:Double>
+    <x:Double x:Key="FontSizeAuthTitle">40</x:Double>   <!-- "Welcome Back!!", "Register Now" -->
 
     <!-- Spacing and shapes (Figma screens are 412 wide with 31 side margins). -->
     <x:Double x:Key="SpacingS">8</x:Double>
     <x:Double x:Key="SpacingM">16</x:Double>
     <Thickness x:Key="PagePadding">31,62,31,0</Thickness>
+    <Thickness x:Key="AuthPadding">24,80,24,24</Thickness>
+    <x:Double x:Key="ControlHeight">60</x:Double>          <!-- inputs and big buttons -->
+    <x:Double x:Key="ControlRadius">24</x:Double>
+    <x:Double x:Key="CardRadius">16</x:Double>
     <x:Double x:Key="TabBarHeight">66</x:Double>
     <x:Double x:Key="TabBarCornerRadius">24</x:Double>
     <Thickness x:Key="TabBarMargin">21,0,21,24</Thickness>

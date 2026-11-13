@@ -7,6 +7,7 @@
     <Style TargetType="Page" ApplyToDerivedTypes="True">
         <Setter Property="Padding" Value="0" />
         <Setter Property="Shell.NavBarIsVisible" Value="False" />
+        <Setter Property="NavigationPage.HasNavigationBar" Value="False" />
         <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Background}, Dark={StaticResource BackgroundDark}}" />
     </Style>
 
@@ -36,20 +37,72 @@
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Grey}, Dark={StaticResource GreyDark}}" />
     </Style>
 
-    <Style TargetType="Button">
-        <Setter Property="FontFamily" Value="{DynamicResource AppBodyFont}" />
-        <Setter Property="FontSize" Value="{StaticResource FontSizeBody}" />
-        <Setter Property="BackgroundColor" Value="{StaticResource Olive}" />
-        <Setter Property="TextColor" Value="{StaticResource PaleYellow}" />
-        <Setter Property="MinimumHeightRequest" Value="44" />
+    <!-- Big olive serif page title, e.g. "Welcome Back!!" -->
+    <Style TargetType="Label" x:Key="AuthTitle" BasedOn="{StaticResource Title}">
+        <Setter Property="FontSize" Value="{StaticResource FontSizeAuthTitle}" />
     </Style>
 
+    <!-- Olive text: subtitles, field labels, links -->
+    <Style TargetType="Label" x:Key="OliveText" BasedOn="{StaticResource BaseLabel}">
+        <Setter Property="TextColor" Value="{StaticResource Olive}" />
+    </Style>
+
+    <Style TargetType="Label" x:Key="OliveBold" BasedOn="{StaticResource OliveText}">
+        <Setter Property="FontFamily" Value="{DynamicResource AppBodyBoldFont}" />
+    </Style>
+
+    <Style TargetType="Label" x:Key="ErrorText" BasedOn="{StaticResource BaseLabel}">
+        <Setter Property="TextColor" Value="{StaticResource Danger}" />
+        <Setter Property="HorizontalTextAlignment" Value="Center" />
+    </Style>
+
+    <!-- Main button: pale yellow with black bold text ("Sign in", "Finish") -->
+    <Style TargetType="Button">
+        <Setter Property="FontFamily" Value="{DynamicResource AppBodyBoldFont}" />
+        <Setter Property="FontSize" Value="{StaticResource FontSizeInput}" />
+        <Setter Property="BackgroundColor" Value="{StaticResource PaleYellow}" />
+        <Setter Property="TextColor" Value="{StaticResource Text}" />
+        <Setter Property="HeightRequest" Value="{StaticResource ControlHeight}" />
+        <Setter Property="CornerRadius" Value="24" />
+    </Style>
+
+    <!-- Second-choice button: grey with grey text ("Continue with Google") -->
+    <Style TargetType="Button" x:Key="SecondaryButton">
+        <Setter Property="FontFamily" Value="{DynamicResource AppBodyFont}" />
+        <Setter Property="FontSize" Value="{StaticResource FontSizeInput}" />
+        <Setter Property="BackgroundColor" Value="{StaticResource InputGrey}" />
+        <Setter Property="TextColor" Value="{StaticResource Grey}" />
+        <Setter Property="HeightRequest" Value="{StaticResource ControlHeight}" />
+        <Setter Property="CornerRadius" Value="24" />
+    </Style>
+
+    <!-- Grey rounded box that holds an icon and an Entry -->
+    <Style TargetType="Border" x:Key="InputBox">
+        <Setter Property="BackgroundColor" Value="{StaticResource InputGrey}" />
+        <Setter Property="StrokeThickness" Value="0" />
+        <Setter Property="StrokeShape" Value="RoundRectangle 24" />
+        <Setter Property="HeightRequest" Value="{StaticResource ControlHeight}" />
+        <Setter Property="Padding" Value="22,0" />
+    </Style>
+
+    <!-- Entries sit inside InputBox; the Android underline is removed in MauiProgram. -->
     <Style TargetType="Entry">
         <Setter Property="FontFamily" Value="{DynamicResource AppBodyFont}" />
-        <Setter Property="FontSize" Value="{StaticResource FontSizeBody}" />
-        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Text}, Dark={StaticResource TextDark}}" />
+        <Setter Property="FontSize" Value="{StaticResource FontSizeInput}" />
+        <Setter Property="TextColor" Value="{StaticResource Text}" />
         <Setter Property="PlaceholderColor" Value="{StaticResource Grey}" />
-        <Setter Property="MinimumHeightRequest" Value="44" />
+        <Setter Property="BackgroundColor" Value="Transparent" />
+        <Setter Property="VerticalOptions" Value="Center" />
+    </Style>
+
+    <Style TargetType="Image" x:Key="InputIcon">
+        <Setter Property="WidthRequest" Value="18" />
+        <Setter Property="HeightRequest" Value="18" />
+        <Setter Property="VerticalOptions" Value="Center" />
+    </Style>
+
+    <Style TargetType="ActivityIndicator">
+        <Setter Property="Color" Value="{StaticResource Olive}" />
     </Style>
 
     <!-- Tab bar colours. Its floating rounded shape is drawn in Platforms/Android/FloatingTabBarHandler.cs. -->

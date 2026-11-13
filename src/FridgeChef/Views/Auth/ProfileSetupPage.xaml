@@ -1,0 +1,55 @@
+<!-- Figma "2.5 Profile setup". Shown once for every new account; the tabs stay locked until Finish succeeds. -->
+<ContentPage x:Class="FridgeChef.Views.Auth.ProfileSetupPage"
+             xmlns:vm="clr-namespace:FridgeChef.Core.ViewModels;assembly=FridgeChef.Core"
+             xmlns:res="clr-namespace:FridgeChef.Core.Resources;assembly=FridgeChef.Core"
+             x:DataType="vm:ProfileSetupViewModel">
+    <ScrollView>
+        <VerticalStackLayout Padding="{StaticResource AuthPadding}" Spacing="14">
+            <Label Text="{x:Static res:AppResources.ProfileTitle}" Style="{StaticResource Title}" FontSize="38" />
+            <Label Text="{x:Static res:AppResources.ProfileText}" Style="{StaticResource OliveText}" FontSize="15" />
+
+            <!-- Avatar: pale yellow circle, person icon until a photo is chosen, olive camera badge -->
+            <Grid WidthRequest="112" HeightRequest="112" HorizontalOptions="Center" Margin="0,8,0,0">
+                <Grid.GestureRecognizers><TapGestureRecognizer Command="{Binding PickPhotoCommand}" /></Grid.GestureRecognizers>
+                <Border StrokeShape="Ellipse" Stroke="{StaticResource Olive}" StrokeThickness="1"
+                        BackgroundColor="{StaticResource PaleYellow}">
+                    <Grid>
+                        <Image Source="ic_user_round.png" WidthRequest="48" HeightRequest="48" Opacity="0.85" />
+                        <Image x:Name="AvatarImage" Aspect="AspectFill" />
+                    </Grid>
+                </Border>
+                <Border WidthRequest="30" HeightRequest="30" StrokeShape="Ellipse" StrokeThickness="0"
+                        BackgroundColor="{StaticResource Olive}" HorizontalOptions="End" VerticalOptions="End">
+                    <Image Source="ic_camera.png" WidthRequest="16" HeightRequest="16" />
+                </Border>
+            </Grid>
+            <Label Text="{Binding PhotoLabel}" Style="{StaticResource OliveBold}" HorizontalTextAlignment="Center">
+                <Label.GestureRecognizers><TapGestureRecognizer Command="{Binding PickPhotoCommand}" /></Label.GestureRecognizers>
+            </Label>
+
+            <Label Text="{x:Static res:AppResources.HandleLabel}" Style="{StaticResource OliveBold}" Margin="0,8,0,0" />
+            <Border Style="{StaticResource InputBox}">
+                <Grid ColumnDefinitions="Auto,*" ColumnSpacing="10">
+                    <Image Source="ic_at_sign.png" Style="{StaticResource InputIcon}" WidthRequest="20" HeightRequest="20" />
+                    <Entry Grid.Column="1" Text="{Binding Handle}" Placeholder="{x:Static res:AppResources.HandlePlaceholder}"
+                           MaxLength="20" IsSpellCheckEnabled="False" IsTextPredictionEnabled="False" Keyboard="Plain" />
+                </Grid>
+            </Border>
+            <Label Text="{Binding HandleStatus, FallbackValue={x:Static res:AppResources.HandleHint}, TargetNullValue={x:Static res:AppResources.HandleHint}}"
+                   Style="{StaticResource Muted}" FontSize="{StaticResource FontSizeSmall}" />
+
+            <Label Text="{x:Static res:AppResources.AccountNameLabel}" Style="{StaticResource OliveBold}" />
+            <Border Style="{StaticResource InputBox}">
+                <Grid ColumnDefinitions="Auto,*" ColumnSpacing="10">
+                    <Image Source="ic_user_round.png" Style="{StaticResource InputIcon}" WidthRequest="20" HeightRequest="20" />
+                    <Entry Grid.Column="1" Text="{Binding DisplayName}" Placeholder="{x:Static res:AppResources.AccountNamePlaceholder}"
+                           MaxLength="40" ReturnCommand="{Binding FinishCommand}" />
+                </Grid>
+            </Border>
+
+            <Label Text="{Binding Error}" Style="{StaticResource ErrorText}" />
+            <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" />
+            <Button Text="{x:Static res:AppResources.Finish}" Command="{Binding FinishCommand}" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

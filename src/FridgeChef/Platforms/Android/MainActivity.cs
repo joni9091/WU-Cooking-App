@@ -14,6 +14,6 @@ public class MainActivity : MauiAppCompatActivity
 		// Figma: white status bar with dark icons, matching the page background.
 		var window = Window!;
 		window.SetStatusBarColor(Android.Graphics.Color.White);
-		WindowCompat.GetInsetsController(window, window.DecorView).AppearanceLightStatusBars = true;
+		WindowCompat.GetInsetsController(window, window.DecorView)!.AppearanceLightStatusBars = true;
 	}
 }

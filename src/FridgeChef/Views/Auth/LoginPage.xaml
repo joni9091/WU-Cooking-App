@@ -1,0 +1,63 @@
+<!-- Figma "3. Login or Sigup". The first box asks for the email (sign-in is by email). Apple button hidden on Android. -->
+<ContentPage x:Class="FridgeChef.Views.Auth.LoginPage"
+             xmlns:vm="clr-namespace:FridgeChef.Core.ViewModels;assembly=FridgeChef.Core"
+             xmlns:res="clr-namespace:FridgeChef.Core.Resources;assembly=FridgeChef.Core"
+             x:DataType="vm:LoginViewModel">
+    <ScrollView>
+        <VerticalStackLayout Padding="{StaticResource AuthPadding}" Spacing="20">
+            <VerticalStackLayout Spacing="6" Margin="4,0,0,4">
+                <Label Text="{x:Static res:AppResources.LoginTitle}" Style="{StaticResource AuthTitle}" />
+                <Label Text="{x:Static res:AppResources.LoginSubtitle}" Style="{StaticResource OliveText}"
+                       FontFamily="{DynamicResource AppHeadingFont}" FontSize="15" />
+            </VerticalStackLayout>
+
+            <Border Style="{StaticResource InputBox}">
+                <Grid ColumnDefinitions="Auto,*" ColumnSpacing="10">
+                    <Image Source="ic_mail.png" Style="{StaticResource InputIcon}" />
+                    <Entry Grid.Column="1" Text="{Binding Email}" Placeholder="{x:Static res:AppResources.EmailPlaceholder}"
+                           Keyboard="Email" IsSpellCheckEnabled="False" IsTextPredictionEnabled="False" ReturnType="Next" />
+                </Grid>
+            </Border>
+
+            <Border Style="{StaticResource InputBox}">
+                <Grid ColumnDefinitions="Auto,*,Auto" ColumnSpacing="10">
+                    <Image Source="ic_key_round.png" Style="{StaticResource InputIcon}" />
+                    <Entry Grid.Column="1" Text="{Binding Password}" Placeholder="{x:Static res:AppResources.PasswordPlaceholder}"
+                           IsPassword="{Binding HidePassword}" ReturnType="Done" ReturnCommand="{Binding SignInCommand}" />
+                    <ImageButton Grid.Column="2" Source="{Binding EyeIcon}" Command="{Binding TogglePasswordCommand}"
+                                 WidthRequest="24" HeightRequest="24" Padding="0" BackgroundColor="Transparent"
+                                 SemanticProperties.Description="{x:Static res:AppResources.ShowPassword}" />
+                </Grid>
+            </Border>
+
+            <Grid ColumnDefinitions="*,Auto" Margin="18,-4,4,0">
+                <Label Text="{Binding ShowPasswordText}" Style="{StaticResource OliveText}">
+                    <Label.GestureRecognizers><TapGestureRecognizer Command="{Binding TogglePasswordCommand}" /></Label.GestureRecognizers>
+                </Label>
+                <Label Grid.Column="1" Text="{x:Static res:AppResources.ForgotLink}" Style="{StaticResource OliveBold}">
+                    <Label.GestureRecognizers><TapGestureRecognizer Command="{Binding GoCommand}" CommandParameter="forgot" /></Label.GestureRecognizers>
+                </Label>
+            </Grid>
+
+            <Label Text="{Binding Error}" Style="{StaticResource ErrorText}" />
+            <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" />
+
+            <Button Text="{x:Static res:AppResources.SignIn}" Command="{Binding SignInCommand}" />
+            <Label Text="{x:Static res:AppResources.OrContinueWith}" Style="{StaticResource OliveText}" FontSize="16"
+                   HorizontalTextAlignment="Center" />
+            <Button Text="{x:Static res:AppResources.ContinueGoogle}" Style="{StaticResource SecondaryButton}"
+                    Command="{Binding GoogleCommand}" />
+
+            <Label HorizontalTextAlignment="Center" Margin="0,40,0,0">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="{x:Static res:AppResources.NoAccount}" TextColor="{StaticResource Olive}" FontFamily="{DynamicResource AppBodyFont}" FontSize="15" />
+                        <Span Text=" " />
+                        <Span Text="{x:Static res:AppResources.SignUpLink}" TextColor="{StaticResource Olive}" FontFamily="{DynamicResource AppBodyBoldFont}" FontSize="15" />
+                    </FormattedString>
+                </Label.FormattedText>
+                <Label.GestureRecognizers><TapGestureRecognizer Command="{Binding GoCommand}" CommandParameter="signup" /></Label.GestureRecognizers>
+            </Label>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

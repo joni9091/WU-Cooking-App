@@ -12,4 +12,78 @@
   <data name="TabNews" xml:space="preserve"><value>News</value></data>
   <data name="TabAccount" xml:space="preserve"><value>Account</value></data>
   <data name="ComingSoon" xml:space="preserve"><value>Coming soon</value></data>
+  <data name="Welcome1Title" xml:space="preserve"><value>Welcome to Fridge Chef</value></data>
+  <data name="Welcome1Text" xml:space="preserve"><value>Fridge Chef turns the leftovers in your fridge into dinner. Type what you have, pick up to 3 cuisines, and get 3 recipe ideas in seconds.</value></data>
+  <data name="Welcome2Title" xml:space="preserve"><value>Cook like a local</value></data>
+  <data name="Welcome2Text" xml:space="preserve"><value>Browse Cambodian favourites and dishes from around the world, each with calories and simple steps.</value></data>
+  <data name="Welcome3Title" xml:space="preserve"><value>Use what you have</value></data>
+  <data name="Welcome3Text" xml:space="preserve"><value>Tell us what is in your fridge and we will suggest recipes that use it, so less food goes to waste.</value></data>
+  <data name="Welcome4Title" xml:space="preserve"><value>Keep your favourites</value></data>
+  <data name="Welcome4Text" xml:space="preserve"><value>Save the recipes you love and find them again any time, even offline.</value></data>
+  <data name="GetStarted" xml:space="preserve"><value>Get started</value></data>
+  <data name="LanguageLink" xml:space="preserve"><value>English / ខ្មែរ</value></data>
+  <data name="LanguageTitle" xml:space="preserve"><value>Language</value></data>
+  <data name="LanguageSubtitle" xml:space="preserve"><value>Choose the language for the app.</value></data>
+  <data name="Back" xml:space="preserve"><value>Back</value></data>
+  <data name="LoginTitle" xml:space="preserve"><value>Welcome Back!!</value></data>
+  <data name="LoginSubtitle" xml:space="preserve"><value>Sign in to see your saved recipes.</value></data>
+  <data name="EmailPlaceholder" xml:space="preserve"><value>Email</value></data>
+  <data name="PasswordPlaceholder" xml:space="preserve"><value>Password</value></data>
+  <data name="ConfirmPasswordPlaceholder" xml:space="preserve"><value>Confirm password</value></data>
+  <data name="ShowPassword" xml:space="preserve"><value>Show password</value></data>
+  <data name="HidePassword" xml:space="preserve"><value>Hide password</value></data>
+  <data name="ForgotLink" xml:space="preserve"><value>Forgotten password?</value></data>
+  <data name="SignIn" xml:space="preserve"><value>Sign in</value></data>
+  <data name="OrContinueWith" xml:space="preserve"><value>Or continue with</value></data>
+  <data name="ContinueGoogle" xml:space="preserve"><value>Continue with Google</value></data>
+  <data name="NoAccount" xml:space="preserve"><value>Don't have an account yet?</value></data>
+  <data name="SignUpLink" xml:space="preserve"><value>Sign up</value></data>
+  <data name="SignUpTitle" xml:space="preserve"><value>Register Now</value></data>
+  <data name="SignUpSubtitle" xml:space="preserve"><value>Create an account to save your recipes.</value></data>
+  <data name="SignUpButton" xml:space="preserve"><value>Sign up</value></data>
+  <data name="HaveAccount" xml:space="preserve"><value>Already have an account?</value></data>
+  <data name="SignUpDone" xml:space="preserve"><value>Check your email and tap the link to confirm your account, then sign in.</value></data>
+  <data name="ForgotTitle" xml:space="preserve"><value>Forgot password?</value></data>
+  <data name="ForgotText" xml:space="preserve"><value>Enter your email and we will send you a code to reset your password.</value></data>
+  <data name="EmailLabel" xml:space="preserve"><value>Email</value></data>
+  <data name="SendCode" xml:space="preserve"><value>Send code</value></data>
+  <data name="RememberedLogin" xml:space="preserve"><value>Remembered it? Log in</value></data>
+  <data name="CodeText" xml:space="preserve"><value>If an account uses this email, we sent it a code. Enter the code and choose a new password.</value></data>
+  <data name="CodeLabel" xml:space="preserve"><value>Code</value></data>
+  <data name="CodePlaceholder" xml:space="preserve"><value>Code from the email</value></data>
+  <data name="NewPasswordPlaceholder" xml:space="preserve"><value>New password</value></data>
+  <data name="SavePassword" xml:space="preserve"><value>Save new password</value></data>
+  <data name="ProfileTitle" xml:space="preserve"><value>Set up your profile</value></data>
+  <data name="ProfileText" xml:space="preserve"><value>Choose how friends will see you. You can change this later.</value></data>
+  <data name="AddPhoto" xml:space="preserve"><value>Add a photo</value></data>
+  <data name="ChangePhoto" xml:space="preserve"><value>Change photo</value></data>
+  <data name="HandleLabel" xml:space="preserve"><value>@handle</value></data>
+  <data name="HandlePlaceholder" xml:space="preserve"><value>@pick-a-handle</value></data>
+  <data name="HandleHint" xml:space="preserve"><value>Letters, numbers, dots and _ only. Must be unique.</value></data>
+  <data name="HandleChecking" xml:space="preserve"><value>Checking…</value></data>
+  <data name="HandleFree" xml:space="preserve"><value>Available</value></data>
+  <data name="HandleTaken" xml:space="preserve"><value>That @handle is taken.</value></data>
+  <data name="AccountNameLabel" xml:space="preserve"><value>Account name</value></data>
+  <data name="AccountNamePlaceholder" xml:space="preserve"><value>Your name</value></data>
+  <data name="Finish" xml:space="preserve"><value>Finish</value></data>
+  <data name="PhotoFromGallery" xml:space="preserve"><value>Choose from gallery</value></data>
+  <data name="PhotoFromCamera" xml:space="preserve"><value>Take a photo</value></data>
+  <data name="Cancel" xml:space="preserve"><value>Cancel</value></data>
+  <data name="LogOut" xml:space="preserve"><value>Log out</value></data>
+  <data name="LogOutTitle" xml:space="preserve"><value>Log out?</value></data>
+  <data name="LogOutText" xml:space="preserve"><value>You will need to sign in again to see your saved recipes.</value></data>
+  <data name="ErrEmail" xml:space="preserve"><value>Enter a valid email address.</value></data>
+  <data name="ErrPassword" xml:space="preserve"><value>Password must be at least 8 characters.</value></data>
+  <data name="ErrPasswordMatch" xml:space="preserve"><value>Passwords do not match.</value></data>
+  <data name="ErrHandle" xml:space="preserve"><value>Use 3 to 20 letters, numbers, dots or _.</value></data>
+  <data name="ErrName" xml:space="preserve"><value>Enter your name.</value></data>
+  <data name="ErrCode" xml:space="preserve"><value>Enter the code from the email.</value></data>
+  <data name="ErrLogin" xml:space="preserve"><value>Email or password is incorrect.</value></data>
+  <data name="ErrNotConfirmed" xml:space="preserve"><value>Please confirm your email first. Check your inbox.</value></data>
+  <data name="ErrNoInternet" xml:space="preserve"><value>No internet connection. Check your network.</value></data>
+  <data name="ErrTooMany" xml:space="preserve"><value>Too many attempts. Please wait a few minutes and try again.</value></data>
+  <data name="ErrCodeWrong" xml:space="preserve"><value>That code is wrong or has expired.</value></data>
+  <data name="ErrEmailNotAllowed" xml:space="preserve"><value>We could not send an email to this address. Please continue with Google.</value></data>
+  <data name="ErrGeneric" xml:space="preserve"><value>Something went wrong. Please try again.</value></data>
+  <data name="ErrPhoto" xml:space="preserve"><value>Could not use that photo. Please try another.</value></data>
 </root>

@@ -1,0 +1,37 @@
+<!-- Figma "29. Language picker". Also used from Settings later (Phase 7). -->
+<ContentPage x:Class="FridgeChef.Views.Auth.LanguagePage"
+             xmlns:res="clr-namespace:FridgeChef.Core.Resources;assembly=FridgeChef.Core">
+    <VerticalStackLayout Padding="{StaticResource PagePadding}" Spacing="16">
+        <HorizontalStackLayout Spacing="12">
+            <Image Source="ic_chevron_left.png" WidthRequest="24" HeightRequest="24" VerticalOptions="Center"
+                   SemanticProperties.Description="{x:Static res:AppResources.Back}">
+                <Image.GestureRecognizers><TapGestureRecognizer Tapped="OnBack" /></Image.GestureRecognizers>
+            </Image>
+            <Label Text="{x:Static res:AppResources.LanguageTitle}" Style="{StaticResource Title}" />
+        </HorizontalStackLayout>
+        <Label Text="{x:Static res:AppResources.LanguageSubtitle}" Style="{StaticResource OliveText}" />
+
+        <!-- Each language name is written in its own script and font, so it reads right whatever the app language is. -->
+        <Border x:Name="EnglishCard" Padding="18,14" StrokeShape="RoundRectangle 16">
+            <Grid ColumnDefinitions="*,Auto">
+                <VerticalStackLayout>
+                    <Label Text="English" FontFamily="InstrumentSerif" FontSize="26" TextColor="{StaticResource Text}" />
+                    <Label Text="English" FontFamily="Inter" FontSize="12" TextColor="{StaticResource Grey}" />
+                </VerticalStackLayout>
+                <Image x:Name="EnglishCheck" Grid.Column="1" Source="ic_check.png" WidthRequest="22" HeightRequest="22" />
+            </Grid>
+            <Border.GestureRecognizers><TapGestureRecognizer Tapped="OnEnglish" /></Border.GestureRecognizers>
+        </Border>
+
+        <Border x:Name="KhmerCard" Padding="18,14" StrokeShape="RoundRectangle 16">
+            <Grid ColumnDefinitions="*,Auto">
+                <VerticalStackLayout>
+                    <Label Text="ភាសាខ្មែរ" FontFamily="KantumruyPro" FontSize="22" LineHeight="1.5" TextColor="{StaticResource Text}" />
+                    <Label Text="Khmer" FontFamily="Inter" FontSize="12" TextColor="{StaticResource Grey}" />
+                </VerticalStackLayout>
+                <Image x:Name="KhmerCheck" Grid.Column="1" Source="ic_check.png" WidthRequest="22" HeightRequest="22" />
+            </Grid>
+            <Border.GestureRecognizers><TapGestureRecognizer Tapped="OnKhmer" /></Border.GestureRecognizers>
+        </Border>
+    </VerticalStackLayout>
+</ContentPage>
