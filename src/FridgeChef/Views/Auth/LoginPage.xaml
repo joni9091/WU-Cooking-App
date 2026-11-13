@@ -5,6 +5,11 @@
              x:DataType="vm:LoginViewModel">
     <ScrollView>
         <VerticalStackLayout Padding="{StaticResource AuthPadding}" Spacing="20">
+            <!-- Language switch here too: Welcome is shown only once (brief: switch on Welcome and in Settings) -->
+            <Label Text="{x:Static res:AppResources.LanguageLink}" FontFamily="KantumruyProSemiBold" FontSize="13"
+                   TextColor="{StaticResource Olive}" HorizontalOptions="End" Margin="0,-48,0,0" Padding="8">
+                <Label.GestureRecognizers><TapGestureRecognizer Command="{Binding GoCommand}" CommandParameter="language" /></Label.GestureRecognizers>
+            </Label>
             <VerticalStackLayout Spacing="6" Margin="4,0,0,4">
                 <Label Text="{x:Static res:AppResources.LoginTitle}" Style="{StaticResource AuthTitle}" />
                 <Label Text="{x:Static res:AppResources.LoginSubtitle}" Style="{StaticResource OliveText}"

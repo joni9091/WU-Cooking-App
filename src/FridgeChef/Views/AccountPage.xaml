@@ -1,9 +1,10 @@
-<!-- Account tab. Placeholder until Phase 7; has Log out now so sign-in can be tested (Figma 24 "Log out?" dialog). -->
+<!-- Account tab. Placeholder until Phase 7; has Language and Log out now (both are rows in the Figma Account screen). -->
 <ContentPage x:Class="FridgeChef.Views.AccountPage"
              xmlns:res="clr-namespace:FridgeChef.Core.Resources;assembly=FridgeChef.Core"
              Title="{x:Static res:AppResources.TabAccount}">
     <VerticalStackLayout Padding="{StaticResource PagePadding}" Spacing="24" VerticalOptions="Center">
         <Label Text="{x:Static res:AppResources.ComingSoon}" Style="{StaticResource Muted}" HorizontalOptions="Center" />
+        <Button Text="{x:Static res:AppResources.LanguageTitle}" Clicked="OnLanguage" BackgroundColor="{StaticResource InputGrey}" />
         <Button Text="{x:Static res:AppResources.LogOut}" Clicked="OnLogOut" />
     </VerticalStackLayout>
 </ContentPage>
